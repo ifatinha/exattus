@@ -130,17 +130,11 @@ a {
   transform: rotate(-45deg);
 }
 .burger__button-visually {
-  font-size: 1rem;
-  font-weight: 600;
   font-family: "Jost", sans-serif;
   font-optical-sizing: auto;
-  clip: rect(0, 0, 0, 0);
-  font-size: 0.875rem;
-  height: 1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
 }
 .burger__button-bars {
   background-color: rgb(212, 214, 215);
