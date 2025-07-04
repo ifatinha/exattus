@@ -5,39 +5,61 @@
 
 .navbar {
 
-    &__list {
+    @include flex(center, space-between, 4rem);
+    width: 100%;
 
-        @include devices-small-screens {
-            background    : #e7e7e7;
-            flex-direction: column;
-            height        : 0px;
-            left          : 0;
-            overflow-y    : hidden;
-            position      : absolute;
-            transition    : .6s ease-in-out;
-            top           : 67px;
-            visibility    : hidden;
-            width         : 100%;
-            z-index       : 1000;
+    &__brand {
+        min-width: 250px;
+
+        img {
+            height        : 60px;
+            vertical-align: middle;
         }
+    }
 
-        @include devices-large-screens {
+    &__menu {
+        @include flex(center, space-between);
+
+        @include ipad-landscape() {
             @include flex(center, space-between);
         }
 
-        a {
-            display   : block;
-            padding   : .5rem;
-            transition: .5s ease-in-out;
+        @include devices-small-screens {
+            display: none;
+        }
 
-            @include hover {
-                opacity: .5;
+        @include devices(l) {
+            display: none;
+        }
+
+        .menu__link {
+            display    : block;
+            line-height: 28px;
+            padding    : 12px 10px;
+            position   : relative;
+            transition : color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out;
+
+            &::before {
+                background-image   : url("../images/menu-hover.png");
+                background-position: center center;
+                background-repeat  : no-repeat;
+                bottom             : 0;
+                content            : "";
+                height             : 8px;
+                left               : -5px;
+                position           : absolute;
+                right              : 0;
+                transition         : all 0.3s ease-in-out;
+                opacity            : 0;
             }
+        }
 
-            @include devices-small-screens {
-                border-bottom: 2px solid rgba($color: #000000, $alpha: 0.05);
-                margin       : 0 1rem;
-                padding      : 1rem 0;
+        .menu__item.active .menu__link,
+        .menu__item .menu__link:hover {
+            @include apply-color(sky-blue);
+
+            &::before {
+                opacity: 1;
             }
         }
     }
@@ -51,45 +73,4 @@
         visibility: visible;
     }
 
-}
-
-// navbar modal
-.menu__container {
-    height: 100%;
-    width : 100%;
-}
-
-.menu__list {
-    @include flex(center, center);
-    height    : 100%;
-    overflow-y: auto;
-    padding   : 1rem 0;
-    width     : 100%;
-
-    @include devices-small-screens {
-        flex-direction: column;
-    }
-
-    @include mobile-landscape {
-        justify-content: start
-    }
-
-    li {
-        @include font-primary();
-        text-align: center;
-        width     : 100%;
-    }
-
-    span {
-        display   : block;
-        text-align: center;
-    }
-
-    a {
-        display       : inline-block;
-        font-size     : get-font-size(20);
-        padding       : .5rem;
-        text-transform: uppercase;
-        width         : 100%;
-    }
 }

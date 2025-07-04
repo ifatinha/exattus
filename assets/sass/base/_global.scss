@@ -1,3 +1,6 @@
+@use "typography"as *;
+@use "colors"as *;
+
 html {
     scroll-behavior: smooth;
 }
@@ -6,6 +9,13 @@ html,
 body {
     height: 100%;
     width : 100%
+}
+
+body {
+    @include apply-bg-color(pure-black);
+    @include font-primary();
+    color    : #d4d6d7;
+    font-size: get-font-size(18);
 }
 
 a {

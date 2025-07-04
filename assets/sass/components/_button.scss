@@ -4,62 +4,75 @@
 @use "../global/responsive"as *;
 
 .burger__button {
-    @include flex(center, center, 8px);
+    @include flex(center, center, 10px);
     background: transparent;
     border    : none;
     cursor    : pointer;
-    min-height: 52px;
-    min-width : 44px;
+    min-height: 50px;
+    min-width : 48px;
+    padding   : 10px;
     transition: .5s ease-in-out;
 
     @include devices-large-screens() {
-        display: none;
+        //display: none;
     }
 
     @include hover {
         opacity: .5;
+
+        .burger__button-bars {
+            background: transparent !important;
+
+            &::before {
+                transform: rotate(45deg);
+            }
+
+            &::after {
+                transform: rotate(-45deg);
+            }
+        }
     }
 
     &-visually {
         font-size  : get-font-size(16);
         font-weight: 600;
 
-        // @include font-primary();
-        // clip     : rect(0, 0, 0, 0);
-        // font-size: get-font-size(14);
-        // height   : 1px;
-        // overflow : hidden;
-        // padding  : 0;
-        // position : absolute;
-        // width    : 1px;
+        @include font-primary();
+        clip     : rect(0, 0, 0, 0);
+        font-size: get-font-size(14);
+        height   : 1px;
+        overflow : hidden;
+        padding  : 0;
+        position : absolute;
+        width    : 1px;
     }
 
     &-bars {
-        @include apply-bg-color("pure-black");
-        display   : block;
-        height    : 2px;
-        position  : relative;
-        transition: all .25s linear;
-        width     : 22px;
+        background-color: rgb(212, 214, 215);
+        border-radius   : 2px;
+        display         : block;
+        height          : 2px;
+        position        : relative;
+        transition      : all .25s linear;
+        width           : 30px;
 
         &::after,
         &::before {
-            background-color: currentColor;
+            background-color: rgb(212, 214, 215);
             content         : "";
             display         : block;
             height          : 100%;
             position        : absolute;
-            right           : 0;
             transition      : all .25s linear;
             width           : 100%;
         }
 
         &::after {
-            transform: translate(0, -8px);
+            transform: translate(0, -10px);
         }
 
         &::before {
-            transform: translate(0, 8px);
+            transform: translate(0, 10px);
         }
     }
 }

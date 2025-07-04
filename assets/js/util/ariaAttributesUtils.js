@@ -8,3 +8,7 @@ export const updateAriaAttributes = (isOpen, button) => {
     button.setAttribute(key, value);
   });
 };
+
+export const updateAriaHidden = (isHidden, element) => {
+  element.setAttribute("aria-hidden", isHidden);
+};

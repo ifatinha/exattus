@@ -3,6 +3,10 @@
 $theme-color: (
     pure-black: #000000,
     pure-white: #ffffff,
+    sky-blue: #77BEFF,
+    graphite-black:#212529,
+    onyx-black: #181818,
+    cloud-silver: #e8e8e8
 );
 
 @mixin apply-color($key) {

@@ -1,18 +1,24 @@
 @use "../base/colors"as *;
 @use "../base/typography"as *;
 @use "../base/mixins"as *;
+@use "../global/responsive"as *;
 
 .header {
-
     @include flex(center, space-between);
-    @include font-primary();
-    background: #e7e7e7;
-    padding   : 1rem 2%;
-    width     : 100%;
+    background   : transparent;
+    border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.1);
+    padding      : 1rem 2%;
+    position     : absolute;
+    width        : 100%;
+    z-index      : 9;
 
-    &__brand {
-        font-size     : get-font-size(24);
-        font-weight   : bold;
-        text-transform: uppercase;
+    @include devices(xxl) {
+        padding-left : 5rem;
+        padding-right: 5rem;
+    }
+
+    @include devices(xl) {
+        padding-left : 4rem;
+        padding-right: 4rem;
     }
 }

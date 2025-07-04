@@ -3,11 +3,14 @@
 @use "../util/functions"as *;
 
 @mixin font-primary() {
-   font-family: "Poppins", sans-serif;
+   font-family        : "Jost", sans-serif;
+   font-optical-sizing: auto;
 }
 
-@mixin font-secondary() {
-   font-family: Arial, Helvetica, sans-serif;
+@mixin russo-one-regular() {
+   font-family: "Russo One", sans-serif;
+   font-weight: 500;
+   font-style : normal;
 }
 
 @function get-font-size($size) {

@@ -1,4 +1,4 @@
-import { openModal, closeModal } from "./modules/menuModalController.js";
+import { openModal, closeModal } from "./modules/modalController.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const functionsToCall = [

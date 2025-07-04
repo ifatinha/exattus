@@ -1,0 +1,207 @@
+@use "../base/mixins"as *;
+@use "../base/colors"as *;
+@use "../util/functions"as *;
+@use "../base/typography"as *;
+@use "../global/responsive"as *;
+
+.sidebar {
+    bottom      : 0;
+    overflow-y  : auto;
+    padding     : px-to-rem(50);
+    position    : fixed;
+    right       : 0;
+    //transform : translateX(450px);
+    transition  : opacity 0.7s ease, transform 0.7s ease, visibility 0.7s ease;
+    top         : 0;
+    visibility  : visible;
+    //visibility: hidden;
+    width       : 450px;
+    z-index     : 1001;
+
+    @include devices(m) {
+        width: 320px;
+    }
+
+    @include devices(xs) {
+        padding: 1rem;
+        width  : 320px;
+    }
+
+    &__close-btn {
+        @include flex(center, center, 0);
+        @include rounded(50px, true);
+        @include apply-bg-color("pure-black");
+        @include apply-color("pure-white");
+        border        : transparent;
+        cursor        : pointer;
+        font-size     : get-font-size(12);
+        font-weight   : 600;
+        min-height    : 50px;
+        min-width     : 50px;
+        position      : absolute;
+        right         : 50px;
+        transition    : .5s ease-in-out;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+
+        @include devices-small-screens {
+            right: 1rem;
+        }
+
+        @include hover {
+
+            &::after {
+                transform: rotate(225deg);
+            }
+
+            &::before {
+                transform: rotate(135deg);
+            }
+        }
+
+        &::after,
+        &::before {
+            background: currentColor;
+            content   : "";
+            height    : 2px;
+            position  : absolute;
+            transition: .6s ease-in-out;
+            width     : 22px;
+        }
+
+        &::after {
+            transform: rotate(45deg);
+
+            @include hover {
+                transform: translate(-50%, -50%) rotate(225deg);
+            }
+        }
+
+        &::before {
+            transform: rotate(-45deg);
+        }
+    }
+
+    .sidebar__contact {
+        border-top    : 3px solid transparent;
+        display       : flex;
+        flex-direction: column;
+        gap           : px-to-rem(8);
+        padding-top   : px-to-rem(25);
+        width         : 100%;
+
+        .number {
+            font-size     : get-font-size(30);
+            font-weight   : 600;
+            letter-spacing: 1px;
+
+            @include devices-small-screens {
+                font-size: get-font-size(24);
+            }
+        }
+
+        .text {
+            color: rgba(255, 255, 255, 0.8);
+        }
+    }
+}
+
+.sidebar--info {
+    background: linear-gradient(130deg, rgb(54, 99, 216) 0%, rgb(119, 190, 255) 100%);
+
+    .sidebar__description {
+        @include flex(start, space-between, 50px);
+        flex-direction: column;
+        margin-top    : px-to-rem(80);
+
+        h4 {
+            @include russo-one-regular();
+            font-size    : get-font-size(32);
+            margin-bottom: 1rem;
+        }
+
+        p {
+            line-height: get-font-size(28);
+        }
+    }
+
+    .sidebar__social-links {
+        @include flex(start, space-between, 15px);
+        flex-direction: column;
+        width         : 100%;
+
+        li {
+            width: 100%;
+
+            a {
+                @include flex(center, start, 20px);
+                font-size : get-font-size(22);
+                transition: .3s ease-in-out;
+
+                @include hover {
+                    @include apply-color("pure-black");
+                }
+            }
+        }
+    }
+
+    .sidebar__contact {
+        border-color: get-color("pure-black")
+    }
+}
+
+.sidebar--menu {
+    @include apply-bg-color("onyx-black");
+
+    .sidebar__header {
+        @include flex(center, space-around, 1px);
+        justify-content: start;
+        margin-bottom  : 2rem;
+    }
+
+    .sidebar__body {
+        display       : flex;
+        gap           : 50px;
+        flex-direction: column;
+    }
+
+    .sidebar__menu {
+        li {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            padding      : px-to-rem(15) 0;
+
+            a {
+                font-size  : get-font-size(20);
+                font-weight: 500;
+                line-height: px-to-rem(30);
+                transition : .3s ease-in-out;
+
+                @include hover {
+                    @include apply-color("sky-blue");
+                }
+            }
+        }
+
+        .active {
+            @include apply-color("sky-blue");
+        }
+    }
+
+    .sidebar__contact {
+        border-color: get-color("cloud-silver");
+        border-image: linear-gradient(to right, #3663D8, #77BEFF) 1;
+
+        a {
+            background             : linear-gradient(130deg, #3663D8 0%, #77BEFF 100%);
+            background-clip        : text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
+
+.sidebar__active {
+    opacity   : 1;
+    transform : translateY(0);
+    visibility: visible;
+}
