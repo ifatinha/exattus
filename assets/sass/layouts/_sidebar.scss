@@ -5,18 +5,17 @@
 @use "../global/responsive"as *;
 
 .sidebar {
-    bottom      : 0;
-    overflow-y  : auto;
-    padding     : px-to-rem(50);
-    position    : fixed;
-    right       : 0;
-    //transform : translateX(450px);
-    transition  : opacity 0.7s ease, transform 0.7s ease, visibility 0.7s ease;
-    top         : 0;
-    visibility  : visible;
-    //visibility: hidden;
-    width       : 450px;
-    z-index     : 1001;
+    bottom    : 0;
+    overflow-y: auto;
+    padding   : px-to-rem(50);
+    position  : fixed;
+    right     : 0;
+    transform : translateX(450px);
+    transition: opacity 0.7s ease, transform 0.7s ease, visibility 0.7s ease;
+    top       : 0;
+    visibility: hidden;
+    width     : 450px;
+    z-index   : 1001;
 
     @include devices(m) {
         width: 320px;
@@ -103,50 +102,6 @@
         .text {
             color: rgba(255, 255, 255, 0.8);
         }
-    }
-}
-
-.sidebar--info {
-    background: linear-gradient(130deg, rgb(54, 99, 216) 0%, rgb(119, 190, 255) 100%);
-
-    .sidebar__description {
-        @include flex(start, space-between, 50px);
-        flex-direction: column;
-        margin-top    : px-to-rem(80);
-
-        h4 {
-            @include russo-one-regular();
-            font-size    : get-font-size(32);
-            margin-bottom: 1rem;
-        }
-
-        p {
-            line-height: get-font-size(28);
-        }
-    }
-
-    .sidebar__social-links {
-        @include flex(start, space-between, 15px);
-        flex-direction: column;
-        width         : 100%;
-
-        li {
-            width: 100%;
-
-            a {
-                @include flex(center, start, 20px);
-                font-size : get-font-size(22);
-                transition: .3s ease-in-out;
-
-                @include hover {
-                    @include apply-color("pure-black");
-                }
-            }
-        }
-    }
-
-    .sidebar__contact {
-        border-color: get-color("pure-black")
     }
 }
 

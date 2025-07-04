@@ -1,0 +1,19 @@
+<svg width="220" height="64" viewBox="0 0 320 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gradiente para o texto -->
+  <defs>
+    <linearGradient id="exattus-gradient" x1="0" y1="0" x2="320" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#fff"/>
+      <stop offset="80%" stop-color="#77BEFF"/>
+    </linearGradient>
+  </defs>
+  <!-- Nome exattus estilizado, moderno e impactante, em minúsculas -->
+  <text x="0" y="48" font-family="'Russo One', Arial, sans-serif" font-size="48" font-weight="bold" letter-spacing="3" fill="url(#exattus-gradient)">
+    exattus
+  </text>
+  <!-- Linha tech abaixo do nome -->
+  <rect x="0" y="54" width="180" height="5" rx="2.5" fill="#77BEFF"/>
+  <!-- Detalhe digital: três pequenos pontos ao final da linha -->
+  <circle cx="195" cy="56.5" r="2.5" fill="#fff"/>
+  <circle cx="205" cy="56.5" r="2.5" fill="#77BEFF"/>
+  <circle cx="215" cy="56.5" r="2.5" fill="#fff"/>
+</svg>

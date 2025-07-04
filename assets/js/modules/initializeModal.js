@@ -8,22 +8,22 @@ import {
 export function getElements() {
   const buttonBurger = document.querySelector("#navbarOpenButton"); // Botão do menu (hambúrguer)
   const modal = document.querySelector("#modal"); // Elemento do modal
-  const sidebarInfo = document.querySelector("#sidebarInfo"); // Sidebar lateral
-  const sidebarInfoCloseBtn = document.querySelector("#sidebarInfoCloseBtn"); // Botão de fechar a sidebar
+  const sidebarMenu = document.querySelector("#sidebarMenu"); // Sidebar lateral
+  const sidebarCloseBtn = document.querySelector("#sidebarCloseBtn"); // Botão de fechar a sidebar
 
   // Se algum elemento não for encontrado, retorna undefined
-  if (!buttonBurger || !modal || !sidebarInfo || !sidebarInfoCloseBtn) {
+  if (!buttonBurger || !modal || !sidebarMenu || !sidebarCloseBtn) {
     console.error("Um ou mais elementos não foram encontrados no DOM");
     return {
       buttonBurger: undefined,
       modal: undefined,
-      sidebarInfo: undefined,
-      sidebarInfoCloseBtn: undefined,
+      sidebarMenu: undefined,
+      sidebarCloseBtn: undefined,
     };
   }
 
   // Retorna todos os elementos em um objeto
-  return { buttonBurger, modal, sidebarInfo, sidebarInfoCloseBtn };
+  return { buttonBurger, modal, sidebarMenu, sidebarCloseBtn };
 }
 
 // Função que alterna o estado aberto/fechado do modal, sidebar e botão burger
@@ -31,10 +31,10 @@ export function handleToggle(event) {
   // Previne o duplo disparo em dispositivos touch
   if (event?.type === "touchstart") event.preventDefault();
 
-  const { buttonBurger, modal, sidebarInfo } = getElements();
+  const { buttonBurger, modal, sidebarMenu } = getElements();
 
   // Alterna as classes de ativo para cada elemento
-  [modal, buttonBurger, sidebarInfo].forEach((element, index) => {
+  [modal, buttonBurger, sidebarMenu].forEach((element, index) => {
     const classList = ["modal__active", "burger__active", "sidebar__active"];
 
     toggleClass(element, classList[index]);
@@ -43,7 +43,7 @@ export function handleToggle(event) {
     const isOpen = buttonBurger.classList.contains("burger__active");
     updateAriaAttributes(isOpen, buttonBurger);
 
-    const isOpenSidebar = sidebarInfo.classList.contains("sidebar__active");
-    updateAriaHidden(!isOpenSidebar, sidebarInfo);
+    const isOpenSidebar = sidebarMenu.classList.contains("sidebar__active");
+    updateAriaHidden(!isOpenSidebar, sidebarMenu);
   });
 }

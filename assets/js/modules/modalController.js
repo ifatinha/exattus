@@ -23,9 +23,9 @@ export function openModal() {
 
 // Função para fechar o modal ao clicar/tocar fora ou no botão de fechar, ou pressionar ESC
 export function closeModal() {
-  const { modal, sidebarInfoCloseBtn } = getElements();
+  const { modal, sidebarCloseBtn } = getElements();
 
-  if (!modal || !sidebarInfoCloseBtn) {
+  if (!modal || !sidebarCloseBtn) {
     console.error("Modal or sidebar close button not found");
     return;
   }
@@ -33,7 +33,7 @@ export function closeModal() {
   ["touchstart", "click"].forEach((eventType) => {
     modal.addEventListener(eventType, handleToggle);
 
-    setupCloseMenuListeners(sidebarInfoCloseBtn);
+    setupCloseMenuListeners(sidebarCloseBtn);
     setupCloseMenuListeners(modal);
   });
 

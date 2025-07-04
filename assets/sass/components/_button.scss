@@ -36,8 +36,9 @@
     &-visually {
         @include font-primary();
         @include apply-color(pure-white);
-        font-size  : get-font-size(16);
-        font-weight: 600;
+        font-size     : get-font-size(16);
+        font-weight   : 600;
+        text-transform: uppercase;
 
         // clip     : rect(0, 0, 0, 0);
         // font-size: get-font-size(14);

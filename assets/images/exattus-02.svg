@@ -1,0 +1,16 @@
+<svg width="400" height="120" viewBox="0 0 400 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Símbolo: círculo, gráfico de barras e check, versão alternativa -->
+  <g>
+    <circle cx="60" cy="60" r="44" stroke="#77BEFF" stroke-width="6" fill="none"/>
+    <!-- Gráfico de barras com alturas diferentes -->
+    <rect x="38" y="82" width="8" height="18" rx="2" fill="#77BEFF"/>
+    <rect x="52" y="68" width="8" height="32" rx="2" fill="#77BEFF"/>
+    <rect x="66" y="76" width="8" height="24" rx="2" fill="#77BEFF"/>
+    <!-- Check mais arredondado -->
+    <polyline points="46,68 58,80 80,50" fill="none" stroke="#77BEFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <!-- Texto exattus em lowercase, fonte Jost, espaçamento maior -->
+  <text x="110" y="92" font-family="'Jost', Arial, sans-serif" font-size="64" font-weight="bold" fill="#77BEFF" letter-spacing="8">
+    exattus
+  </text>
+</svg>

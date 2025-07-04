@@ -47,7 +47,7 @@
    <meta name="twitter:image" content="https://www.exattuscontabiltech.com.br/assets/images/twitter-image.png" />
 
    <!-- Favicon -->
-   <link rel="icon" type="image/svg+xml" href="assets/images/icon-exattus.svg">
+   <link rel="shortcut icon" href="assets/images/icon-exattus.svg" type="image/x-icon">
 
    <!-- Tema para navegadores móveis -->
    <meta name="theme-color" content="#004d40" />
@@ -65,50 +65,69 @@
 
 
 <body>
+
+   <!-- start header -->
    <header class="header">
       <div class="header__brand">
-         <a href="#">Exattus</a>
+         <a href="index.html">
+            <img src="assets/images/exattus.svg" alt="EXATTUS CONTABILIDADE & TECNOLOGIA LTDA" />
+         </a>
       </div>
-         <button class="burger__button" type="button" id="navbarOpenButton" aria-label="Abrir Menu"
-            aria-expanded="false" aria-haspopup="menu" aria-controls="navbarMenu">
-            <span class="burger__button-visually">Menu</span>
-            <span class="burger__button-bars" id="menuBar" aria-hidden="true"></span>
-         </button>
+      <button class="burger__button" type="button" id="navbarOpenButton" aria-label="Abrir Menu" aria-expanded="false"
+         aria-haspopup="menu" aria-controls="navbarMenu">
+         <span class="burger__button-visually">Menu</span>
+         <span class="burger__button-bars" id="menuBar" aria-hidden="true"></span>
+      </button>
       </nav>
    </header>
+   <!-- end header -->
 
-   <!-- start navbar modal -->
-   <div class="modal menu__modal" id="menuModal">
-      <button class="modal__close-button" id="menuModalCloseButton">
-         <span>Fechar</span>
-         <img src="assets/images/close.png" alt="Close Button">
-      </button>
-      <div class="menu__container">
-         <ul class="menu__list">
-            <li>
-               <span>1</span>
-               <a href="#">Link 01</a>
-            </li>
-            <li>
-               <span>2</span>
-               <a href="#">Link 02</a>
-            </li>
-            <li>
-               <span>3</span>
-               <a href="#">Link 03</a>
-            </li>
-            <li>
-               <span>4</span>
-               <a href="#">Link 04</a>
-            </li>
-            <li>
-               <span>5</span>
-               <a href="#">Link 05</a>
-            </li>
+   <!-- start modal -->
+   <div class="modal menu__modal" id="modal"></div>
+   <!-- end modal -->
+
+   <!-- start sidebar -->
+   <div class="sidebar sidebar--menu" id="sidebarMenu">
+      <div class="sidebar__header">
+         <div class="navbar__brand">
+            <a href="index.html">
+               <img src="assets/images/exattus.svg" alt="exattus Brand" />
+            </a>
+         </div>
+         <button class="sidebar__close-btn" id="sidebarCloseBtn" aria-label="Fechar menu">
+            <span class="close__btn-x"></span>
+            <span class="close__btn-y"></span>
+         </button>
+      </div>
+
+      <div class="sidebar__body">
+         <ul class="sidebar__menu" id="sidebarMenuList" aria-label="Menu lateral">
+            <li><a href="#home" class="active">Inicio</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#services">Serviços</a></li>
+            <li><a href="#clients">Clientes</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contato</a></li>
          </ul>
+         <div class="sidebar__contact">
+            <span class="number">+55 83 98153-2811</span>
+            <a href="mailto:contato@veltrion.com">
+               <i class="fas fa-envelope"></i>
+               contato@veltrion.com
+            </a>
+            <span class="text">
+               Pronto para inovar? Entre em contato.
+            </span>
+         </div>
       </div>
    </div>
-   <!-- end navbar modal -->
+   <!-- end sidebar -->
+
+   <!-- start main content -->
+   <main>
+      
+   </main>
+   <!-- end main content -->
 
    <!-- scripts -->
    <script type="module" src="assets/js/script.js"></script>

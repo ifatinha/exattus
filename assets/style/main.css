@@ -135,6 +135,7 @@ a {
   color: #ffffff;
   font-size: 1rem;
   font-weight: 600;
+  text-transform: uppercase;
 }
 .burger__button-bars {
   background-color: rgb(212, 214, 215);
@@ -173,7 +174,7 @@ a {
 
 .modal {
   color: #ffffff;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
   height: 100%;
   inset: 0;
   overflow-y: auto;
@@ -337,6 +338,12 @@ a {
     padding-right: 4rem;
   }
 }
+.header__brand {
+  min-width: 200px;
+}
+.header__brand img {
+  height: auto;
+}
 
 .sidebar {
   bottom: 0;
@@ -344,9 +351,10 @@ a {
   padding: 3.125rem;
   position: fixed;
   right: 0;
+  transform: translateX(450px);
   transition: opacity 0.7s ease, transform 0.7s ease, visibility 0.7s ease;
   top: 0;
-  visibility: visible;
+  visibility: hidden;
   width: 450px;
   z-index: 1001;
 }
@@ -451,53 +459,6 @@ a {
 }
 .sidebar .sidebar__contact .text {
   color: rgba(255, 255, 255, 0.8);
-}
-
-.sidebar--info {
-  background: linear-gradient(130deg, rgb(54, 99, 216) 0%, rgb(119, 190, 255) 100%);
-}
-.sidebar--info .sidebar__description {
-  align-items: start;
-  display: flex;
-  gap: 50px;
-  justify-content: space-between;
-  flex-direction: column;
-  margin-top: 5rem;
-}
-.sidebar--info .sidebar__description h4 {
-  font-family: "Russo One", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-.sidebar--info .sidebar__description p {
-  line-height: 1.75rem;
-}
-.sidebar--info .sidebar__social-links {
-  align-items: start;
-  display: flex;
-  gap: 15px;
-  justify-content: space-between;
-  flex-direction: column;
-  width: 100%;
-}
-.sidebar--info .sidebar__social-links li {
-  width: 100%;
-}
-.sidebar--info .sidebar__social-links li a {
-  align-items: center;
-  display: flex;
-  gap: 20px;
-  justify-content: start;
-  font-size: 1.375rem;
-  transition: 0.3s ease-in-out;
-}
-.sidebar--info .sidebar__social-links li a:hover {
-  color: #000000;
-}
-.sidebar--info .sidebar__contact {
-  border-color: #000000;
 }
 
 .sidebar--menu {

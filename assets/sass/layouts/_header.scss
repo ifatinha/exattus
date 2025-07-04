@@ -21,4 +21,12 @@
         padding-left : 4rem;
         padding-right: 4rem;
     }
+
+    &__brand {
+        min-width : 200px;
+
+        img {
+            height: auto;
+        }
+    }
 }
