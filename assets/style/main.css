@@ -1,0 +1,400 @@
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img,
+video {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.burger__button {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  min-height: 52px;
+  min-width: 44px;
+  transition: 0.5s ease-in-out;
+}
+@media screen and (min-width: 1920px) {
+  .burger__button {
+    display: none;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
+  .burger__button {
+    display: none;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
+  .burger__button {
+    display: none;
+  }
+}
+.burger__button:hover {
+  opacity: 0.5;
+}
+.burger__button-visually {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.burger__button-bars {
+  background-color: #000000;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: all 0.25s linear;
+  width: 22px;
+}
+.burger__button-bars::after, .burger__button-bars::before {
+  background-color: currentColor;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  transition: all 0.25s linear;
+  width: 100%;
+}
+.burger__button-bars::after {
+  transform: translate(0, -8px);
+}
+.burger__button-bars::before {
+  transform: translate(0, 8px);
+}
+
+.burger__active .burger__button-bars {
+  background: transparent !important;
+}
+.burger__active .burger__button-bars::before {
+  transform: rotate(45deg);
+}
+.burger__active .burger__button-bars::after {
+  transform: rotate(-45deg);
+}
+
+.modal {
+  color: #ffffff;
+  background: black;
+  height: 100%;
+  inset: 0;
+  overflow-y: auto;
+  opacity: 0;
+  position: fixed;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+  visibility: hidden;
+  width: 100%;
+  z-index: 1000;
+}
+.modal::-webkit-scrollbar {
+  width: 0;
+}
+.modal__close-button {
+  align-items: center;
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  color: #ffffff;
+  background: transparent;
+  border: transparent;
+  cursor: pointer;
+  font-size: 0.875rem;
+  min-height: 42px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 9999999;
+}
+.modal__close-button img {
+  height: 32px;
+  width: 32px;
+}
+
+.modal__active {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+@media screen and (min-width: 768px) and (max-width: calc(1024px - 1px)) {
+  .navbar__list {
+    background: #e7e7e7;
+    flex-direction: column;
+    height: 0px;
+    left: 0;
+    overflow-y: hidden;
+    position: absolute;
+    transition: 0.6s ease-in-out;
+    top: 67px;
+    visibility: hidden;
+    width: 100%;
+    z-index: 1000;
+  }
+}
+@media screen and (max-width: calc(768px - 1px)) {
+  .navbar__list {
+    background: #e7e7e7;
+    flex-direction: column;
+    height: 0px;
+    left: 0;
+    overflow-y: hidden;
+    position: absolute;
+    transition: 0.6s ease-in-out;
+    top: 67px;
+    visibility: hidden;
+    width: 100%;
+    z-index: 1000;
+  }
+}
+@media screen and (max-width: 480px) {
+  .navbar__list {
+    background: #e7e7e7;
+    flex-direction: column;
+    height: 0px;
+    left: 0;
+    overflow-y: hidden;
+    position: absolute;
+    transition: 0.6s ease-in-out;
+    top: 67px;
+    visibility: hidden;
+    width: 100%;
+    z-index: 1000;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .navbar__list {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
+  .navbar__list {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
+  .navbar__list {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+}
+.navbar__list a {
+  display: block;
+  padding: 0.5rem;
+  transition: 0.5s ease-in-out;
+}
+.navbar__list a:hover {
+  opacity: 0.5;
+}
+@media screen and (min-width: 768px) and (max-width: calc(1024px - 1px)) {
+  .navbar__list a {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    margin: 0 1rem;
+    padding: 1rem 0;
+  }
+}
+@media screen and (max-width: calc(768px - 1px)) {
+  .navbar__list a {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    margin: 0 1rem;
+    padding: 1rem 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .navbar__list a {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    margin: 0 1rem;
+    padding: 1rem 0;
+  }
+}
+
+.navbar--active .navbar__list {
+  height: calc(100% - 67px);
+  overflow-y: auto;
+  visibility: visible;
+}
+
+.menu__container {
+  height: 100%;
+  width: 100%;
+}
+
+.menu__list {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  height: 100%;
+  overflow-y: auto;
+  padding: 1rem 0;
+  width: 100%;
+}
+@media screen and (min-width: 768px) and (max-width: calc(1024px - 1px)) {
+  .menu__list {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: calc(768px - 1px)) {
+  .menu__list {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 480px) {
+  .menu__list {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .menu__list {
+    justify-content: start;
+  }
+}
+.menu__list li {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  width: 100%;
+}
+.menu__list span {
+  display: block;
+  text-align: center;
+}
+.menu__list a {
+  display: inline-block;
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+}
+@media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
+  .container {
+    max-width: 1440px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+  background: #e7e7e7;
+  padding: 1rem 2%;
+  width: 100%;
+}
+.header__brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=main.css.map */
