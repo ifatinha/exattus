@@ -1,0 +1,78 @@
+@use "../base/colors"as *;
+@use "../global/animations"as *;
+
+.site-content {
+    @include apply-bg-color(primary-color);
+    position: relative;
+    z-index : 2;
+}
+
+.site-container {
+    margin : 0 auto;
+    padding: 0 1rem;
+    width  : 100%;
+}
+
+.site-efftect {
+    height  : 100%;
+    inset   : 0;
+    position: fixed;
+    width   : 100%;
+    z-index : -1;
+
+    .effect {
+        background: rgba(255, 255, 255, 0.04);
+        height    : 100vh;
+        position  : absolute;
+        top       : 0;
+        width     : 1px;
+
+        &:nth-child(1) {
+            left: 5%;
+        }
+
+        &:nth-child(2) {
+            left: 25%;
+        }
+
+        &:nth-child(3) {
+            left: 50%;
+        }
+
+        &:nth-child(4) {
+            left: 75%;
+        }
+
+        &:nth-child(5) {
+            left: 95%;
+        }
+
+        &:nth-child(1) {
+            &::after {
+                animation-delay: 0.05s;
+            }
+        }
+
+        &::after {
+            @include run-effect();
+            background: linear-gradient(rgba(131, 131, 131, 0.1) 0%, rgb(119, 190, 255) 75%, rgba(131, 131, 131, 0.1) 100%);
+            content   : "";
+            display   : block;
+            height    : 70px;
+            left      : 0px;
+            position  : absolute;
+            top       : 50%;
+            width     : 100%;
+        }
+    }
+}
+
+@keyframes run {
+    0% {
+        top: -50%;
+    }
+
+    100% {
+        top: 110%;
+    }
+}

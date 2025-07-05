@@ -104,6 +104,10 @@ a {
   text-decoration: none;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .burger__button {
   align-items: center;
   display: flex;
@@ -508,6 +512,85 @@ a {
   opacity: 1;
   transform: translateY(0);
   visibility: visible;
+}
+
+@keyframes run {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+.site-content {
+  position: relative;
+  z-index: 2;
+}
+
+.site-container {
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.site-efftect {
+  height: 100%;
+  inset: 0;
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+}
+.site-efftect .effect {
+  background: rgba(255, 255, 255, 0.04);
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  width: 1px;
+}
+.site-efftect .effect:nth-child(1) {
+  left: 5%;
+}
+.site-efftect .effect:nth-child(2) {
+  left: 25%;
+}
+.site-efftect .effect:nth-child(3) {
+  left: 50%;
+}
+.site-efftect .effect:nth-child(4) {
+  left: 75%;
+}
+.site-efftect .effect:nth-child(5) {
+  left: 95%;
+}
+.site-efftect .effect:nth-child(1)::after {
+  animation-delay: 0.05s;
+}
+.site-efftect .effect::after {
+  animation-name: run;
+  animation-duration: 5s;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  background: linear-gradient(rgba(131, 131, 131, 0.1) 0%, rgb(119, 190, 255) 75%, rgba(131, 131, 131, 0.1) 100%);
+  content: "";
+  display: block;
+  height: 70px;
+  left: 0px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+@keyframes run {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
