@@ -1,15 +1,29 @@
 // Estilos para containers que definem a largura e o alinhamento do conteúdo principal da página.
-@use "../global/responsive" as *;
+@use "../global/responsive"as *;
 
 .container {
-    margin: 0 auto;
-    width : 100%;
-
-    @include devices(xl) {
-        max-width: 1440px;
-    }
+    background: darkgray;
+    margin    : 0 auto;
+    max-width : 1440px;
+    width     : 100%;
 
     @include devices(l) {
         max-width: 1200px;
+    }
+
+    @include devices(l) {
+        max-width: 960px;
+    }
+
+    @include devices(t) {
+        max-width: 720px;
+    }
+
+    @include devices(m) {
+        max-width: 540px;
+    }
+
+    @include devices(xs) {
+        max-width: 440px;
     }
 }

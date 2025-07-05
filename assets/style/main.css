@@ -61,6 +61,7 @@ video {
   display: block;
   height: auto;
   max-width: 100%;
+  width: 100%;
 }
 
 iframe {
@@ -304,17 +305,34 @@ a {
 }
 
 .container {
+  background: darkgray;
   margin: 0 auto;
+  max-width: 1440px;
   width: 100%;
-}
-@media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
-  .container {
-    max-width: 1440px;
-  }
 }
 @media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
   .container {
     max-width: 1200px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: calc(1024px - 1px)) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media screen and (max-width: calc(768px - 1px)) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .container {
+    max-width: 440px;
   }
 }
 
@@ -347,6 +365,28 @@ a {
 }
 .header__brand img {
   height: auto;
+}
+
+.main-content {
+  background: darkgreen;
+  overflow: hidden;
+  padding-top: 15.625rem;
+  width: 100%;
+}
+
+.banner-inner {
+  background: orange;
+  padding-bottom: 6.875rem;
+  position: relative;
+}
+
+.banner-img {
+  height: auto;
+  max-width: 100%;
+  position: absolute;
+  right: -10px;
+  top: 0;
+  width: 950px;
 }
 
 .sidebar {
