@@ -1,5 +1,8 @@
 @use "typography"as *;
 @use "colors"as *;
+@use "../global/responsive"as *;
+@use "mixins"as *;
+@use "../util/prefixes"as *;
 
 html {
     scroll-behavior: smooth;
@@ -7,8 +10,8 @@ html {
 
 html,
 body {
-    height  : 100%;
-    width   : 100%
+    height: 100%;
+    width : 100%
 }
 
 body {
@@ -25,4 +28,61 @@ a {
 
 .overflow-hidden {
     overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include russo-one-regular();
+    margin-bottom: 1rem;
+}
+
+.title {
+    @include prefix(background-clip, text);
+    @include flex(center, start, 0);
+    background             : linear-gradient(60deg, #3663D8 -20%, #77BEFF 100%);
+    background-clip        : text;
+    font-weight            : 700;
+    margin-bottom          : px-to-rem(16);
+    text-transform         : uppercase;
+    -webkit-text-fill-color: transparent;
+
+    img {
+        height: 28px;
+        width : 28px;
+    }
+}
+
+.order-md-0 {
+    order: 0;
+
+    @include mobile-landscape {
+        order: 1;
+    }
+}
+
+.order-md-1 {
+
+    @include devices(m) {
+        order: 1;
+    }
+
+    @include devices(xs) {
+        order: 1;
+    }
+}
+
+.attract-hover {
+    display: inline-block;
+}
+
+.attract-hover-easing {
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    @include hover {
+        transform: translate(6px, 31.3333px);
+    }
 }

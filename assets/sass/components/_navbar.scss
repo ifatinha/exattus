@@ -5,20 +5,8 @@
 
 .navbar {
 
-    @include flex(center, space-between, 4rem);
-    width: 100%;
-
-    &__brand {
-        min-width: 250px;
-
-        img {
-            height        : 60px;
-            vertical-align: middle;
-        }
-    }
-
     &__menu {
-        @include flex(center, space-between);
+        @include flex(center, space-between, 2rem);
 
         @include ipad-landscape() {
             @include flex(center, space-between);
@@ -29,7 +17,7 @@
         }
 
         @include devices(l) {
-            display: none;
+            //display: none;
         }
 
         .menu__link {

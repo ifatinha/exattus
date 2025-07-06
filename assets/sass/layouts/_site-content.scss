@@ -3,8 +3,8 @@
 
 .site-content {
     @include apply-bg-color(primary-color);
-    position: relative;
-    z-index : 2;
+    position  : relative;
+    z-index   : 2;
 }
 
 .site-container {

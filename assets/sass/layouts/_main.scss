@@ -1,16 +1,22 @@
 @use "../util/functions"as *;
 @use "../global/responsive"as *;
+@use "../util/prefixes"as *;
+@use "../base/typography"as *;
+@use "../base/mixins"as *;
+@use "../base/colors"as *;
 
 .main-content {
-    background : darkgreen;
     overflow   : hidden;
-    padding-top: px-to-rem(250);
+    padding-top: px-to-rem(150);
     width      : 100%;
+
+    @include devices-large-screens {
+        padding-top: px-to-rem(250);
+    }
 }
 
 .banner-inner {
-    background    : orange;
-    padding-bottom: px-to-rem(110);
+    padding-bottom: px-to-rem(120);
     position      : relative;
 }
 
@@ -21,4 +27,124 @@
     right    : -10px;
     top      : 0;
     width    : 950px;
+    z-index  : 1;
+
+    @include devices(xs) {
+        display: none;
+    }
+}
+
+.main-banner-content {
+    padding : 1rem 2%;
+    position: relative;
+    z-index : 2;
+}
+
+.main-title {
+    font-size  : get-font-size(140);
+    line-height: px-to-rem(150);
+
+    @include devices(l) {
+        font-size  : get-font-size(85);
+        line-height: px-to-rem(95);
+    }
+
+    @include devices(t) {
+        font-size  : get-font-size(62);
+        line-height: px-to-rem(72);
+    }
+
+    @include devices(m) {
+        font-size  : get-font-size(44);
+        line-height: px-to-rem(40);
+    }
+
+    @include devices(xs) {
+        font-size  : get-font-size(44);
+        line-height: px-to-rem(40);
+    }
+}
+
+.main-text {
+    @include flex(center, start, 2rem);
+    flex-wrap    : wrap;
+    margin-bottom: px-to-rem(30);
+
+    @include devices-large-screens() {
+        margin-bottom: px-to-rem(60);
+    }
+
+    @include devices(m) {
+        gap: 0;
+
+        .main-description {
+            order: 1;
+        }
+    }
+
+    @include devices(xs) {
+        gap: 0;
+
+        .main-description {
+            order: 1;
+        }
+    }
+}
+
+.main-description {
+    max-width : 450px;
+    margin-top: px-to-rem(20);
+    width     : 100%;
+
+    @include devices(m);
+    margin-top: 0;
+}
+
+.main-text {
+    @include apply-color(light-silver);
+}
+
+.main-info {
+    @include flex(center, start, 2rem);
+    flex-wrap: wrap;
+    width    : 100%;
+
+    @include devices-large-screens {
+        gap: 6rem;
+    }
+}
+
+.main-counter {
+    @include flex(center, start, 30px);
+    @include russo-one-regular();
+    border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+    padding      : 20px 0;
+    position     : relative;
+
+    &::before {
+        background: linear-gradient(170deg, #3663D8 0%, #77BEFF 100%);
+        bottom    : -3px;
+        content   : "";
+        height    : 3px;
+        left      : 0;
+        position  : absolute;
+        width     : 50px;
+    }
+
+    .counter-number {
+        font-size: get-font-size(48);
+
+        @include devices(m) {
+            font-size: get-font-size(36);
+        }
+
+        @include devices(xs) {
+            font-size: get-font-size(36);
+        }
+    }
+
+    .counter-info {
+        font-size: get-font-size(22);
+        width    : 190px;
+    }
 }

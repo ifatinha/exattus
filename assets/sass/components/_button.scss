@@ -2,6 +2,7 @@
 @use "../base/mixins"as *;
 @use "../base/typography"as *;
 @use "../global/responsive"as *;
+@use "../util/functions"as *;
 
 .burger__button {
     @include flex(center, center, 10px);
@@ -91,5 +92,49 @@
         &::after {
             transform: rotate(-45deg);
         }
+    }
+}
+
+.btn-round {
+    @include flex(center, center, 10px);
+    @include rounded(160px, true);
+    background    : transparent;
+    border        : 1px solid rgba(255, 255, 255, 0.15);
+    flex-direction: column;
+    padding       : px-to-rem(15);
+    position      : relative;
+    transition    : all 0.35s ease-in-out;
+    z-index       : 2;
+
+    @include hover {
+        border: 1px solid #77BEFF;
+
+        span {
+            color: get-color(sky-blue);
+        }
+    }
+
+    &::after {
+        border-radius: 50%;
+        border       : 1px solid rgba(255, 255, 255, 0.15);
+        content      : "";
+        height       : 100%;
+        position     : absolute;
+        right        : -6px;
+        transition   : all 0.35s ease-in-out;
+        top          : -6px;
+        width        : 100%;
+        z-index      : -1;
+    }
+
+    span {
+        color         : get-color(sky-blue);
+        text-transform: capitalize;
+        transition    : all 0.35s ease-in-out;
+    }
+
+    img {
+        height: 20px;
+        width : 20px;
     }
 }
