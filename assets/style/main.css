@@ -94,9 +94,9 @@ body {
 
 body {
   background-color: #000000;
+  color: #d4d6d7;
   font-family: "Jost", sans-serif;
   font-optical-sizing: auto;
-  color: #d4d6d7;
   font-size: 1.125rem;
 }
 
@@ -463,8 +463,9 @@ h6 {
 }
 
 .banner-img {
-  height: auto;
+  height: 100%;
   max-width: 100%;
+  object-fit: cover;
   position: absolute;
   right: -10px;
   top: 0;

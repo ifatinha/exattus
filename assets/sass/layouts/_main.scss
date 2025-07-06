@@ -21,13 +21,14 @@
 }
 
 .banner-img {
-    height   : auto;
-    max-width: 100%;
-    position : absolute;
-    right    : -10px;
-    top      : 0;
-    width    : 950px;
-    z-index  : 1;
+    height    : 100%;
+    max-width : 100%;
+    object-fit: cover;
+    position  : absolute;
+    right     : -10px;
+    top       : 0;
+    width     : 950px;
+    z-index   : 1;
 
     @include devices(xs) {
         display: none;
