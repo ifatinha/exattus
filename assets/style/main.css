@@ -178,17 +178,30 @@ h6 {
 }
 
 .attract-hover {
-  background: #3663D8;
   display: inline-block;
 }
 
 .attract-hover-easing {
   transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-.attract-hover-easing:hover {
-  transform: translate(6px, 31.3333px);
+@keyframes run {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
 }
-
+@keyframes bounce_513 {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
 .burger__button {
   align-items: center;
   display: flex;
@@ -282,6 +295,9 @@ h6 {
 .btn-round:hover::after {
   border-color: #77BEFF;
 }
+.btn-round:active {
+  transform: scale(0.95);
+}
 .btn-round::after {
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -295,6 +311,7 @@ h6 {
   z-index: -1;
 }
 .btn-round span {
+  color: #77BEFF;
   text-transform: capitalize;
   transition: all 0.35s ease-in-out;
 }
@@ -811,14 +828,6 @@ h6 {
   visibility: visible;
 }
 
-@keyframes run {
-  0% {
-    top: -50%;
-  }
-  100% {
-    top: 110%;
-  }
-}
 .site-content {
   position: relative;
   z-index: 2;

@@ -91,14 +91,13 @@ h6 {
 }
 
 .attract-hover {
-    background: #3663D8;
-    display   : inline-block;
+    display: inline-block;
 }
 
 .attract-hover-easing {
     transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
     @include hover {
-        transform: translate(6px, 31.3333px);
+        //transform: translate(6px, 31.3333px);
     }
 }

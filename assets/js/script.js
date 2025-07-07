@@ -1,9 +1,11 @@
 import { openModal, closeModal } from "./modules/modalController.js";
+import { counter } from "./modules/counter.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const functionsToCall = [
     { name: "openModal", func: openModal },
     { name: "closeModal", func: closeModal },
+    { name: "counter", func: counter },
   ];
 
   functionsToCall.forEach(({ name, func }) => {

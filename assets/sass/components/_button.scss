@@ -3,6 +3,7 @@
 @use "../base/typography"as *;
 @use "../global/responsive"as *;
 @use "../util/functions"as *;
+@use "../global/animations"as *;
 
 .burger__button {
     @include flex(center, center, 10px);
@@ -100,6 +101,7 @@
 .btn-round {
     @include flex(center, center, 10px);
     @include rounded(160px, true);
+    // @include bounce-effect();
     background    : transparent;
     border        : 1px solid rgba(255, 255, 255, 0.15);
     flex-direction: column;
@@ -120,6 +122,10 @@
         }
     }
 
+    &:active {
+        transform: scale(0.95);
+    }
+
     &::after {
         border-radius: 50%;
         border       : 1px solid rgba(255, 255, 255, 0.15);
@@ -134,7 +140,7 @@
     }
 
     span {
-        //color         : get-color(sky-blue);
+        color         : get-color(sky-blue);
         text-transform: capitalize;
         transition    : all 0.35s ease-in-out;
     }
