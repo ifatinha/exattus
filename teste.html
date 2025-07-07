@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .attract-hover {
+            /* border: 1px solid red; */
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .attract-hover-easing {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .btn-round {
+            padding: 14px 28px;
+            font-weight: bold;
+            transition: transform 0.3s ease-out, box-shadow 0.3s;
+            will-change: transform;
+            background: transparent;
+            border: 1px solid blue;
+            flex-direction: column;
+            position: relative;
+            transition: all 0.35s ease-in-out;
+            z-index: 2;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="attract-hover attract-hover--attracted">
+        <div class="attract-hover-easing">
+            <a href="#" class="btn-round btn-efect">
+                <span>Saiba mais</span>
+                <img src="assets/images/arrow.svg" alt="Arrow">
+            </a>
+        </div>
+    </div>
+
+    <script>
+        const hoverArea = document.querySelector('.attract-hover');
+        const btnRound = document.querySelector('.btn-round');
+
+        hoverArea.addEventListener('mousemove', (ev) => {
+            const rect = hoverArea.getBoundingClientRect()
+            const x = ev.clientX - rect.left - rect.width / 2;
+            const y = ev.clientY - rect.top - rect.height / 2;
+
+            // Reduz a força do efeito (ajuste conforme necessário)
+            const strength = 0.3;
+
+            btnRound.style.transform = `translate(${x * strength}px, ${y * strength}px)`;
+        });
+
+        hoverArea.addEventListener('mouseleave', () => {
+            btnRound.style.transform = 'translate(0, 0)';
+        });
+
+    </script>
+</body>
+
+</html>
