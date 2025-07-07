@@ -27,5 +27,5 @@ export function counter() {
 
   setTimeout(() => {
     requestAnimationFrame(animateCounter);
-  }, 2000); // Inicia a animação após 1 segundo
+  }, 9000); // Inicia a animação após 1 segundo
 }

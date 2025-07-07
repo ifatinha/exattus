@@ -428,6 +428,41 @@ h6 {
   visibility: visible;
 }
 
+.loader {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  background-color: #000000;
+  height: 100%;
+  inset: 0;
+  opacity: 1;
+  position: fixed;
+  transition: opacity 5s ease-in-out;
+  width: 100%;
+  z-index: 999999;
+}
+.loader-text {
+  animation: glow 1.5s ease-in-out infinite;
+  font-size: 2.5rem;
+  letter-spacing: 0.125rem;
+}
+
+.loader-disabled {
+  opacity: 0;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #77BEFF, 0 0 10px #77BEFF;
+  }
+  50% {
+    text-shadow: 0 0 15px #77BEFF, 0 0 30px #00bfa6;
+  }
+  100% {
+    text-shadow: 0 0 5px #77BEFF, 0 0 10px #77BEFF;
+  }
+}
 .container {
   margin: 0 auto;
   max-width: 1440px;

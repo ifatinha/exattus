@@ -1,0 +1,40 @@
+@use "../base/colors"as *;
+@use "../base/mixins"as *;
+@use "../base/typography"as *;
+@use "../util/functions"as *;
+
+.loader {
+    @include flex(center, center);
+    @include apply-bg-color(pure-black);
+    height    : 100%;
+    inset     : 0;
+    opacity   : 1;
+    position  : fixed;
+    transition: opacity 5s ease-in-out;
+    width     : 100%;
+    z-index   : 999999;
+
+    &-text {
+        animation     : glow 1.5s ease-in-out infinite;
+        font-size     : 2.5rem;
+        letter-spacing: px-to-rem(2);
+    }
+}
+
+.loader-disabled {
+    opacity: 0;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #77BEFF, 0 0 10px #77BEFF;
+    }
+
+    50% {
+        text-shadow: 0 0 15px #77BEFF, 0 0 30px #00bfa6;
+    }
+
+    100% {
+        text-shadow: 0 0 5px #77BEFF, 0 0 10px #77BEFF;
+    }
+}
