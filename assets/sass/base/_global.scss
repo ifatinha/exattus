@@ -4,6 +4,21 @@
 @use "mixins"as *;
 @use "../util/prefixes"as *;
 
+//Scrollbar
+::-webkit-scrollbar {
+    height: 6px;
+    width : 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(119, 190, 255);
+}
+
+::-webkit-scrollbar-track {
+    background-color: get-color(soft-gray);
+    border          : 1px solid get-color(soft-gray);
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -76,7 +91,8 @@ h6 {
 }
 
 .attract-hover {
-    display: inline-block;
+    background: #3663D8;
+    display   : inline-block;
 }
 
 .attract-hover-easing {

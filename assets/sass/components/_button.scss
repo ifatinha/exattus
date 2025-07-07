@@ -10,7 +10,7 @@
     border    : none;
     cursor    : pointer;
     min-height: 50px;
-    min-width : 48px;
+    min-width : 50px;
     padding   : 10px;
     transition: .5s ease-in-out;
 
@@ -22,14 +22,13 @@
         opacity: .5;
 
         .burger__button-bars {
-            background: transparent !important;
 
             &::before {
-                transform: rotate(45deg);
+                width: 100%
             }
 
             &::after {
-                transform: rotate(-45deg);
+                width: 100%
             }
         }
     }
@@ -72,10 +71,13 @@
 
         &::after {
             transform: translate(0, -10px);
+            width    : 50%;
         }
 
         &::before {
             transform: translate(0, 10px);
+            right    : 0;
+            width    : 50%;
         }
     }
 }
@@ -107,10 +109,14 @@
     z-index       : 2;
 
     @include hover {
-        border: 1px solid #77BEFF;
+        border-color: get-color(sky-blue);
 
         span {
             color: get-color(sky-blue);
+        }
+
+        &::after {
+            border-color: get-color(sky-blue);
         }
     }
 
@@ -128,7 +134,7 @@
     }
 
     span {
-        color         : get-color(sky-blue);
+        //color         : get-color(sky-blue);
         text-transform: capitalize;
         transition    : all 0.35s ease-in-out;
     }

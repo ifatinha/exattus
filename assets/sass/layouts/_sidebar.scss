@@ -108,6 +108,10 @@
 .sidebar--menu {
     @include apply-bg-color("onyx-black");
 
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+
     .sidebar__header {
         @include flex(center, space-around, 1px);
         justify-content: start;

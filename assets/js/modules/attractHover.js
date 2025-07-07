@@ -4,7 +4,7 @@ function attractHover(selector, options = {}) {
     magnetism: 3,
     attractClass: "attract-hover",
     attractEasingClass: "attract-hover-easing",
-    attractAttractedClass: "attract-hover-attracted",
+    attractAttractedClass: "attract-hover--attracted",
     ...options,
   };
 

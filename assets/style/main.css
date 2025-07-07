@@ -82,6 +82,20 @@ textarea {
   resize: none;
 }
 
+::-webkit-scrollbar {
+  height: 6px;
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(119, 190, 255);
+}
+
+::-webkit-scrollbar-track {
+  background-color: #dfdfdf;
+  border: 1px solid #dfdfdf;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -164,6 +178,7 @@ h6 {
 }
 
 .attract-hover {
+  background: #3663D8;
   display: inline-block;
 }
 
@@ -183,21 +198,18 @@ h6 {
   border: none;
   cursor: pointer;
   min-height: 50px;
-  min-width: 48px;
+  min-width: 50px;
   padding: 10px;
   transition: 0.5s ease-in-out;
 }
 .burger__button:hover {
   opacity: 0.5;
 }
-.burger__button:hover .burger__button-bars {
-  background: transparent !important;
-}
 .burger__button:hover .burger__button-bars::before {
-  transform: rotate(45deg);
+  width: 100%;
 }
 .burger__button:hover .burger__button-bars::after {
-  transform: rotate(-45deg);
+  width: 100%;
 }
 .burger__button-visually {
   font-family: "Jost", sans-serif;
@@ -227,9 +239,12 @@ h6 {
 }
 .burger__button-bars::after {
   transform: translate(0, -10px);
+  width: 50%;
 }
 .burger__button-bars::before {
   transform: translate(0, 10px);
+  right: 0;
+  width: 50%;
 }
 
 .burger__active .burger__button-bars {
@@ -259,10 +274,13 @@ h6 {
   z-index: 2;
 }
 .btn-round:hover {
-  border: 1px solid #77BEFF;
+  border-color: #77BEFF;
 }
 .btn-round:hover span {
   color: #77BEFF;
+}
+.btn-round:hover::after {
+  border-color: #77BEFF;
 }
 .btn-round::after {
   border-radius: 50%;
@@ -277,7 +295,6 @@ h6 {
   z-index: -1;
 }
 .btn-round span {
-  color: #77BEFF;
   text-transform: capitalize;
   transition: all 0.35s ease-in-out;
 }
@@ -744,6 +761,9 @@ h6 {
 
 .sidebar--menu {
   background-color: #181818;
+}
+.sidebar--menu::-webkit-scrollbar {
+  width: 0;
 }
 .sidebar--menu .sidebar__header {
   align-items: center;

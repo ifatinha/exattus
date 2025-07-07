@@ -7,7 +7,8 @@ $theme-color: (
     graphite-black:#212529,
     onyx-black: #181818,
     cloud-silver: #e8e8e8,
-    light-silver: #d4d6d7
+    light-silver: #d4d6d7,
+    soft-gray: #dfdfdf
 );
 
 @mixin apply-color($key) {
