@@ -1,6 +1,7 @@
 import { openModal, closeModal } from "./modules/modalController.js";
 import { counter } from "./modules/counter.js";
 import { initLoader } from "./modules/loader.js";
+import { toTop } from "./modules/toTop.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const functionsToCall = [
@@ -8,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { name: "closeModal", func: closeModal },
     { name: "counter", func: counter },
     { name: "initLoader", func: initLoader },
+    { name: "toTop", func: toTop },
   ];
 
   functionsToCall.forEach(({ name, func }) => {

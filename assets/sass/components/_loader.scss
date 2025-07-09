@@ -28,7 +28,7 @@
 
     &::before,
     &::after {
-        @include rounded(130px, 130px);
+        @include rounded(130px, true);
         @include loader-effect();
         animation: loader 3s linear infinite;
         content  : "";
