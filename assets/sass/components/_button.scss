@@ -101,7 +101,6 @@
 .btn-round {
     @include flex(center, center, 10px);
     @include rounded(160px, true);
-    // @include bounce-effect();
     background    : transparent;
     border        : 1px solid rgba(255, 255, 255, 0.15);
     flex-direction: column;

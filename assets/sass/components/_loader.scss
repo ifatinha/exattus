@@ -1,40 +1,44 @@
 @use "../base/colors"as *;
 @use "../base/mixins"as *;
 @use "../base/typography"as *;
+@use "../global/animations"as *;
 @use "../util/functions"as *;
 
-.loader {
+.preloader {
     @include flex(center, center);
     @include apply-bg-color(pure-black);
     height    : 100%;
     inset     : 0;
-    opacity   : 1;
+    opacity   : 0; // lembrar de remover quando for usar o loader
     position  : fixed;
-    transition: opacity 5s ease-in-out;
+    transition: all .3s ease-in-out;
     width     : 100%;
+    visibility: hidden; // lembrar de remover quando for usar o loader
     z-index   : 999999;
-
-    &-text {
-        animation     : glow 1.5s ease-in-out infinite;
-        font-size     : 2.5rem;
-        letter-spacing: px-to-rem(2);
-    }
 }
 
-.loader-disabled {
-    opacity: 0;
+.preloader-disabled {
+    display   : none;
+    opacity   : 0;
+    visibility: hidden;
 }
 
-@keyframes glow {
-    0% {
-        text-shadow: 0 0 5px #77BEFF, 0 0 10px #77BEFF;
+.loader {
+    position: relative;
+
+    &::before,
+    &::after {
+        @include rounded(130px, 130px);
+        @include loader-effect();
+        animation: loader 3s linear infinite;
+        content  : "";
+        color    : white;
+        border   : 1px solid #0060fa;
+        position : absolute;
     }
 
-    50% {
-        text-shadow: 0 0 15px #77BEFF, 0 0 30px #00bfa6;
-    }
-
-    100% {
-        text-shadow: 0 0 5px #77BEFF, 0 0 10px #77BEFF;
+    &::after {
+        animation-delay: 1s;
+        opacity        : 0;
     }
 }

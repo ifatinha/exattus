@@ -1,19 +1,16 @@
 export function initLoader() {
-  window.addEventListener("load", () => {
+  /*window.addEventListener("load", () => {
     setTimeout(() => {
-      const loader = document.querySelector("#loader");
+      const loader = document.querySelector("#preloader");
 
       if (!loader) {
         console.error("Loader element not found");
         return;
       }
 
-      loader.style.opacity = "0";
-      loader.style.transition = "opacity 5s ease-in-out";
-
       setTimeout(() => {
-        loader.style.display = "none";
-      }, 500);
-    }, 8000);
-  });
+        loader.classList.add("preloader-disabled");
+      }, 2000);
+    }, 5000);
+  });*/
 }

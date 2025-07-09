@@ -192,14 +192,16 @@ h6 {
     top: 110%;
   }
 }
-@keyframes bounce_513 {
-  0%, 100% {
-    transform: translateY(-25%);
-    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+@keyframes loader {
+  0% {
+    border: 1em solid #0060fa;
+    transform: scale(0);
+    opacity: 1;
   }
-  50% {
-    transform: translateY(0);
-    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  100% {
+    border: 0 solid #0060fa;
+    transform: scale(1);
+    opacity: 0;
   }
 }
 .burger__button {
@@ -428,7 +430,7 @@ h6 {
   visibility: visible;
 }
 
-.loader {
+.preloader {
   align-items: center;
   display: flex;
   gap: 1rem;
@@ -436,33 +438,46 @@ h6 {
   background-color: #000000;
   height: 100%;
   inset: 0;
-  opacity: 1;
+  opacity: 0;
   position: fixed;
-  transition: opacity 5s ease-in-out;
+  transition: all 0.3s ease-in-out;
   width: 100%;
+  visibility: hidden;
   z-index: 999999;
 }
-.loader-text {
-  animation: glow 1.5s ease-in-out infinite;
-  font-size: 2.5rem;
-  letter-spacing: 0.125rem;
+
+.preloader-disabled {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
 
-.loader-disabled {
+.loader {
+  position: relative;
+}
+.loader::before, .loader::after {
+  height: 130px;
+  width: 130px;
+  border-radius: 65px;
+  animation-name: loader;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  animation: loader 3s linear infinite;
+  content: "";
+  color: white;
+  border: 1px solid #0060fa;
+  position: absolute;
+}
+.loader::after {
+  animation-delay: 1s;
   opacity: 0;
 }
 
-@keyframes glow {
-  0% {
-    text-shadow: 0 0 5px #77BEFF, 0 0 10px #77BEFF;
-  }
-  50% {
-    text-shadow: 0 0 15px #77BEFF, 0 0 30px #00bfa6;
-  }
-  100% {
-    text-shadow: 0 0 5px #77BEFF, 0 0 10px #77BEFF;
-  }
-}
 .container {
   margin: 0 auto;
   max-width: 1440px;
