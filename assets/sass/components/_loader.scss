@@ -42,3 +42,13 @@
         opacity        : 0;
     }
 }
+
+/* Esconde o conteúdo até o preloader sumir */
+#content.hidden {
+    opacity   : 0;
+    transition: opacity 2s ease;
+}
+
+#content.show {
+    opacity: 1;
+}

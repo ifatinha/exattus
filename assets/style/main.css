@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html,
 body,
@@ -177,13 +178,11 @@ h6 {
   }
 }
 
-.attract-hover {
-  display: inline-block;
+.paragraph {
+  color: #d4d6d7;
+  line-height: px-to-rem(28);
 }
 
-.attract-hover-easing {
-  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
 @keyframes run {
   0% {
     top: -50%;
@@ -331,6 +330,7 @@ h6 {
   width: 55px;
   border-radius: 27.5px;
   box-shadow: rgba(255, 255, 255, 0.1) 0px 0px 0px 2px inset;
+  border: 2px solid rgb(119, 190, 255);
   bottom: 3.125rem;
   color: rgb(119, 190, 255);
   opacity: 0;
@@ -338,8 +338,13 @@ h6 {
   right: 3.125rem;
   transition: 0.5s ease-in-out;
   transform: translateY(30px);
+  transition: 0.3s ease-in-out;
   visibility: hidden;
-  z-index: 9999;
+  z-index: 999999;
+}
+.back-to-top:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.15);
 }
 
 .back-to-top.active {
@@ -502,6 +507,16 @@ h6 {
 .loader::after {
   animation-delay: 1s;
   opacity: 0;
+}
+
+/* Esconde o conteúdo até o preloader sumir */
+#content.hidden {
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+#content.show {
+  opacity: 1;
 }
 
 .container {
@@ -972,6 +987,102 @@ h6 {
   }
   100% {
     top: 110%;
+  }
+}
+.section {
+  padding: 10rem 2% 0;
+}
+@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
+  .section {
+    padding-top: 7.5rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: calc(1024px - 1px)) {
+  .section {
+    padding-top: 5rem;
+  }
+}
+@media screen and (max-width: calc(768px - 1px)) {
+  .section {
+    padding-top: 2.5rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .section {
+    padding-top: 2.5rem;
+  }
+}
+.section .title {
+  margin-bottom: 1.25rem;
+}
+.section .container {
+  padding: 0 12px;
+}
+
+.section-description {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 1920px) {
+  .section-description {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
+  .section-description {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
+  .section-description {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .section-description .paragraph {
+    padding-right: 3rem;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
+  .section-description .paragraph {
+    padding-right: 3rem;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
+  .section-description .paragraph {
+    padding-right: 3rem;
+  }
+}
+
+.section-title {
+  font-size: 1.875rem;
+  line-height: 2.5rem;
+  text-transform: capitalize;
+}
+@media screen and (min-width: 1920px) {
+  .section-title {
+    font-size: 3.75rem;
+    line-height: 4.375rem;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
+  .section-title {
+    font-size: 3.75rem;
+    line-height: 4.375rem;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
+  .section-title {
+    font-size: 3.75rem;
+    line-height: 4.375rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: calc(1024px - 1px)) {
+  .section-title {
+    font-size: 2.625rem;
+    line-height: 3.25rem;
   }
 }
 

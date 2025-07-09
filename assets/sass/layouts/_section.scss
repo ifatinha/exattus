@@ -1,0 +1,65 @@
+@use "../util/functions"as *;
+@use "../global/responsive"as *;
+@use "../base/colors"as *;
+@use "../base/typography"as *;
+
+.section {
+    padding: px-to-rem(160) 2% 0;
+
+    @include devices(l) {
+        padding-top: px-to-rem(120);
+    }
+
+    @include devices(t) {
+        padding-top: px-to-rem(80);
+    }
+
+    @include devices(m) {
+        padding-top: px-to-rem(40);
+    }
+
+    @include devices(xs) {
+        padding-top: px-to-rem(40);
+    }
+
+    .title {
+        margin-bottom: px-to-rem(20);
+    }
+
+    .container {
+        padding: 0 12px;
+    }
+}
+
+.section-description {
+    display              : grid;
+    grid-template-columns: 1fr;
+    gap                  : px-to-rem(24);
+    margin-bottom        : px-to-rem(32);
+
+    @include devices-large-screens() {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .paragraph {
+        @include devices-large-screens() {
+            padding-right: 3rem;
+        }
+    }
+}
+
+.section-title {
+    font-size     : get-font-size(30);
+    line-height   : px-to-rem(40);
+    text-transform: capitalize;
+
+    @include devices-large-screens() {
+        font-size  : get-font-size(60);
+        line-height: px-to-rem(70);
+    }
+
+    @include devices(t) {
+        font-size  : get-font-size(42);
+        line-height: px-to-rem(52);
+    }
+}

@@ -154,6 +154,7 @@
     @include flex(center, center, 0);
     @include rounded(55px, true);
     box-shadow: rgba(255, 255, 255, 0.1) 0px 0px 0px 2px inset;
+    border    : 2px solid rgb(119, 190, 255);
     bottom    : px-to-rem(50);
     color     : rgb(119, 190, 255);
     opacity   : 0;
@@ -161,8 +162,14 @@
     right     : px-to-rem(50);
     transition: 0.5s ease-in-out;
     transform : translateY(30px);
+    transition: .3s ease-in-out;
     visibility: hidden;
-    z-index   : 9999;
+    z-index   : 999999;
+
+    @include hover {
+        border-color: rgba(255, 255, 255, 0.15);
+        color       : rgba(255, 255, 255, 0.15);
+    }
 }
 
 .back-to-top.active {

@@ -90,14 +90,7 @@ h6 {
     }
 }
 
-.attract-hover {
-    display: inline-block;
-}
-
-.attract-hover-easing {
-    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-
-    @include hover {
-        //transform: translate(6px, 31.3333px);
-    }
+.paragraph {
+    @include apply-color(light-silver);
+    line-height: px-to-rem(28);
 }
