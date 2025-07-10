@@ -18,7 +18,7 @@
     }
 
     &-row {
-        width      : 100%;
+        width: 100%;
 
         &:nth-child(2) {
             display              : grid;
@@ -92,10 +92,11 @@
 .about-list {
     @include flex(start, start, 12px);
     flex-direction: column;
-    margin-bottom : px-to-rem(32);
+    margin-bottom : px-to-rem(16);
 
     @include devices-large-screens() {
-        margin-left: px-to-rem(120);
+        margin-left  : px-to-rem(120);
+        margin-bottom: px-to-rem(32);
     }
 
     li {

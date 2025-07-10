@@ -119,38 +119,3 @@
         gap: 6rem;
     }
 }
-
-.main-counter {
-    @include flex(center, start, 30px);
-    @include russo-one-regular();
-    border-bottom: 3px solid rgba(255, 255, 255, 0.1);
-    padding      : 20px 0;
-    position     : relative;
-
-    &::before {
-        background: linear-gradient(170deg, #3663D8 0%, #77BEFF 100%);
-        bottom    : -3px;
-        content   : "";
-        height    : 3px;
-        left      : 0;
-        position  : absolute;
-        width     : 50px;
-    }
-
-    .counter-number {
-        font-size: get-font-size(48);
-
-        @include devices(m) {
-            font-size: get-font-size(36);
-        }
-
-        @include devices(xs) {
-            font-size: get-font-size(36);
-        }
-    }
-
-    .counter-info {
-        font-size: get-font-size(22);
-        width    : 190px;
-    }
-}
