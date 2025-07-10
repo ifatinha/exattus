@@ -5,6 +5,7 @@
 @use "../base/typography"as *;
 @use "../util/prefixes"as *;
 
+/** section about */
 .about {
     .about-content {
         display              : grid;
@@ -17,7 +18,7 @@
     }
 
     &-row {
-        width: 100%;
+        width      : 100%;
 
         &:nth-child(2) {
             display              : grid;
@@ -25,6 +26,10 @@
 
             @include devices-large-screens {
                 grid-column          : 2 / -1;
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @include devices(t) {
                 grid-template-columns: 1fr 1fr;
             }
         }
@@ -35,8 +40,10 @@
     padding-right: px-to-rem(40);
 
     img {
-        height    : 100%;
-        object-fit: cover;
+        border-radius: 10px;
+        height       : auto;
+        object-fit   : cover;
+        max-width    : 100%;
     }
 }
 
@@ -45,7 +52,7 @@
 }
 
 .about-reviews {
-    margin-bottom: px-to-rem(16);
+    margin-bottom: px-to-rem(22);
     padding-right: 0;
 
     @include devices-large-screens {
@@ -78,6 +85,28 @@
                     opacity: .5;
                 }
             }
+        }
+    }
+}
+
+.about-list {
+    @include flex(start, start, 12px);
+    flex-direction: column;
+    margin-bottom : px-to-rem(32);
+
+    @include devices-large-screens() {
+        margin-left: px-to-rem(120);
+    }
+
+    li {
+        @include flex(baseline, start, 12px);
+        font-weight  : 400;
+        margin-bottom: 10px;
+        transition   : all .3s ease-in-out;
+
+        img {
+            height: 15px;
+            width : 15px;
         }
     }
 }

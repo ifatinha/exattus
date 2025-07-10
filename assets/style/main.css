@@ -1124,6 +1124,7 @@ h6 {
   }
 }
 
+/** section about */
 .about .about-content {
   display: grid;
   grid-template-columns: 1fr;
@@ -1169,13 +1170,20 @@ h6 {
     grid-template-columns: 1fr 1fr;
   }
 }
+@media screen and (min-width: 768px) and (max-width: calc(1024px - 1px)) {
+  .about-row:nth-child(2) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 .about-image {
   padding-right: 2.5rem;
 }
 .about-image img {
-  height: 100%;
+  border-radius: 10px;
+  height: auto;
   object-fit: cover;
+  max-width: 100%;
 }
 
 .about-details {
@@ -1183,7 +1191,7 @@ h6 {
 }
 
 .about-reviews {
-  margin-bottom: 1rem;
+  margin-bottom: 1.375rem;
   padding-right: 0;
 }
 @media screen and (min-width: 1920px) {
@@ -1234,6 +1242,43 @@ h6 {
 }
 .about-reviews p span a:hover {
   opacity: 0.5;
+}
+
+.about-list {
+  align-items: start;
+  display: flex;
+  gap: 12px;
+  justify-content: start;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 1920px) {
+  .about-list {
+    margin-left: 7.5rem;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
+  .about-list {
+    margin-left: 7.5rem;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
+  .about-list {
+    margin-left: 7.5rem;
+  }
+}
+.about-list li {
+  align-items: baseline;
+  display: flex;
+  gap: 12px;
+  justify-content: start;
+  font-weight: 400;
+  margin-bottom: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.about-list li img {
+  height: 15px;
+  width: 15px;
 }
 
 /*# sourceMappingURL=main.css.map */
