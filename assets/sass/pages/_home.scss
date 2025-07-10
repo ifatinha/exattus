@@ -1,0 +1,83 @@
+@use "../util/functions"as *;
+@use "../global/responsive"as *;
+@use "../base/mixins"as *;
+@use "../base/colors"as *;
+@use "../base/typography"as *;
+@use "../util/prefixes"as *;
+
+.about {
+    .about-content {
+        display              : grid;
+        grid-template-columns: 1fr;
+        margin-top           : px-to-rem(50);
+
+        @include devices-large-screens {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &-row {
+        width: 100%;
+
+        &:nth-child(2) {
+            display              : grid;
+            grid-template-columns: 1fr;
+
+            @include devices-large-screens {
+                grid-column          : 2 / -1;
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    }
+}
+
+.about-image {
+    padding-right: px-to-rem(40);
+
+    img {
+        height    : 100%;
+        object-fit: cover;
+    }
+}
+
+.about-details {
+    padding: px-to-rem(30) px-to-rem(12) 0;
+}
+
+.about-reviews {
+    margin-bottom: px-to-rem(16);
+    padding-right: 0;
+
+    @include devices-large-screens {
+        padding-right: px-to-rem(40);
+    }
+
+    p {
+        @include font-primary();
+        @include flex(start, start, 10px);
+        color      : get-color(light-silver);
+        font-weight: 500;
+        line-height: normal;
+
+        span {
+            &:first-of-type {
+                flex-shrink: 0;
+            }
+
+            i {
+                color: get-color(solar-gold);
+            }
+
+            a {
+                @include prefix(background-clip, text);
+                @include prefix(text-fill-color, transparent);
+                background-image: linear-gradient(60deg, #3663D8 -20%, #77BEFF 100%);
+                transition      : .3s ease-in-out;
+
+                @include hover() {
+                    opacity: .5;
+                }
+            }
+        }
+    }
+}
