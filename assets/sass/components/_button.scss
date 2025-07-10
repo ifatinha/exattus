@@ -107,6 +107,7 @@
     padding       : px-to-rem(15);
     position      : relative;
     transition    : all 0.35s ease-in-out;
+    text-align    : center;
     z-index       : 2;
 
     @include hover {

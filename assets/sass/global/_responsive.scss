@@ -92,6 +92,13 @@ $xs-device : 480px;
     }
 }
 
+// Mixin para dispositivos exatamente 768px em landscape
+@mixin ipad-2-landscape {
+    @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+        @content;
+    }
+}
+
 @mixin mobile-landscape {
     @media screen and (max-width: 767px) and (orientation: landscape) {
         @content;

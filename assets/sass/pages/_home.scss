@@ -10,6 +10,7 @@
     .about-content {
         display              : grid;
         grid-template-columns: 1fr;
+        gap                  : px-to-rem(32);
         margin-top           : px-to-rem(50);
 
         @include devices-large-screens {
@@ -23,6 +24,7 @@
         &:nth-child(2) {
             display              : grid;
             grid-template-columns: 1fr;
+            gap                  : px-to-rem(16);
 
             @include devices-large-screens {
                 grid-column          : 2 / -1;
@@ -48,11 +50,24 @@
 }
 
 .about-details {
-    padding: px-to-rem(30) px-to-rem(12) 0;
+    @include flex(start, space-around, 30px);
+    flex-direction: column;
+    padding       : px-to-rem(40) px-to-rem(12) 0;
+
+    @include devices-large-screens {
+        padding-top: px-to-rem(80);
+    }
+
+    @include ipad-2-landscape() {
+        padding-top: px-to-rem(20);
+    }
+
+    @include devices(l) {
+        padding-top: px-to-rem(40);
+    }
 }
 
 .about-reviews {
-    margin-bottom: px-to-rem(22);
     padding-right: 0;
 
     @include devices-large-screens {
@@ -92,11 +107,18 @@
 .about-list {
     @include flex(start, start, 12px);
     flex-direction: column;
-    margin-bottom : px-to-rem(16);
+    margin-left   : 0;
 
     @include devices-large-screens() {
-        margin-left  : px-to-rem(120);
-        margin-bottom: px-to-rem(32);
+        margin-left: px-to-rem(195);
+    }
+
+    @include ipad-2-landscape() {
+        margin-left: 0
+    }
+
+    @include devices(l) {
+        margin-left: 0
     }
 
     li {
@@ -109,5 +131,15 @@
             height: 15px;
             width : 15px;
         }
+    }
+}
+
+.about-contact {
+    @include flex(start, center, 30px);
+    flex-direction: column;
+    position      : relative;
+
+    @include devices-large-screens() {
+        align-items: center;
     }
 }
