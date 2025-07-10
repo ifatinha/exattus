@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html,
 body,
@@ -329,13 +328,12 @@ h6 {
   height: 55px;
   width: 55px;
   border-radius: 27.5px;
-  box-shadow: rgba(255, 255, 255, 0.1) 0px 0px 0px 2px inset;
   border: 2px solid rgb(119, 190, 255);
-  bottom: 3.125rem;
+  bottom: 1.875rem;
   color: rgb(119, 190, 255);
   opacity: 0;
   position: fixed;
-  right: 3.125rem;
+  right: 1.25rem;
   transition: 0.5s ease-in-out;
   transform: translateY(30px);
   transition: 0.3s ease-in-out;
@@ -471,19 +469,53 @@ h6 {
   inset: 0;
   opacity: 0;
   position: fixed;
-  transition: all 0.3s ease-in-out;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
   width: 100%;
   visibility: hidden;
   z-index: 999999;
 }
 
-.preloader-disabled {
-  display: none;
-  opacity: 0;
-  visibility: hidden;
+.preloader-title {
+  color: rgba(255, 255, 255, 0.1);
+  font-size: 4.375rem;
+  line-height: 5.625rem;
+  letter-spacing: 2px;
+  position: absolute;
+}
+@media screen and (min-width: 1920px) {
+  .preloader-title {
+    font-size: 18.75rem;
+    line-height: 20rem;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
+  .preloader-title {
+    font-size: 18.75rem;
+    line-height: 20rem;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
+  .preloader-title {
+    font-size: 18.75rem;
+    line-height: 20rem;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
+  .preloader-title {
+    font-size: 11.875rem;
+    line-height: 12.5rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: calc(1024px - 1px)) {
+  .preloader-title {
+    font-size: 8.75rem;
+    line-height: 10rem;
+  }
 }
 
 .loader {
+  height: 130px;
+  width: 130px;
   position: relative;
 }
 .loader::before, .loader::after {
@@ -498,7 +530,6 @@ h6 {
   animation-direction: normal;
   animation-fill-mode: forwards;
   animation-play-state: running;
-  animation: loader 3s linear infinite;
   content: "";
   color: white;
   border: 1px solid #0060fa;
@@ -509,14 +540,14 @@ h6 {
   opacity: 0;
 }
 
-/* Esconde o conteúdo até o preloader sumir */
-#content.hidden {
+#siteContent.hidden {
   opacity: 0;
-  transition: opacity 2s ease;
+  transition: opacity 5s ease;
 }
 
-#content.show {
+#siteContent.visible {
   opacity: 1;
+  overflow: auto;
 }
 
 .container {
@@ -1040,25 +1071,14 @@ h6 {
     grid-template-columns: 1fr 1fr;
   }
 }
-@media screen and (min-width: 1920px) {
-  .section-description .paragraph {
-    padding-right: 3rem;
-  }
-}
-@media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
-  .section-description .paragraph {
-    padding-right: 3rem;
-  }
-}
-@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
-  .section-description .paragraph {
-    padding-right: 3rem;
-  }
+.section-description .paragraph {
+  align-self: center;
 }
 
 .section-title {
   font-size: 1.875rem;
   line-height: 2.5rem;
+  padding-right: 1rem;
   text-transform: capitalize;
 }
 @media screen and (min-width: 1920px) {

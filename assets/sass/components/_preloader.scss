@@ -1,0 +1,73 @@
+@use "../base/colors"as *;
+@use "../base/mixins"as *;
+@use "../base/typography"as *;
+@use "../global/animations"as *;
+@use "../util/functions"as *;
+@use "../global/responsive"as *;
+
+.preloader {
+    @include flex(center, center);
+    @include apply-bg-color(pure-black);
+    height    : 100%;
+    inset     : 0;
+    opacity   : 0; // lembrar de remover quando for usar o loader
+    position  : fixed;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+    width     : 100%;
+    visibility: hidden; // lembrar de remover quando for usar o loader
+    z-index   : 999999;
+}
+
+.preloader-title {
+    color         : rgba(255, 255, 255, 0.1);
+    font-size     : get-font-size(70);
+    line-height   : px-to-rem(90);
+    letter-spacing: 2px;
+    position      : absolute;
+
+    @include devices-large-screens {
+        font-size  : get-font-size(300);
+        line-height: px-to-rem(320);
+    }
+
+    @include devices(l) {
+        font-size  : get-font-size(190);
+        line-height: px-to-rem(200);
+    }
+
+    @include devices(t) {
+        font-size  : get-font-size(140);
+        line-height: px-to-rem(160);
+    }
+}
+
+.loader {
+    height  : 130px;
+    width   : 130px;
+    position: relative;
+
+    &::before,
+    &::after {
+        @include rounded(130px, true);
+        @include loader-effect();
+        content : "";
+        color   : white;
+        border  : 1px solid get-color(blue-voltage);
+        position: absolute;
+    }
+
+    &::after {
+        animation-delay: 1s;
+        opacity        : 0;
+    }
+}
+
+#siteContent.hidden {
+    opacity   : 0;
+    transition: opacity 5s ease;
+}
+
+#siteContent.visible {
+    opacity : 1;
+    overflow: auto;
+}

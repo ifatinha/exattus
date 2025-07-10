@@ -42,15 +42,14 @@
     }
 
     .paragraph {
-        @include devices-large-screens() {
-            padding-right: 3rem;
-        }
+        align-self  : center;
     }
 }
 
 .section-title {
     font-size     : get-font-size(30);
     line-height   : px-to-rem(40);
+    padding-right : 1rem;
     text-transform: capitalize;
 
     @include devices-large-screens() {

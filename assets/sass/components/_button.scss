@@ -153,13 +153,12 @@
 .back-to-top {
     @include flex(center, center, 0);
     @include rounded(55px, true);
-    box-shadow: rgba(255, 255, 255, 0.1) 0px 0px 0px 2px inset;
     border    : 2px solid rgb(119, 190, 255);
-    bottom    : px-to-rem(50);
+    bottom    : px-to-rem(30);
     color     : rgb(119, 190, 255);
     opacity   : 0;
     position  : fixed;
-    right     : px-to-rem(50);
+    right     : px-to-rem(20);
     transition: 0.5s ease-in-out;
     transform : translateY(30px);
     transition: .3s ease-in-out;
