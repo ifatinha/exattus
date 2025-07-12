@@ -57,7 +57,7 @@ h6 {
 
 .title {
     @include prefix(background-clip, text);
-    @include flex(center, start, 0);
+    @include flex(center, start, 4px);
     background             : linear-gradient(60deg, #3663D8 -20%, #77BEFF 100%);
     background-clip        : text;
     font-weight            : 700;

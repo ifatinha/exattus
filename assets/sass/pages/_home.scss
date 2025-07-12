@@ -143,3 +143,99 @@
         align-items: center;
     }
 }
+
+.history {
+    @include apply-bg-color(pure-black);
+    padding            : px-to-rem(70) 0;
+
+    @include devices-large-screens {
+        padding-top   : px-to-rem(150);
+        padding-bottom: px-to-rem(150);
+    }
+
+    @include devices(t) {
+        padding-top   : px-to-rem(90);
+        padding-bottom: px-to-rem(90);
+    }
+
+    &-content {
+        display              : grid;
+        grid-template-columns: 1fr;
+        padding              : 0 1rem;
+
+        @include devices-large-screens {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &-col {
+        padding: 0 px-to-rem(12);
+    }
+
+    &-wrapper {
+        border       : 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        position     : relative;
+        padding      : 1rem;
+
+        @include devices-large-screens {
+            padding: px-to-rem(60) px-to-rem(50);
+        }
+
+        span {
+            @include russo-one-regular();
+        }
+    }
+
+    &-year-sm {
+        background             : linear-gradient(160deg, #3663D8 0%, #77BEFF 20%, #00D1FF 100%);
+        background-clip        : text;
+        font-size              : get-font-size(32);
+        margin-bottom          : px-to-rem(32);
+        -webkit-text-fill-color: transparent;
+        @include prefix(background-clip, text);
+    }
+
+    &-info {
+        display: flex;
+        gap    : px-to-rem(30);
+
+        @include devices(m) {
+            flex-direction: column;
+        }
+
+        @include devices(xs) {
+            flex-direction: column;
+        }
+    }
+
+    &-year-lg {
+        align-self         : center;
+        color              : transparent;
+        font-size          : get-font-size(80);
+        line-height        : normal;
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+
+        @include devices-large-screens {
+            font-size   : get-font-size(110);
+            transform   : scale(-1);
+            writing-mode: vertical-lr;
+        }
+
+        @include devices(t) {
+            font-size   : get-font-size(110);
+            transform   : scale(-1);
+            writing-mode: vertical-lr;
+        }
+    }
+
+    &-description {
+
+        blockquote {
+            border-left : 5px solid #77BEFF;
+            box-shadow  : 0 5px 30px rgba(0, 0, 0, 0.05);
+            margin      : px-to-rem(20) 0;
+            padding-left: px-to-rem(15);
+        }
+    }
+}
