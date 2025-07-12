@@ -146,7 +146,7 @@
 
 .history {
     @include apply-bg-color(pure-black);
-    padding            : px-to-rem(70) 0;
+    padding: px-to-rem(70) 0;
 
     @include devices-large-screens {
         padding-top   : px-to-rem(150);
@@ -239,3 +239,5 @@
         }
     }
 }
+
+/** End section about */
