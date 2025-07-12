@@ -4,6 +4,7 @@
 @use "../base/colors"as *;
 @use "../base/typography"as *;
 @use "../util/prefixes"as *;
+@use "../global/animations"as *;
 
 /** section about */
 .about {
@@ -260,6 +261,45 @@
     }
 
     &-inner {
-        width: 100%;
+        @include marquee();
+        align-items: center;
+        display    : flex;
+        gap        : px-to-rem(60);
+        position   : relative;
+        white-space: nowwrap;
+        width      : 100%;
+    }
+
+    &-item {
+        align-items   : center;
+        display       : flex;
+        flex          : 0 0 auto;
+        gap           : 15px;
+        padding-bottom: 1px;
+    }
+
+    &-icon {
+        background: green;
+        height    : 50px;
+        width     : 50px;
+
+        img {
+            object-fit: cover;
+        }
+    }
+
+    &-title {
+        @include russo-one-regular();
+        color              : transparent;
+        font-size          : get-font-size(42);
+        line-height        : normal;
+        position           : relative;
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+        top                : 3px;
+        transition         : .3s ease-in-out;
+
+        @include hover {
+            color: get-color(pure-white)
+        }
     }
 }

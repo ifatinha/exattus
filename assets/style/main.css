@@ -241,6 +241,14 @@ h6 {
     opacity: 0;
   }
 }
+@keyframes marquee {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 .burger__button {
   align-items: center;
   display: flex;
@@ -1520,7 +1528,50 @@ h6 {
   width: 100%;
 }
 .space-inner {
+  animation-name: marquee;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  align-items: center;
+  display: flex;
+  gap: 3.75rem;
+  position: relative;
+  white-space: nowwrap;
   width: 100%;
+}
+.space-item {
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 15px;
+  padding-bottom: 1px;
+}
+.space-icon {
+  background: green;
+  height: 50px;
+  width: 50px;
+}
+.space-icon img {
+  object-fit: cover;
+}
+.space-title {
+  font-family: "Russo One", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: transparent;
+  font-size: 2.625rem;
+  line-height: normal;
+  position: relative;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+  top: 3px;
+  transition: 0.3s ease-in-out;
+}
+.space-title:hover {
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=main.css.map */
