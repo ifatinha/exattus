@@ -1354,25 +1354,21 @@ h6 {
 @media screen and (min-width: 1920px) {
   .history {
     padding-top: 9.375rem;
-    padding-bottom: 9.375rem;
   }
 }
 @media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
   .history {
     padding-top: 9.375rem;
-    padding-bottom: 9.375rem;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
   .history {
     padding-top: 9.375rem;
-    padding-bottom: 9.375rem;
   }
 }
 @media screen and (min-width: 768px) and (max-width: calc(1024px - 1px)) {
   .history {
     padding-top: 5.625rem;
-    padding-bottom: 5.625rem;
   }
 }
 .history-content {
@@ -1493,5 +1489,38 @@ h6 {
 }
 
 /** End section about */
+/** start section services*/
+.space {
+  background-color: #000000;
+  padding: 3.125rem 0;
+  width: 100%;
+}
+@media screen and (min-width: 1920px) {
+  .space {
+    padding: 9.375rem 0;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
+  .space {
+    padding: 9.375rem 0;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
+  .space {
+    padding: 9.375rem 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: calc(1024px - 1px)) {
+  .space {
+    padding: 5.625rem 0;
+  }
+}
+.space-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.space-inner {
+  width: 100%;
+}
 
 /*# sourceMappingURL=main.css.map */

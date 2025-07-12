@@ -149,13 +149,11 @@
     padding: px-to-rem(70) 0;
 
     @include devices-large-screens {
-        padding-top   : px-to-rem(150);
-        padding-bottom: px-to-rem(150);
+        padding-top: px-to-rem(150);
     }
 
     @include devices(t) {
-        padding-top   : px-to-rem(90);
-        padding-bottom: px-to-rem(90);
+        padding-top: px-to-rem(90);
     }
 
     &-content {
@@ -232,7 +230,7 @@
     &-description {
 
         blockquote {
-            border-left : 5px solid #77BEFF;
+            border-left : 5px solid get-color(sky-blue);
             box-shadow  : 0 5px 30px rgba(0, 0, 0, 0.05);
             margin      : px-to-rem(20) 0;
             padding-left: px-to-rem(15);
@@ -241,3 +239,27 @@
 }
 
 /** End section about */
+
+/** start section services*/
+.space {
+    @include apply-bg-color(pure-black);
+    padding: px-to-rem(50) 0;
+    width  : 100%;
+
+    @include devices-large-screens {
+        padding: px-to-rem(150) 0;
+    }
+
+    @include devices(t) {
+        padding: px-to-rem(90) 0;
+    }
+
+    &-wrapper {
+        overflow: hidden;
+        width   : 100%;
+    }
+
+    &-inner {
+        width: 100%;
+    }
+}
