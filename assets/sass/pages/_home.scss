@@ -336,17 +336,14 @@
 
         @include devices-large-screens {
             grid-template-columns: repeat(4, 1fr);
-            gap                  : 2rem;
         }
 
         @include devices(l) {
             grid-template-columns: repeat(3, 1fr);
-            gap                  : 2rem;
         }
 
         @include devices(t) {
             grid-template-columns: repeat(2, 1fr);
-            gap                  : 2rem;
         }
     }
 }
