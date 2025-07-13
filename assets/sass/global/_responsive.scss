@@ -55,6 +55,13 @@ $xs-device : 480px;
     }
 }
 
+/* aplicar estilos com menos ou nenhuma animação */
+@mixin prefers-reduced-motion {
+    @media (prefers-reduced-motion: reduce) {
+        @content;
+    }
+}
+
 // Mixin para dispositivos grandes
 @mixin devices-large-screens {
     @include devices(xxl) {

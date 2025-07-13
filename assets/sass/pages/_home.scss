@@ -243,9 +243,9 @@
 
 /** start section services*/
 .space {
-    @include apply-bg-color(pure-black);
-    padding: px-to-rem(50) 0;
-    width  : 100%;
+    overflow: hidden;
+    padding : px-to-rem(50) 0;
+    width   : 100%;
 
     @include devices-large-screens {
         padding: px-to-rem(150) 0;
@@ -254,52 +254,65 @@
     @include devices(t) {
         padding: px-to-rem(90) 0;
     }
+}
 
-    &-wrapper {
-        overflow: hidden;
-        width   : 100%;
-    }
+.marquee-wrapper {
+    overflow  : hidden;
+    padding   : 0 2%;
+    position  : relative;
+    transition: all 0.3s ease-in-out;
+    width     : 100%;
+}
 
-    &-inner {
-        @include marquee();
-        align-items: center;
-        display    : flex;
-        gap        : px-to-rem(60);
-        position   : relative;
-        white-space: nowwrap;
-        width      : 100%;
-    }
+.marquee-inner {
+    @include marquee();
+    align-items: center;
+    display    : flex;
+    gap        : px-to-rem(40);
+    position   : relative;
+    white-space: nowwrap;
+    width      : 100%;
+}
 
-    &-item {
-        align-items   : center;
-        display       : flex;
-        flex          : 0 0 auto;
-        gap           : 15px;
-        padding-bottom: 1px;
-    }
+.marquee-item {
+    align-items   : center;
+    display       : flex;
+    flex          : 0 0 auto;
+    gap           : 15px;
+    padding-bottom: 1px;
+}
 
-    &-icon {
-        background: green;
-        height    : 50px;
-        width     : 50px;
+.marquee-icon {
+    height    : 50px;
+    font-size : 42px;
+    text-align: center;
+    width     : 50px;
 
-        img {
-            object-fit: cover;
-        }
-    }
-
-    &-title {
-        @include russo-one-regular();
-        color              : transparent;
-        font-size          : get-font-size(42);
-        line-height        : normal;
-        position           : relative;
-        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
-        top                : 3px;
-        transition         : .3s ease-in-out;
-
-        @include hover {
-            color: get-color(pure-white)
-        }
+    i {
+        background             : linear-gradient(160deg, #3663D8 0%, #77BEFF 20%, #00D1FF 100%);
+        background-clip        : text;
+        -webkit-text-fill-color: transparent;
+        @include prefix(background-clip, text);
     }
 }
+
+.marquee-title {
+    @include russo-one-regular();
+    color              : transparent;
+    font-size          : get-font-size(42);
+    line-height        : normal;
+    position           : relative;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+    top                : 3px;
+    transition         : all .3s ease-in-out;
+
+    @include hover {
+        color: get-color(pure-white);
+    }
+
+    @include devices-small-screens {
+        font-size: get-font-size(32);
+    }
+}
+
+// Finalizar animação do marquee

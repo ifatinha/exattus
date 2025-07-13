@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html,
 body,
@@ -82,6 +83,7 @@ textarea {
   resize: none;
 }
 
+/* aplicar estilos com menos ou nenhuma animação */
 ::-webkit-scrollbar {
   height: 6px;
   width: 4px;
@@ -247,6 +249,14 @@ h6 {
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+@keyframes marqueeRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translatex(0);
   }
 }
 .burger__button {
@@ -1499,7 +1509,7 @@ h6 {
 /** End section about */
 /** start section services*/
 .space {
-  background-color: #000000;
+  overflow: hidden;
   padding: 3.125rem 0;
   width: 100%;
 }
@@ -1523,11 +1533,16 @@ h6 {
     padding: 5.625rem 0;
   }
 }
-.space-wrapper {
+
+.marquee-wrapper {
   overflow: hidden;
+  padding: 0 2%;
+  position: relative;
+  transition: all 0.3s ease-in-out;
   width: 100%;
 }
-.space-inner {
+
+.marquee-inner {
   animation-name: marquee;
   animation-duration: 30s;
   animation-timing-function: linear;
@@ -1538,27 +1553,38 @@ h6 {
   animation-play-state: running;
   align-items: center;
   display: flex;
-  gap: 3.75rem;
+  gap: 2.5rem;
   position: relative;
   white-space: nowwrap;
   width: 100%;
 }
-.space-item {
+
+.marquee-item {
   align-items: center;
   display: flex;
   flex: 0 0 auto;
   gap: 15px;
   padding-bottom: 1px;
 }
-.space-icon {
-  background: green;
+
+.marquee-icon {
   height: 50px;
+  font-size: 42px;
+  text-align: center;
   width: 50px;
 }
-.space-icon img {
-  object-fit: cover;
+.marquee-icon i {
+  background: linear-gradient(160deg, #3663D8 0%, #77BEFF 20%, #00D1FF 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  -o-background-clip: text;
+  background-clip: text;
 }
-.space-title {
+
+.marquee-title {
   font-family: "Russo One", sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -1568,10 +1594,25 @@ h6 {
   position: relative;
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
   top: 3px;
-  transition: 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-.space-title:hover {
+.marquee-title:hover {
   color: #ffffff;
+}
+@media screen and (min-width: 768px) and (max-width: calc(1024px - 1px)) {
+  .marquee-title {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: calc(768px - 1px)) {
+  .marquee-title {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .marquee-title {
+    font-size: 2rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -67,3 +67,24 @@
     animation-fill-mode      : none;
     animation-play-state     : running;
 }
+
+@keyframes marqueeRight {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translatex(0);
+    }
+}
+
+@mixin marqueeRight($duration: 50s, $direction: normal, $timing: linear) {
+    animation-name           : marquee;
+    animation-duration       : $duration;
+    animation-timing-function: $timing;
+    animation-delay          : 0s;
+    animation-iteration-count: infinite;
+    animation-direction      : $direction;
+    animation-fill-mode      : none;
+    animation-play-state     : running;
+}
