@@ -42,13 +42,14 @@
     }
 
     .paragraph {
-        align-self  : center;
+        align-self: center;
     }
 }
 
 .section-title {
     font-size     : get-font-size(30);
     line-height   : px-to-rem(40);
+    margin        : px-to-rem(10) 0 px-to-rem(20);
     padding-right : 1rem;
     text-transform: capitalize;
 

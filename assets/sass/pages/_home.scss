@@ -316,3 +316,69 @@
 }
 
 // Finalizar animação do marquee
+
+.services {
+    //background    : darkblue;
+    padding-bottom: px-to-rem(40);
+
+    @include devices-large-screens {
+        padding-bottom: px-to-rem(150);
+    }
+
+    @include devices(t) {
+        padding-bottom: px-to-rem(90);
+    }
+
+    &-content {
+        display              : grid;
+        grid-template-columns: 1fr;
+        gap                  : 1rem;
+
+        @include devices-large-screens {
+            grid-template-columns: repeat(4, 1fr);
+            gap                  : 2rem;
+        }
+
+        @include devices(l) {
+            grid-template-columns: repeat(3, 1fr);
+            gap                  : 2rem;
+        }
+
+        @include devices(t) {
+            grid-template-columns: repeat(2, 1fr);
+            gap                  : 2rem;
+        }
+    }
+}
+
+.services-col {
+    padding: 0 px-to-rem(14);
+}
+
+.services-col-1 {
+    grid-column: 1/span;
+
+    @include devices-large-screens {
+        grid-column: 1/3;
+    }
+
+    @include devices(t) {
+        grid-column: 1/3;
+    }
+
+    .paragraph {
+        @include devices-large-screens {
+            margin-left: 3rem;
+        }
+    }
+}
+
+.service-wrapper {
+    //@include apply-bg-color(pure-black);
+    border       : 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: px-to-rem(10);
+    height       : 100%;
+    padding      : px-to-rem(60) px-to-rem(40);
+    position     : relative;
+    transition   : all 0.3s ease-in-out;
+}
