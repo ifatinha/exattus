@@ -1719,12 +1719,33 @@ h6 {
 }
 
 .service-wrapper {
+  background-color: #000000;
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 0.625rem;
   height: 100%;
   padding: 3.75rem 2.5rem;
   position: relative;
   transition: all 0.3s ease-in-out;
+}
+
+.service-card::before {
+  background: linear-gradient(130deg, #3663D8, #77BEFF, #00D1FF) 100%;
+  border-radius: inherit;
+  content: "";
+  inset: 0;
+  margin: -3px;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-inner {
+  padding: 0 0 4px 4px;
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=main.css.map */
