@@ -409,6 +409,41 @@ h6 {
   visibility: visible;
 }
 
+.btn-arrow {
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  align-items: center;
+  display: flex;
+  gap: 0;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-color: #77BEFF;
+  cursor: pointer;
+  padding: 4px 4px 0 0;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.btn-arrow::after {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-color: #77BEFF;
+  bottom: -4px;
+  border-radius: 50%;
+  content: "";
+  height: 100%;
+  left: -4px;
+  opacity: 1;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+.btn-arrow img {
+  height: 18px;
+  vertical-align: middle;
+  width: 18px;
+}
+
 .modal {
   color: #ffffff;
   background: rgba(0, 0, 0, 0.7);
@@ -1676,6 +1711,7 @@ h6 {
 
 .services-col-1 {
   grid-column: 1/span;
+  padding-bottom: 2rem;
 }
 @media screen and (min-width: 1920px) {
   .services-col-1 {
@@ -1737,10 +1773,67 @@ h6 {
 .service-card:hover::before {
   opacity: 1;
 }
+.service-card:hover .service-icon {
+  margin-top: -70px;
+  opacity: 0;
+}
+.service-card:hover .service-bg-icon {
+  opacity: 0.2;
+}
+.service-card:hover .service-links {
+  margin-bottom: 0;
+  opacity: 1;
+}
 
 .service-inner {
   padding: 0 0 4px 4px;
   overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.service-icon {
+  margin-bottom: 1.25rem;
+  height: 60px;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+  width: 60px;
+}
+.service-icon i {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 3.75rem;
+}
+
+.service-bg-icon {
+  bottom: 20px;
+  height: 60px;
+  opacity: 0;
+  position: absolute;
+  right: 20px;
+  transition: all 0.3s ease-in-out;
+  width: 60px;
+}
+.service-bg-icon i {
+  font-size: 3.75rem;
+  background: linear-gradient(160deg, #3663D8 0%, #77BEFF 20%, #00D1FF 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  -o-background-clip: text;
+  background-clip: text;
+}
+
+.service-title {
+  font-size: 1.625rem;
+  margin-bottom: 1.25rem;
+}
+
+.service-links {
+  margin-top: 1.25rem;
+  margin-bottom: -70px;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
 }
 
 /*# sourceMappingURL=main.css.map */

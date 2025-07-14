@@ -177,3 +177,35 @@
     transform : translateY(0);
     visibility: visible;
 }
+
+.btn-arrow {
+    @include rounded(50px, true);
+    @include flex(center, center, 0);
+    background  : transparent;
+    border      : 1px solid rgba(255, 255, 255, 0.15);
+    border-color: get-color(sky-blue);
+    cursor      : pointer;
+    padding     : 4px 4px 0 0;
+    position    : relative;
+    transition  : all .3s ease-in-out;
+
+    &::after {
+        border       : 1px solid rgba(255, 255, 255, 0.1);
+        border-color : get-color(sky-blue);
+        bottom       : -4px;
+        border-radius: 50%;
+        content      : "";
+        height       : 100%;
+        left         : -4px;
+        opacity      : 1;
+        position     : absolute;
+        transition   : all .3s ease-in-out;
+        width        : 100%;
+    }
+
+    img {
+        height        : 18px;
+        vertical-align: middle;
+        width         : 18px;
+    }
+}
