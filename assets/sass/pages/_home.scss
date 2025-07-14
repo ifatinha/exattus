@@ -465,9 +465,10 @@
 }
 
 .cases-studios {
-    padding   : px-to-rem(50) 2% px-to-rem(50);
-    text-align: center;
-    width     : 100%;
+    margin-bottom: px-to-rem(30);
+    padding      : px-to-rem(50) 2% px-to-rem(50);
+    text-align   : center;
+    width        : 100%;
 
     @include devices-large-screens {
         padding: px-to-rem(150) 0 px-to-rem(150);
@@ -482,6 +483,116 @@
         display        : flex;
         justify-content: center;
         text-align     : center;
+    }
+}
+
+.cases-container {
+    padding: px-to-rem(12);
+}
+
+.cases-row {
+    display              : grid;
+    grid-template-columns: 1fr;
+    gap                  : 24px;
+
+    @include devices-large-screens {
+        grid-template-columns: repeat(5, 1fr);
+        gap                  : 2rem;
+    }
+
+    @include devices(t) {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+.case-studies-wrapper {
+    border-radius: px-to-rem(20);
+    height       : 800px;
+    overflow     : hidden;
+    position     : relative;
+    transition   : all .8s ease-in-out;
+
+    @include devices(l) {
+        height: 650px;
+    }
+
+    @include devices(t) {
+        height: 550px;
+    }
+
+    @include devices(m) {
+        max-height: 500px;
+    }
+
+    @include devices(xs) {
+        max-height: 500px;
+    }
+
+    @include hover {
+
+        .case-studies-category {
+            color: get-color(sky-blue);
+
+            &::before,
+            &::after {
+                border-color: get-color(sky-blue);
+            }
+        }
+    }
+}
+
+.case-studies-img {
+    border-radius: px-to-rem(20);
+    height       : 100%;
+    overflow     : hidden;
+
+    img {
+        background-repeat  : no-repeat;
+        background-position: center center;
+        background-size    : cover;
+        height             : 100%;
+        object-fit         : cover;
+        transition         : all .5s ease-in-out;
+
+        @include hover {
+            transform: scale(1.3);
+        }
+    }
+}
+
+.case-studies-category {
+    @include apply-color(pure-white);
+    border-radius: 80%;
+    position     : absolute;
+    padding      : px-to-rem(9) px-to-rem(37);
+    right        : px-to-rem(35);
+    top          : px-to-rem(15);
+    transition   : all .3s ease-in-out;
+
+    @include devices-large-screens() {
+        top: px-to-rem(30);
+    }
+
+    &::before,
+    &::after {
+        border       : 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 80%;
+        content      : "";
+        height       : 100%;
+        position     : absolute;
+        transition   : all .3s ease-in-out;
+        width        : 100%;
+        z-index      : 2;
+    }
+
+    &::before {
+        right: -5px;
+        top  : -2px;
+    }
+
+    &::after {
+        bottom: -2px;
+        left  : -5px;
     }
 }
 
