@@ -1836,4 +1836,38 @@ h6 {
   transition: all 0.3s ease-in-out;
 }
 
+.cases-studios {
+  padding: 3.125rem 2% 3.125rem;
+  text-align: center;
+  width: 100%;
+}
+@media screen and (min-width: 1920px) {
+  .cases-studios {
+    padding: 9.375rem 0 9.375rem;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
+  .cases-studios {
+    padding: 9.375rem 0 9.375rem;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
+  .cases-studios {
+    padding: 9.375rem 0 9.375rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: calc(1024px - 1px)) {
+  .cases-studios {
+    padding: 6.25rem 0 6.25rem;
+  }
+}
+.cases-studios .title {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+/** end section services */
+
 /*# sourceMappingURL=main.css.map */

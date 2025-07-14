@@ -463,3 +463,26 @@
     opacity      : 1;
     transition   : all .3s ease-in-out;
 }
+
+.cases-studios {
+    padding   : px-to-rem(50) 2% px-to-rem(50);
+    text-align: center;
+    width     : 100%;
+
+    @include devices-large-screens {
+        padding: px-to-rem(150) 0 px-to-rem(150);
+    }
+
+    @include devices(t) {
+        padding: px-to-rem(100) 0 px-to-rem(100);
+    }
+
+    .title {
+        align-items    : center;
+        display        : flex;
+        justify-content: center;
+        text-align     : center;
+    }
+}
+
+/** end section services */
