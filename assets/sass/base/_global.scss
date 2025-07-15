@@ -71,6 +71,15 @@ h6 {
     }
 }
 
+.text-center {
+    padding   : 0 2%;
+    text-align: center;
+
+    .title {
+        justify-content: center;
+    }
+}
+
 .order-md-0 {
     order: 0;
 

@@ -159,6 +159,14 @@ h6 {
   width: 28px;
 }
 
+.text-center {
+  padding: 0 2%;
+  text-align: center;
+}
+.text-center .title {
+  justify-content: center;
+}
+
 .order-md-0 {
   order: 0;
 }
@@ -1841,7 +1849,6 @@ h6 {
   background: #000000;
   margin-bottom: 1.875rem;
   padding: 3.125rem 2% 3.125rem;
-  text-align: center;
   width: 100%;
 }
 @media screen and (min-width: 1920px) {
@@ -1863,13 +1870,6 @@ h6 {
   .cases-studios {
     padding: 6.25rem 0 6.25rem;
   }
-}
-.cases-studios .title {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2.5rem;
-  text-align: center;
 }
 
 .cases-container {
@@ -2163,6 +2163,36 @@ h6 {
   .cases-studios-button {
     padding-top: 2.5rem;
   }
+}
+
+.testimonial {
+  padding: 3.125rem 0;
+  width: 100%;
+}
+@media screen and (min-width: 1920px) {
+  .testimonial {
+    padding: 9.375rem 0;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
+  .testimonial {
+    padding: 9.375rem 0;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
+  .testimonial {
+    padding: 9.375rem 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: calc(1024px - 1px)) {
+  .testimonial {
+    padding: 6.25rem 0;
+  }
+}
+.testimonial .section-title {
+  max-width: 750px;
+  margin: 20px auto 0;
+  width: 100%;
 }
 
 /** end section services */
