@@ -491,22 +491,26 @@
 }
 
 .cases-row {
-    display              : grid;
-    grid-template-columns: 1fr;
-    gap                  : 24px;
+    display: flex;
+    gap    : px-to-rem(30);
+    padding: 0 px-to-rem(30);
 
-    @include devices-large-screens {
-        grid-template-columns: repeat(5, 1fr);
-        gap                  : 2rem;
+    @include devices(m) {
+        gap      : px-to-rem(24);
+        flex-wrap: wrap;
+        padding  : 0;
     }
 
-    @include devices(t) {
-        grid-template-columns: repeat(5, 1fr);
+    @include devices(xs) {
+        gap      : px-to-rem(24);
+        flex-wrap: wrap;
+        padding  : 0;
     }
 }
 
 .case-studies-wrapper {
     border-radius: px-to-rem(20);
+    flex         : 1 1 0%;
     height       : 800px;
     overflow     : hidden;
     position     : relative;
@@ -521,17 +525,34 @@
     }
 
     @include devices(m) {
+        flex      : 0 1 100%;
         max-height: 500px;
     }
 
     @include devices(xs) {
+        flex      : 0 1 100%;
         max-height: 500px;
+    }
+
+    @include mobile-landscape {
+        flex : 0 1 auto;
+        width: calc(50% - 12px);
     }
 
     @include hover {
 
+        @include devices-large-screens {
+            flex-grow: 3.5;
+        }
+
+        @include devices(t) {
+            flex: 3 1 0%;
+        }
+
         .case-studies-category {
-            color: get-color(sky-blue);
+            color     : get-color(sky-blue);
+            opacity   : 1;
+            visibility: visible;
 
             &::before,
             &::after {
@@ -555,7 +576,7 @@
         transition         : all .5s ease-in-out;
 
         @include hover {
-            transform: scale(1.3);
+            transform: scale(1.1);
         }
     }
 }
@@ -563,11 +584,13 @@
 .case-studies-category {
     @include apply-color(pure-white);
     border-radius: 80%;
+    opacity      : 0;
     position     : absolute;
     padding      : px-to-rem(9) px-to-rem(37);
     right        : px-to-rem(35);
     top          : px-to-rem(15);
     transition   : all .3s ease-in-out;
+    visibility   : hidden;
 
     @include devices-large-screens() {
         top: px-to-rem(30);
