@@ -103,6 +103,7 @@
     @include rounded(160px, true);
     background    : transparent;
     border        : 1px solid rgba(255, 255, 255, 0.15);
+    color         : get-color(pure-white);
     flex-direction: column;
     padding       : px-to-rem(15);
     position      : relative;
@@ -140,7 +141,7 @@
     }
 
     span {
-        color         : get-color(sky-blue);
+        color         : get-color(pure-white);
         text-transform: capitalize;
         transition    : all 0.35s ease-in-out;
     }
