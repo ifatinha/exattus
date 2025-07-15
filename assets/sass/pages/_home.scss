@@ -542,7 +542,7 @@
     @include hover {
 
         @include devices-large-screens {
-            flex-grow: 3.5;
+            flex-grow: 3.3;
         }
 
         @include devices(t) {
@@ -559,6 +559,16 @@
                 border-color: get-color(sky-blue);
             }
         }
+
+        .case-studies-info {
+            opacity   : 1;
+            visibility: visible;
+        }
+
+        .case-studies-info-inner {
+            opacity   : 1;
+            visibility: visible;
+        }
     }
 }
 
@@ -574,6 +584,7 @@
         height             : 100%;
         object-fit         : cover;
         transition         : all .5s ease-in-out;
+        transition-delay   : 250ms;
 
         @include hover {
             transform: scale(1.1);
@@ -616,6 +627,97 @@
     &::after {
         bottom: -2px;
         left  : -5px;
+    }
+}
+
+.case-studies-info {
+    align-items     : start;
+    display         : flex;
+    flex-direction  : column;
+    justify-content : flex-end;
+    inset           : 0;
+    padding         : px-to-rem(40) px-to-rem(30);
+    position        : absolute;
+    transition      : all .5s ease-in-out;
+    transition-delay: 250ms;
+    z-index         : 1;
+    visibility      : hidden;
+
+    &::before {
+        align-items    : start;
+        background     : linear-gradient(180deg, rgba(0, 56, 255, 0) 40%, rgba(0, 56, 255, 0.5) 80%);
+        border-radius  : px-to-rem(20);
+        content        : "";
+        display        : flex;
+        flex-direction : column;
+        inset          : 0;
+        justify-content: flex-end;
+        opacity        : 1;
+        overflow       : hidden;
+        padding        : 40px;
+        position       : absolute;
+        transition     : all .3s ease-in-out;
+    }
+}
+
+.case-studies-info-inner {
+    opacity   : 0;
+    position  : relative;
+    text-align: left;
+    z-index   : 1;
+    visibility: hidden;
+}
+
+.case-studies-title {
+    font-size    : get-font-size(42);
+    margin-bottom: px-to-rem(20);
+    transition   : all 0.3s ease-in-out;
+}
+
+.case-studies-desc {
+    margin-bottom: px-to-rem(20);
+    transition   : all 0.4s ease-in-out;
+
+    p {
+        display           : -webkit-box;
+        line-clamp        : 2;
+        margin-bottom     : px-to-rem(20);
+        overflow          : hidden;
+        text-overflow     : ellipsis;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+}
+
+.case-studies-active {
+
+    @include devices-large-screens {
+        flex-grow: 3.3;
+    }
+
+    @include devices(t) {
+        flex: 3 1 0%;
+    }
+
+    .case-studies-category {
+        color     : get-color(sky-blue);
+        opacity   : 1;
+        visibility: visible;
+
+        &::before,
+        &::after {
+            border-color: get-color(sky-blue);
+        }
+    }
+
+    .case-studies-info {
+        opacity   : 1;
+        visibility: visible;
+    }
+
+    .case-studies-info-inner {
+        opacity   : 1;
+        visibility: visible;
     }
 }
 
