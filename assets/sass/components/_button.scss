@@ -165,7 +165,7 @@
     transform : translateY(30px);
     transition: .3s ease-in-out;
     visibility: hidden;
-    z-index   : 999999;
+    z-index   : 1000;
 
     @include hover {
         border-color: rgba(255, 255, 255, 0.15);

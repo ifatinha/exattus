@@ -736,7 +736,7 @@
 
     .section-title {
         max-width: 750px;
-        margin   : 20px auto;
+        margin   : 20px auto 40px;
         width    : 100%;
     }
 }
@@ -746,14 +746,27 @@
     flex-wrap: wrap;
     padding  : 0 1%;
     width    : 100%;
+
+    .owl-item {
+        &:nth-child(odd) {
+            margin-top: px-to-rem(40);
+        }
+
+        &:nth-child(even) {
+            margin-bottom: 40px;
+        }
+    }
 }
 
 .testimonial-wrapper {
-    background   : green;
     border-radius: 10px;
-    border       : 1px solid rgba(0, 0, 0, 0.05);
+    border       : 1px solid rgba(255, 255, 255, 0.05);
     padding      : px-to-rem(40);
     position     : relative;
+
+    &::before {
+        content: "dsads";
+    }
 }
 
 /** end section services */

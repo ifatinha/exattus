@@ -405,7 +405,7 @@ h6 {
   transform: translateY(30px);
   transition: 0.3s ease-in-out;
   visibility: hidden;
-  z-index: 999999;
+  z-index: 1000;
 }
 .back-to-top:hover {
   border-color: rgba(255, 255, 255, 0.15);
@@ -2191,7 +2191,7 @@ h6 {
 }
 .testimonial .section-title {
   max-width: 750px;
-  margin: 20px auto;
+  margin: 20px auto 40px;
   width: 100%;
 }
 
@@ -2204,13 +2204,21 @@ h6 {
   padding: 0 1%;
   width: 100%;
 }
+.testimonial-container .owl-item:nth-child(odd) {
+  margin-top: 2.5rem;
+}
+.testimonial-container .owl-item:nth-child(even) {
+  margin-bottom: 40px;
+}
 
 .testimonial-wrapper {
-  background: green;
   border-radius: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   padding: 2.5rem;
   position: relative;
+}
+.testimonial-wrapper::before {
+  content: "dsads";
 }
 
 /** end section services */
