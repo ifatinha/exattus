@@ -465,10 +465,9 @@
 }
 
 .cases-studios {
-    background   : get-color(pure-black);
-    margin-bottom: px-to-rem(30);
-    padding      : px-to-rem(50) 2% px-to-rem(50);
-    width        : 100%;
+    @include apply-bg-color(pure-black);
+    padding: px-to-rem(50) 2% px-to-rem(50);
+    width  : 100%;
 
     @include devices-large-screens {
         padding: px-to-rem(150) 0 px-to-rem(150);
@@ -723,6 +722,7 @@
 }
 
 .testimonial {
+    @include apply-bg-color(pure-black);
     padding: px-to-rem(50) 0;
     width  : 100%;
 
@@ -744,7 +744,7 @@
 .testimonial-container {
     @include flex(start, flex-start, 0);
     flex-wrap: wrap;
-    padding  : 0 1%;
+    padding  : 0 2%;
     width    : 100%;
 
     .owl-item {
@@ -763,9 +763,56 @@
     border       : 1px solid rgba(255, 255, 255, 0.05);
     padding      : px-to-rem(40);
     position     : relative;
+}
 
-    &::before {
-        content: "dsads";
+.testimonial-ratings {
+    display   : flex;
+    gap       : 3px;
+    margin-top: 5px;
+
+    i {
+        @include flex(center, center, 0);
+        font-size              : get-font-size(20);
+        -webkit-text-fill-color: transparent;
+        background             : linear-gradient(170deg, rgb(54, 99, 216) 0%, rgb(119, 190, 255) 100%) text;
+    }
+}
+
+.testimonial-quote {
+    position: absolute;
+    right   : px-to-rem(20);
+    top     : px-to-rem(15);
+
+    img {
+        display: inherit;
+        width  : auto;
+    }
+}
+
+.testimonial-content {
+    font-size  : get-font-size(22);
+    font-style : italic;
+    line-height: px-to-rem(32);
+    margin-top : px-to-rem(40);
+
+    p {
+        color: rgb(212, 214, 215);
+    }
+}
+
+.testimonial-author {
+    align-items: center;
+    display    : flex;
+    gap        : 15px;
+    margin-top : 30px;
+}
+
+.author-info {
+    .author-name {
+        background             : linear-gradient(170deg, rgb(54, 99, 216) 0%, rgb(119, 190, 255) 100%) text;
+        font-size              : get-font-size(22);
+        line-height            : px-to-rem(32);
+        -webkit-text-fill-color: transparent;
     }
 }
 

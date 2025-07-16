@@ -24,8 +24,8 @@ export function carouselTestimonial() {
         1200: {
           items: 2,
         },
-        1400: {
-          items: 2,
+        1600: {
+          items: 3,
         },
       },
     });

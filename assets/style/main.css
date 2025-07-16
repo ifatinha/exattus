@@ -1846,8 +1846,7 @@ h6 {
 }
 
 .cases-studios {
-  background: #000000;
-  margin-bottom: 1.875rem;
+  background-color: #000000;
   padding: 3.125rem 2% 3.125rem;
   width: 100%;
 }
@@ -2166,6 +2165,7 @@ h6 {
 }
 
 .testimonial {
+  background-color: #000000;
   padding: 3.125rem 0;
   width: 100%;
 }
@@ -2201,7 +2201,7 @@ h6 {
   gap: 0;
   justify-content: flex-start;
   flex-wrap: wrap;
-  padding: 0 1%;
+  padding: 0 2%;
   width: 100%;
 }
 .testimonial-container .owl-item:nth-child(odd) {
@@ -2217,8 +2217,54 @@ h6 {
   padding: 2.5rem;
   position: relative;
 }
-.testimonial-wrapper::before {
-  content: "dsads";
+
+.testimonial-ratings {
+  display: flex;
+  gap: 3px;
+  margin-top: 5px;
+}
+.testimonial-ratings i {
+  align-items: center;
+  display: flex;
+  gap: 0;
+  justify-content: center;
+  font-size: 1.25rem;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(170deg, rgb(54, 99, 216) 0%, rgb(119, 190, 255) 100%) text;
+}
+
+.testimonial-quote {
+  position: absolute;
+  right: 1.25rem;
+  top: 0.9375rem;
+}
+.testimonial-quote img {
+  display: inherit;
+  width: auto;
+}
+
+.testimonial-content {
+  font-size: 1.375rem;
+  font-style: italic;
+  line-height: 2rem;
+  margin-top: 2.5rem;
+}
+.testimonial-content p {
+  color: rgb(212, 214, 215);
+}
+
+.testimonial-author {
+  align-items: center;
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.author-info .author-name {
+  background: linear-gradient(170deg, rgb(54, 99, 216) 0%, rgb(119, 190, 255) 100%) text;
+  font-size: 1.375rem;
+  line-height: 2rem;
+  -webkit-text-fill-color: transparent;
 }
 
 /** end section services */
