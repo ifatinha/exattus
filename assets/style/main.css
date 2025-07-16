@@ -1102,7 +1102,7 @@ h6 {
   }
 }
 .section {
-  padding: 10rem 2% 0;
+  padding-top: 10rem;
 }
 @media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
   .section {
@@ -1661,27 +1661,7 @@ h6 {
 }
 
 .services {
-  padding-bottom: 2.5rem;
-}
-@media screen and (min-width: 1920px) {
-  .services {
-    padding-bottom: 9.375rem;
-  }
-}
-@media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
-  .services {
-    padding-bottom: 9.375rem;
-  }
-}
-@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
-  .services {
-    padding-bottom: 9.375rem;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: calc(1024px - 1px)) {
-  .services {
-    padding-bottom: 5.625rem;
-  }
+  padding-bottom: 3.75rem;
 }
 .services-content {
   display: grid;
@@ -1847,28 +1827,8 @@ h6 {
 
 .cases-studios {
   background-color: #000000;
-  padding: 3.125rem 2% 3.125rem;
+  padding-bottom: 3.75rem;
   width: 100%;
-}
-@media screen and (min-width: 1920px) {
-  .cases-studios {
-    padding: 9.375rem 0 9.375rem;
-  }
-}
-@media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
-  .cases-studios {
-    padding: 9.375rem 0 9.375rem;
-  }
-}
-@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
-  .cases-studios {
-    padding: 9.375rem 0 9.375rem;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: calc(1024px - 1px)) {
-  .cases-studios {
-    padding: 6.25rem 0 6.25rem;
-  }
 }
 
 .cases-container {
@@ -2166,28 +2126,8 @@ h6 {
 
 .testimonial {
   background-color: #000000;
-  padding: 3.125rem 0;
+  padding-bottom: 3.75rem;
   width: 100%;
-}
-@media screen and (min-width: 1920px) {
-  .testimonial {
-    padding: 9.375rem 0;
-  }
-}
-@media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
-  .testimonial {
-    padding: 9.375rem 0;
-  }
-}
-@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
-  .testimonial {
-    padding: 9.375rem 0;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: calc(1024px - 1px)) {
-  .testimonial {
-    padding: 6.25rem 0;
-  }
 }
 .testimonial .section-title {
   max-width: 750px;
@@ -2268,5 +2208,6 @@ h6 {
 }
 
 /** end section services */
+/** start section servies */
 
 /*# sourceMappingURL=main.css.map */

@@ -318,16 +318,7 @@
 // Finalizar animação do marquee
 
 .services {
-    //background    : darkblue;
-    padding-bottom: px-to-rem(40);
-
-    @include devices-large-screens {
-        padding-bottom: px-to-rem(150);
-    }
-
-    @include devices(t) {
-        padding-bottom: px-to-rem(90);
-    }
+    padding-bottom: px-to-rem(60);
 
     &-content {
         display              : grid;
@@ -466,16 +457,8 @@
 
 .cases-studios {
     @include apply-bg-color(pure-black);
-    padding: px-to-rem(50) 2% px-to-rem(50);
-    width  : 100%;
-
-    @include devices-large-screens {
-        padding: px-to-rem(150) 0 px-to-rem(150);
-    }
-
-    @include devices(t) {
-        padding: px-to-rem(100) 0 px-to-rem(100);
-    }
+    padding-bottom: px-to-rem(60);
+    width         : 100%;
 }
 
 .cases-container {
@@ -723,16 +706,8 @@
 
 .testimonial {
     @include apply-bg-color(pure-black);
-    padding: px-to-rem(50) 0;
-    width  : 100%;
-
-    @include devices-large-screens() {
-        padding: px-to-rem(150) 0;
-    }
-
-    @include devices(t) {
-        padding: px-to-rem(100) 0;
-    }
+    padding-bottom: px-to-rem(60);
+    width         : 100%;
 
     .section-title {
         max-width: 750px;
@@ -817,3 +792,5 @@
 }
 
 /** end section services */
+
+/** start section servies */

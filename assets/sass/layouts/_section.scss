@@ -4,7 +4,7 @@
 @use "../base/typography"as *;
 
 .section {
-    padding: px-to-rem(160) 2% 0;
+    padding-top: px-to-rem(160);
 
     @include devices(l) {
         padding-top: px-to-rem(120);
