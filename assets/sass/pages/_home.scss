@@ -736,9 +736,24 @@
 
     .section-title {
         max-width: 750px;
-        margin   : 20px auto 0;
+        margin   : 20px auto;
         width    : 100%;
     }
+}
+
+.testimonial-container {
+    @include flex(start, flex-start, 0);
+    flex-wrap: wrap;
+    padding  : 0 1%;
+    width    : 100%;
+}
+
+.testimonial-wrapper {
+    background   : green;
+    border-radius: 10px;
+    border       : 1px solid rgba(0, 0, 0, 0.05);
+    padding      : px-to-rem(40);
+    position     : relative;
 }
 
 /** end section services */

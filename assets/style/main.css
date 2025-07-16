@@ -2191,8 +2191,26 @@ h6 {
 }
 .testimonial .section-title {
   max-width: 750px;
-  margin: 20px auto 0;
+  margin: 20px auto;
   width: 100%;
+}
+
+.testimonial-container {
+  align-items: start;
+  display: flex;
+  gap: 0;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 0 1%;
+  width: 100%;
+}
+
+.testimonial-wrapper {
+  background: green;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 2.5rem;
+  position: relative;
 }
 
 /** end section services */

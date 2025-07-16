@@ -3,6 +3,7 @@ import { counter } from "./modules/counter.js";
 import { initLoader } from "./modules/preloader.js";
 import { toTop } from "./modules/toTop.js";
 import { toggleCasesStudies } from "./modules/toggle-cases-studies.js";
+import { carouselTestimonial } from "./owlcarousel/carousel.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const functionsToCall = [
@@ -12,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { name: "initLoader", func: initLoader },
     { name: "toTop", func: toTop },
     { name: "toggleCasesStudies", func: toggleCasesStudies },
+    { name: "carouselTestimonial", func: carouselTestimonial },
   ];
 
   functionsToCall.forEach(({ name, func }) => {

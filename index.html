@@ -56,6 +56,9 @@
       href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Russo+One&display=swap"
       rel="stylesheet">
 
+   <!-- owlcarousel -->
+   <link rel="stylesheet" href="assets/owlcarousel/owl.carousel.min.css">
+
    <!-- links css -->
    <link rel="stylesheet" href="assets/style/main.css">
 </head>
@@ -650,11 +653,26 @@
             </div>
          </section>
          <section id="testimonial">
-            <div class="text-center testimonial">
-               <span class="title">
-                  <img src="assets/images/icon-exattus.svg" alt="" height="24" width="24">
-                  Nosso depoimento</span>
-               <h2 class="section-title">O que nossos clientes têm a dizer.</h2>
+            <div class="testimonial">
+               <div class="text-center">
+                  <span class="title">
+                     <img src="assets/images/icon-exattus.svg" alt="" height="24" width="24">
+                     Nosso depoimento</span>
+                  <h2 class="section-title">O que nossos clientes têm a dizer.</h2>
+               </div>
+               <div class="testimonial-container">
+                  <div class="owl-carousel" id="testimonialCarousel">
+                     <div class="testimonial-wrapper">1</div>
+                     <div class="testimonial-wrapper">2</div>
+                     <div class="testimonial-wrapper">3</div>
+                     <div class="testimonial-wrapper">4</div>
+                     <div class="testimonial-wrapper">5</div>
+                     <div class="testimonial-wrapper">6</div>
+                     <div class="testimonial-wrapper">7</div>
+                     <div class="testimonial-wrapper">8</div>
+                     <div class="testimonial-wrapper">9</div>
+                  </div>
+               </div>
             </div>
          </section>
       </div>
@@ -663,6 +681,8 @@
    <!-- end site content -->
 
    <!-- scripts -->
+   <script src="assets/js/owlcarousel/jquery.min.js"></script>
+   <script src="assets/js/owlcarousel/owl.carousel.min.js"></script>
    <script type="module" src="assets/js/script.js"></script>
    <script src="https://kit.fontawesome.com/4980d49b51.js" crossorigin="anonymous"></script>
 </body>
