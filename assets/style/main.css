@@ -2261,7 +2261,7 @@ h6 {
   border-radius: 8px;
   height: 420px;
   margin-bottom: 1.25rem;
-  overflow: hidden;
+  overflow: visible;
   position: relative;
 }
 .team-img img {
@@ -2269,9 +2269,6 @@ h6 {
   object-fit: cover;
   transform: scale(1);
   transition: all 0.8s ease-in-out;
-}
-.team-img:hover img {
-  transform: scale(1.1);
 }
 .team-img:hover .image-overlay {
   opacity: 1;
@@ -2293,6 +2290,35 @@ h6 {
 }
 .image-overlay:hover {
   opacity: 1;
+}
+
+.team-social {
+  bottom: -30px;
+  position: absolute;
+  right: 20px;
+  transition: all 0.4s ease-in-out;
+  z-index: 99;
+}
+
+.share-icon {
+  align-items: center;
+  display: flex;
+  gap: 0;
+  justify-content: center;
+  background-image: linear-gradient(60deg, rgb(54, 99, 216) -20%, rgb(119, 190, 255) 100%);
+  border-radius: 100%;
+  border: 7px solid #000000;
+  border-image: initial;
+  cursor: pointer;
+  height: 60px;
+  margin-top: 0;
+  transition: all 0.4s ease-in-out;
+  width: 60px;
+}
+.share-icon img {
+  height: 20px;
+  object-fit: cover;
+  width: 20px;
 }
 
 .team-info .team-title {

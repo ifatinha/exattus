@@ -831,7 +831,7 @@
     border-radius: 8px;
     height       : 420px;
     margin-bottom: px-to-rem(20);
-    overflow     : hidden;
+    overflow     : visible;
     position     : relative;
 
     img {
@@ -842,9 +842,6 @@
     }
 
     @include hover() {
-        img {
-            transform: scale(1.1);
-        }
 
         .image-overlay {
             opacity: 1;
@@ -868,6 +865,33 @@
 
     @include hover {
         opacity: 1;
+    }
+}
+
+.team-social {
+    bottom    : -30px;
+    position  : absolute;
+    right     : 20px;
+    transition: all .4s ease-in-out;
+    z-index   : 99;
+}
+
+.share-icon {
+    @include flex(center, center, 0);
+    background-image: linear-gradient(60deg, rgb(54, 99, 216) -20%, rgb(119, 190, 255) 100%);
+    border-radius   : 100%;
+    border          : 7px solid get-color(pure-black);
+    border-image    : initial;
+    cursor          : pointer;
+    height          : 60px;
+    margin-top      : 0;
+    transition      : all .4s ease-in-out;
+    width           : 60px;
+
+    img {
+        height    : 20px;
+        object-fit: cover;
+        width     : 20px;
     }
 }
 
