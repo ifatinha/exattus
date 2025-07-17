@@ -874,6 +874,57 @@
     right     : 20px;
     transition: all .4s ease-in-out;
     z-index   : 99;
+
+    ul {
+        align-items   : flex-end;
+        bottom        : 120%;
+        display       : flex;
+        flex-direction: column-reverse;
+        gap           : 10px;
+        opacity       : 0;
+        position      : absolute;
+        right         : 0;
+        transition    : all .4s ease-in-out;
+        visibility    : hidden;
+
+        li {
+            margin-right: 7px;
+
+            a {
+                @include flex(center, center, 0);
+                background     : rgb(255, 255, 255);
+                border-radius  : 100px;
+                color          : rgb(143, 145, 171);
+                height       : 46px;
+                overflow       : hidden;
+                padding        : px-to-rem(10) px-to-rem(14);
+                text-align     : center;
+                transition     : all .4s ease-in-out;
+                width        : 46px;
+
+                span {
+                    font-size  : 0;
+                    font-weight: 500;
+                    line-height: px-to-rem(26);
+                    transition : all .4s ease-in-out;
+                }
+
+                @include hover {
+                    span {
+                        font-size: get-font-size(18);
+                    }
+                }
+            }
+        }
+    }
+
+    @include hover {
+        ul {
+            //bottom    : 130%;
+            opacity   : 1;
+            visibility: visible;
+        }
+    }
 }
 
 .share-icon {
