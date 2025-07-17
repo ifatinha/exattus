@@ -792,5 +792,99 @@
 }
 
 /** end section services */
+.team {
+    padding-bottom: px-to-rem(40);
+}
+
+.team-container {
+    padding-top: px-to-rem(60);
+}
+
+.team-boxs {
+    display              : grid;
+    gap                  : px-to-rem(30);
+    grid-template-columns: 1fr;
+
+    @include devices-large-screens {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include devices(l) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include devices(t) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile-landscape {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.team-item {
+    position: relative;
+    z-index : 1;
+}
+
+.team-img {
+    border-radius: 8px;
+    height       : 420px;
+    margin-bottom: px-to-rem(20);
+    overflow     : hidden;
+    position     : relative;
+
+    img {
+        height    : 100%;
+        object-fit: cover;
+        transform : scale(1);
+        transition: all .8s ease-in-out;
+    }
+
+    @include hover() {
+        img {
+            transform: scale(1.1);
+        }
+
+        .image-overlay {
+            opacity: 1;
+        }
+    }
+}
+
+.image-overlay {
+    background   : linear-gradient(180deg, rgba(0, 56, 255, 0) 40%, rgba(0, 56, 255, 0.7) 80%);
+    border-radius: 8px;
+    bottom       : 0;
+    content      : "";
+    left         : 0;
+    opacity      : 0;
+    position     : absolute;
+    right        : 0;
+    transition   : all .8s ease-in-out;
+    top          : px-to-rem(50);
+    text-align   : center;
+    z-index      : 1;
+
+    @include hover {
+        opacity: 1;
+    }
+}
+
+.team-info {
+    .team-title {
+        @include russo-one-regular();
+        @include apply-color(pure-white);
+        display      : block;
+        font-size    : get-font-size(26);
+        line-height  : px-to-rem(34);
+        margin-bottom: 5px;
+        transition   : all .3s ease-in-out;
+
+        @include hover {
+            @include apply-color(sky-blue);
+        }
+    }
+}
 
 /** start section servies */
