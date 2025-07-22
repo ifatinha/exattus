@@ -2322,12 +2322,15 @@ h6 {
   background: rgb(255, 255, 255);
   border-radius: 100px;
   color: rgb(143, 145, 171);
-  height: 46px;
   overflow: hidden;
   padding: 0.625rem 0.875rem;
   text-align: center;
   transition: all 0.4s ease-in-out;
-  width: 46px;
+}
+.team-social ul li a i {
+  height: 26px;
+  line-height: 26px;
+  width: 18px;
 }
 .team-social ul li a span {
   font-size: 0;
@@ -2336,7 +2339,8 @@ h6 {
   transition: all 0.4s ease-in-out;
 }
 .team-social ul li a:hover span {
-  font-size: 1.125rem;
+  font-size: 1rem;
+  margin-right: 4px;
 }
 .team-social:hover ul {
   opacity: 1;

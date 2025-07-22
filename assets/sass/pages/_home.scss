@@ -892,15 +892,21 @@
 
             a {
                 @include flex(center, center, 0);
-                background     : rgb(255, 255, 255);
-                border-radius  : 100px;
-                color          : rgb(143, 145, 171);
-                height       : 46px;
-                overflow       : hidden;
-                padding        : px-to-rem(10) px-to-rem(14);
-                text-align     : center;
-                transition     : all .4s ease-in-out;
-                width        : 46px;
+                background       : rgb(255, 255, 255);
+                border-radius    : 100px;
+                color            : rgb(143, 145, 171);
+                //height         : 46px;
+                overflow         : hidden;
+                padding          : px-to-rem(10) px-to-rem(14);
+                text-align       : center;
+                transition       : all .4s ease-in-out;
+                //width        : 46px;
+
+                i {
+                    height     : 26px;
+                    line-height: 26px;
+                    width      : 18px;
+                }
 
                 span {
                     font-size  : 0;
@@ -911,7 +917,8 @@
 
                 @include hover {
                     span {
-                        font-size: get-font-size(18);
+                        font-size: get-font-size(16);
+                        margin-right: 4px;
                     }
                 }
             }
