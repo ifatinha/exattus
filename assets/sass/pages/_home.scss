@@ -792,8 +792,14 @@
 }
 
 /** end section services */
+
+/** start section team */
 .team {
     padding-bottom: px-to-rem(40);
+
+    @include devices-large-screens {
+        padding-bottom: px-to-rem(120);
+    }
 }
 
 .team-container {
@@ -917,7 +923,7 @@
 
                 @include hover {
                     span {
-                        font-size: get-font-size(16);
+                        font-size   : get-font-size(16);
                         margin-right: 4px;
                     }
                 }
@@ -969,4 +975,4 @@
     }
 }
 
-/** start section servies */
+/** end section team */

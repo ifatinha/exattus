@@ -3,6 +3,7 @@
 @use "../global/responsive"as *;
 @use "mixins"as *;
 @use "../util/prefixes"as *;
+@use "../util/functions"as *;
 
 //Scrollbar
 ::-webkit-scrollbar {
@@ -137,4 +138,18 @@ h6 {
         font-size: get-font-size(22);
         width    : 190px;
     }
+}
+
+.counter-list {
+    padding-top: px-to-rem(50);
+
+    @include devices-large-screens {
+        padding-top: px-to-rem(100);
+    }
+}
+
+.counter-wrapper {
+    background: green;
+    display   : grid;
+    
 }

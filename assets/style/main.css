@@ -150,7 +150,7 @@ h6 {
   background: linear-gradient(60deg, #3663D8 -20%, #77BEFF 100%);
   background-clip: text;
   font-weight: 700;
-  margin-bottom: px-to-rem(16);
+  margin-bottom: 1rem;
   text-transform: uppercase;
   -webkit-text-fill-color: transparent;
 }
@@ -189,7 +189,7 @@ h6 {
 
 .paragraph {
   color: #d4d6d7;
-  line-height: px-to-rem(28);
+  line-height: 1.75rem;
 }
 
 .counter {
@@ -229,6 +229,30 @@ h6 {
 .counter-info {
   font-size: 1.375rem;
   width: 190px;
+}
+
+.counter-list {
+  padding-top: 3.125rem;
+}
+@media screen and (min-width: 1920px) {
+  .counter-list {
+    padding-top: 6.25rem;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
+  .counter-list {
+    padding-top: 6.25rem;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
+  .counter-list {
+    padding-top: 6.25rem;
+  }
+}
+
+.counter-wrapper {
+  background: green;
+  display: grid;
 }
 
 @keyframes run {
@@ -2208,8 +2232,24 @@ h6 {
 }
 
 /** end section services */
+/** start section team */
 .team {
   padding-bottom: 2.5rem;
+}
+@media screen and (min-width: 1920px) {
+  .team {
+    padding-bottom: 7.5rem;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
+  .team {
+    padding-bottom: 7.5rem;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
+  .team {
+    padding-bottom: 7.5rem;
+  }
 }
 
 .team-container {
@@ -2383,6 +2423,6 @@ h6 {
   color: #77BEFF;
 }
 
-/** start section servies */
+/** end section team */
 
 /*# sourceMappingURL=main.css.map */
