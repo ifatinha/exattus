@@ -149,7 +149,52 @@ h6 {
 }
 
 .counter-wrapper {
-    background: green;
-    display   : grid;
-    
+    display              : grid;
+    grid-template-columns: 1fr;
+    gap                  : px-to-rem(20);
+    justify-content      : center;
+
+    @include devices-large-screens {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include devices(t) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.counter-list-item {
+    @include russo-one-regular();
+    border       : 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    border-image : initial;
+    display      : flex;
+    gap          : px-to-rem(15);
+    padding      : px-to-rem(30) px-to-rem(15);
+    position     : relative;
+
+    &::before {
+        border       : 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        border-image : initial;
+        bottom       : -10px;
+        content      : "";
+        height       : 100%;
+        left         : -10px;
+        position     : absolute;
+        width        : 100%;
+        z-index      : -1;
+    }
+
+    .counter-number {
+        @include devices(t) {
+            font-size: get-font-size(30);
+        }
+    }
+
+    .counter-info {
+        @include devices(m) {
+            font-size: get-font-size(18);
+        }
+    }
 }
