@@ -210,3 +210,61 @@
         width         : 18px;
     }
 }
+
+.btn-video {
+    @include flex(center, center, 0);
+    @include russo-one-regular();
+    @include apply-color(pure-white);
+    border-radius: 100%;
+    font-size    : px-to-rem(18);
+    height       : 100px;
+    line-height  : px-to-rem(15);
+    text-align   : center;
+    opacity      : 1;
+    padding      : px-to-rem(15);
+    position     : absolute;
+    transition   : all .3s ease-in-out;
+    width        : 100px;
+    z-index      : 1;
+
+    @include hover {
+        @include apply-color(pure-black);
+    }
+
+    @include devices-large-screens {
+        font-size  : px-to-rem(42);
+        height     : 215px;
+        line-height: px-to-rem(42);
+        width      : 215px;
+    }
+
+    @include devices(t) {
+        height: 130px;
+        width : 130px;
+    }
+
+    &::before {
+        background     : rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        border-radius  : 100%;
+        content        : "";
+        height         : 100%;
+        left           : 0;
+        position       : absolute;
+        top            : 0;
+        width          : 100%;
+        z-index        : -1;
+    }
+
+    &::after {
+        border       : 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 100%;
+        content      : "";
+        height       : 100%;
+        left         : -10px;
+        position     : absolute;
+        top          : 10px;
+        width        : 100%;
+        z-index      : -1;
+    }
+}
