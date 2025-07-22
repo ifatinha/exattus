@@ -198,3 +198,14 @@ h6 {
         }
     }
 }
+
+.video-bg {
+    @include flex(center, center, 0);
+    background-color     : rgb(37, 99, 173);
+    background-blend-mode: multiply;
+    background-size      : cover;
+    background-position  : center center;
+    height               : 750px;
+    position             : relative;
+    z-index              : 5;
+}
