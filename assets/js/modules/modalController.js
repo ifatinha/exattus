@@ -7,7 +7,7 @@ const setupCloseMenuListeners = (element) => {
   });
 };
 
-// Função para abrir o modal ao clicar/tocar no botão do menu (burger)
+// Função para abrir o modal do menu ao clicar/tocar no botão do menu (burger)
 export function openModal() {
   const { buttonBurger } = getElements();
 
@@ -21,7 +21,7 @@ export function openModal() {
   });
 }
 
-// Função para fechar o modal ao clicar/tocar fora ou no botão de fechar, ou pressionar ESC
+// Função para fechar o modal menu ao clicar/tocar fora ou no botão de fechar, ou pressionar ESC
 export function closeModal() {
   const { modal, sidebarCloseBtn } = getElements();
 
@@ -37,7 +37,7 @@ export function closeModal() {
     setupCloseMenuListeners(modal);
   });
 
-  // Fecha o modal ao pressionar a tecla Escape
+  // Fecha o modal menu ao pressionar a tecla Escape
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
       handleToggle();

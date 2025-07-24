@@ -4,7 +4,7 @@ import {
   updateAriaHidden,
 } from "../util/ariaAttributesUtils.js";
 
-// Função que retorna os principais elementos do modal e sidebar
+// Função que retorna os principais elementos do modal do menu e sidebar
 export function getElements() {
   const buttonBurger = document.querySelector("#navbarOpenButton"); // Botão do menu (hambúrguer)
   const modal = document.querySelector("#modal"); // Elemento do modal
