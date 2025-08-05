@@ -1100,3 +1100,137 @@
 }
 
 /** end section blog */
+
+/** start newsletter */
+.newsletter {
+    @include apply-bg-color(pure-black);
+    padding : px-to-rem(60) 2%;
+    position: relative;
+    width   : 100%;
+    z-index : 2;
+
+    @include devices-large-screens {
+        padding: px-to-rem(120) 0;
+    }
+
+    &-title {
+        @include russo-one-regular();
+        color         : rgba(255, 255, 255, 0.03);
+        font-size     : get-font-size(46);
+        line-height   : normal;
+        left          : 50%;
+        position      : absolute;
+        z-index       : -1;
+        transform     : translate(-50%, -50%);
+        text-transform: capitalize;
+        top           : 50%;
+
+        @include devices-large-screens {
+            font-size: get-font-size(200);
+        }
+
+        @include devices(l) {
+            //font-size: get-font-size(160);
+        }
+
+        @include devices(t) {
+            font-size: get-font-size(120);
+        }
+
+        @include ipad-2-landscape {
+            font-size: get-font-size(160);
+        }
+
+        @include mobile-landscape {
+            font-size: get-font-size(90);
+        }
+    }
+
+    form {
+        max-width: 900px;
+        margin   : 0 auto;
+        width    : 100%;
+    }
+
+    &-form-group {
+        position: relative;
+
+        input {
+            background   : transparent;
+            border-color : transparent;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color        : rgb(255, 255, 255);
+            outline      : none;
+            font-size    : get-font-size(20);
+            padding      : 30px 150px 30px 0px;
+            position     : relative;
+            transition   : all .3s ease-in-out;
+            width        : 100%;
+
+            @include devices-large-screens {
+                padding: 30px 150px 30px 0px;
+            }
+
+            @include devices(t) {
+                padding: 20px 0px;
+            }
+
+            @include devices-mobile {
+                padding: 15px 0px;
+            }
+
+            &::placeholder {
+                color: rgb(255, 255, 255);
+            }
+
+            &:focus {
+                border-bottom-color: get-color(sky-blue);
+            }
+        }
+    }
+
+    .form-check {
+        margin-top: 1rem;
+    }
+
+    .form-checkbox {
+        @include prefix(appearance, none);
+        background   : transparent;
+        border-radius: 4px;
+        border       : 1px solid get-color(pure-white);
+        height       : 16px;
+        position     : relative;
+        width        : 16px;
+
+        &:checked {
+            border-color: transparent;
+
+            &::before {
+                @include flex(center, center, 0);
+                background-image: linear-gradient(-55deg, #3663D8 2%, #77BEFF 56%, #00D1FF 99%);
+                border-radius   : 4px;
+                content         : "\f00c";
+                color           : get-color(pure-white);
+                font-size       : get-font-size(12);
+                font-family     : "Font Awesome 6 Free";
+                font-weight     : 700;
+                height          : 16px;
+                line-height     : 1;
+                left            : 50%;
+                position        : absolute;
+                top             : 50%;
+                transform       : translate(-50%, -50%);
+                width           : 16px;
+            }
+        }
+    }
+}
+
+/** end newsletter */
+
+/** start section faq */
+.faq {
+    background: palevioletred;
+}
+
+/** end section faq */

@@ -534,6 +534,35 @@ h6 {
   width: 18px;
 }
 
+.subscribe-btn {
+  align-items: center;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  color: #ffffff;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.25rem;
+  flex-direction: row;
+  line-height: normal;
+  position: absolute;
+  padding: 15px 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media screen and (max-width: calc(768px - 1px)) {
+  .subscribe-btn {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .subscribe-btn {
+    font-size: 1rem;
+  }
+}
+
 .modal {
   color: #ffffff;
   background: rgba(0, 0, 0, 0.7);
@@ -2606,5 +2635,175 @@ h6 {
 }
 
 /** end section blog */
+/** start newsletter */
+.newsletter {
+  background-color: #000000;
+  padding: 3.75rem 2%;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+@media screen and (min-width: 1920px) {
+  .newsletter {
+    padding: 7.5rem 0;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
+  .newsletter {
+    padding: 7.5rem 0;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
+  .newsletter {
+    padding: 7.5rem 0;
+  }
+}
+.newsletter-title {
+  font-family: "Russo One", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.03);
+  font-size: 2.875rem;
+  line-height: normal;
+  left: 50%;
+  position: absolute;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  text-transform: capitalize;
+  top: 50%;
+}
+@media screen and (min-width: 1920px) {
+  .newsletter-title {
+    font-size: 12.5rem;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
+  .newsletter-title {
+    font-size: 12.5rem;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
+  .newsletter-title {
+    font-size: 12.5rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: calc(1024px - 1px)) {
+  .newsletter-title {
+    font-size: 7.5rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .newsletter-title {
+    font-size: 10rem;
+  }
+}
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .newsletter-title {
+    font-size: 5.625rem;
+  }
+}
+.newsletter form {
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+.newsletter-form-group {
+  position: relative;
+}
+.newsletter-form-group input {
+  background: transparent;
+  border-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgb(255, 255, 255);
+  outline: none;
+  font-size: 1.25rem;
+  padding: 30px 150px 30px 0px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+@media screen and (min-width: 1920px) {
+  .newsletter-form-group input {
+    padding: 30px 150px 30px 0px;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
+  .newsletter-form-group input {
+    padding: 30px 150px 30px 0px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
+  .newsletter-form-group input {
+    padding: 30px 150px 30px 0px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: calc(1024px - 1px)) {
+  .newsletter-form-group input {
+    padding: 20px 0px;
+  }
+}
+@media screen and (max-width: calc(768px - 1px)) {
+  .newsletter-form-group input {
+    padding: 15px 0px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .newsletter-form-group input {
+    padding: 15px 0px;
+  }
+}
+.newsletter-form-group input::placeholder {
+  color: rgb(255, 255, 255);
+}
+.newsletter-form-group input:focus {
+  border-bottom-color: #77BEFF;
+}
+.newsletter .form-check {
+  margin-top: 1rem;
+}
+.newsletter .form-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  background: transparent;
+  border-radius: 4px;
+  border: 1px solid #ffffff;
+  height: 16px;
+  position: relative;
+  width: 16px;
+}
+.newsletter .form-checkbox:checked {
+  border-color: transparent;
+}
+.newsletter .form-checkbox:checked::before {
+  align-items: center;
+  display: flex;
+  gap: 0;
+  justify-content: center;
+  background-image: linear-gradient(-55deg, #3663D8 2%, #77BEFF 56%, #00D1FF 99%);
+  border-radius: 4px;
+  content: "\f00c";
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 700;
+  height: 16px;
+  line-height: 1;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+}
+
+/** end newsletter */
+/** start section faq */
+.faq {
+  background: palevioletred;
+}
+
+/** end section faq */
 
 /*# sourceMappingURL=main.css.map */

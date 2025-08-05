@@ -210,3 +210,23 @@
         width         : 18px;
     }
 }
+
+.subscribe-btn {
+    @include flex(center, center, 15px);
+    @include apply-color(pure-white);
+    background    : transparent;
+    border        : none;
+    cursor        : pointer;
+    font-size     : get-font-size(20);
+    flex-direction: row;
+    line-height   : normal;
+    position      : absolute;
+    padding       : 15px 0;
+    right         : 0;
+    top           : 50%;
+    transform     : translateY(-50%);
+
+    @include devices-mobile {
+        font-size: get-font-size(16);
+    }
+}
