@@ -976,3 +976,103 @@
 }
 
 /** end section team */
+
+/** start section blog */
+.blog {
+    padding-bottom: px-to-rem(60);
+
+    @include devices-large-screens {
+        padding-bottom: px-to-rem(150);
+    }
+
+    .section-title {
+        max-width: 750px;
+        margin   : 20px auto 40px;
+        width    : 100%;
+    }
+
+    &-container {
+        display              : grid;
+        grid-template-columns: 1fr;
+        gap                  : px-to-rem(30);
+
+        @include devices-large-screens {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include devices(t) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &-item {
+        @include apply-bg-color(pure-black);
+        border       : 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        position     : relative;
+        padding      : px-to-rem(40) px-to-rem(30);
+
+        @include hover {
+            &::before {
+                opacity: 1;
+            }
+
+            .blog-image {
+                transform: scale(1.1);
+            }
+        }
+
+        &::before {
+            background   : linear-gradient(to right, #3663D8, #77BEFF);
+            bottom       : 3px;
+            border-radius: inherit;
+            content      : "";
+            left         : 3px;
+            margin       : -4px;
+            opacity      : 0;
+            position     : absolute;
+            right        : 3px;
+            top          : 0;
+            transition   : all 0.3s ease-in-out;
+            z-index      : -1;
+        }
+    }
+
+    .post-data {
+        margin-bottom: px-to-rem(15);
+    }
+
+    .post-title {
+        font-size    : get-font-size(26);
+        margin-bottom: px-to-rem(35);
+    }
+
+    .blog-post-image {
+        overflow: hidden;
+
+        @include hover {
+            img {
+                transform: scale(1.1);
+            }
+        }
+
+        img {
+            transform : scale(1);
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    .blog-post-action {
+        @include flex(center, space-between, 0);
+        margin-top: px-to-rem(30);
+    }
+
+    .post-category {
+        @include font-primary();
+        font-weight   : 600;
+        line-height   : px-to-rem(28);
+        text-transform: uppercase;
+    }
+}
+
+/** end section blog */
