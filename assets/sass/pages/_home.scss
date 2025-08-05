@@ -1073,6 +1073,30 @@
         line-height   : px-to-rem(28);
         text-transform: uppercase;
     }
+
+    .post-link {
+        .btn-arrow {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+
+            &::after {
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            img {
+                height: 16px;
+                width : 16px;
+            }
+
+            @include hover {
+                border-color: get-color(sky-blue);
+
+                &::after {
+                    border-color: get-color(sky-blue);
+                }
+
+            }
+        }
+    }
 }
 
 /** end section blog */

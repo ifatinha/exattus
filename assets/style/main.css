@@ -2588,6 +2588,22 @@ h6 {
   line-height: 1.75rem;
   text-transform: uppercase;
 }
+.blog .post-link .btn-arrow {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.blog .post-link .btn-arrow::after {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.blog .post-link .btn-arrow img {
+  height: 16px;
+  width: 16px;
+}
+.blog .post-link .btn-arrow:hover {
+  border-color: #77BEFF;
+}
+.blog .post-link .btn-arrow:hover::after {
+  border-color: #77BEFF;
+}
 
 /** end section blog */
 
