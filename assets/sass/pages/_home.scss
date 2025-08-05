@@ -979,10 +979,10 @@
 
 /** start section blog */
 .blog {
-    padding-bottom: px-to-rem(60);
+    padding-bottom: px-to-rem(40);
 
     @include devices-large-screens {
-        padding-bottom: px-to-rem(150);
+        padding-bottom: px-to-rem(80);
     }
 
     .section-title {
@@ -1104,13 +1104,13 @@
 /** start newsletter */
 .newsletter {
     @include apply-bg-color(pure-black);
-    padding : px-to-rem(60) 2%;
-    position: relative;
-    width   : 100%;
-    z-index : 2;
+    padding   : px-to-rem(40) 2%;
+    position  : relative;
+    width     : 100%;
+    z-index   : 2;
 
     @include devices-large-screens {
-        padding: px-to-rem(120) 0;
+        padding: px-to-rem(80);
     }
 
     &-title {

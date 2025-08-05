@@ -2512,21 +2512,21 @@ h6 {
 /** end section team */
 /** start section blog */
 .blog {
-  padding-bottom: 3.75rem;
+  padding-bottom: 2.5rem;
 }
 @media screen and (min-width: 1920px) {
   .blog {
-    padding-bottom: 9.375rem;
+    padding-bottom: 5rem;
   }
 }
 @media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
   .blog {
-    padding-bottom: 9.375rem;
+    padding-bottom: 5rem;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
   .blog {
-    padding-bottom: 9.375rem;
+    padding-bottom: 5rem;
   }
 }
 .blog .section-title {
@@ -2638,24 +2638,24 @@ h6 {
 /** start newsletter */
 .newsletter {
   background-color: #000000;
-  padding: 3.75rem 2%;
+  padding: 2.5rem 2%;
   position: relative;
   width: 100%;
   z-index: 2;
 }
 @media screen and (min-width: 1920px) {
   .newsletter {
-    padding: 7.5rem 0;
+    padding: 5rem;
   }
 }
 @media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
   .newsletter {
-    padding: 7.5rem 0;
+    padding: 5rem;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
   .newsletter {
-    padding: 7.5rem 0;
+    padding: 5rem;
   }
 }
 .newsletter-title {
