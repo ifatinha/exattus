@@ -763,14 +763,108 @@ h6 {
 }
 
 .accordion {
-  padding: 0.75rem;
+  padding: 0 0.75rem;
 }
 .accordion-item {
-  border: 1px solid rgba(255, 255, 255, 0.175);
   border-radius: 0.3125rem;
   margin-bottom: 1.25rem;
   overflow: hidden;
-  padding: 1.875rem;
+}
+.accordion-header {
+  border-radius: 5px;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+.accordion-button {
+  align-items: center;
+  display: flex;
+  gap: 0;
+  justify-content: space-between;
+  font-family: "Russo One", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 5px;
+  background: #000000;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1.25rem;
+  padding: 1.25rem;
+  padding-right: 4.6875rem;
+  position: relative;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+.accordion-button:hover {
+  color: #77BEFF;
+}
+.accordion-button:hover::after {
+  color: #77BEFF;
+}
+@media screen and (min-width: 1920px) {
+  .accordion-button {
+    font-size: 1.375rem;
+    padding: 1.875rem;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
+  .accordion-button {
+    font-size: 1.375rem;
+    padding: 1.875rem;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
+  .accordion-button {
+    font-size: 1.375rem;
+    padding: 1.875rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: calc(1024px - 1px)) {
+  .accordion-button {
+    font-size: 1.25rem;
+    padding: 1.25rem;
+  }
+}
+.accordion-button::before {
+  align-items: center;
+  display: flex;
+  gap: 0;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 50px;
+  content: "";
+  height: 40px;
+  margin-top: -22px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  width: 40px;
+}
+.accordion-button::after {
+  align-items: center;
+  display: flex;
+  gap: 0;
+  justify-content: center;
+  background: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 50px;
+  content: "+";
+  font-size: 1.125rem;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  height: 40px;
+  margin-top: -19px;
+  padding-bottom: 3px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  width: 40px;
+}
+
+.accordion-button.collapsed {
+  box-shadow: inherit;
+  outline: inherit;
 }
 
 .container {
@@ -2828,21 +2922,23 @@ h6 {
 .faq-wrapper {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
 }
 @media screen and (min-width: 1920px) {
   .faq-wrapper {
     grid-template-columns: 1fr 1fr;
+    gap: 2rem;
   }
 }
 @media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
   .faq-wrapper {
     grid-template-columns: 1fr 1fr;
+    gap: 2rem;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
   .faq-wrapper {
     grid-template-columns: 1fr 1fr;
+    gap: 2rem;
   }
 }
 

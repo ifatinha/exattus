@@ -1,13 +1,93 @@
 @use "../util/functions"as *;
+@use "../base/typography"as *;
+@use "../base/colors"as *;
+@use "../base/mixins"as *;
+@use "../global/responsive"as *;
 
 .accordion {
-    padding: px-to-rem(12);
+    padding: 0 px-to-rem(12);
 
     &-item {
-        border       : 1px solid rgba($color: #fff, $alpha: 0.175);
         border-radius: px-to-rem(5);
         margin-bottom: px-to-rem(20);
         overflow     : hidden;
-        padding      : px-to-rem(30);
+
     }
+
+    &-header {
+        border-radius: 5px;
+        margin-bottom: 0;
+        overflow     : hidden;
+    }
+
+    &-button {
+        @include flex(center, space-between, 0);
+        @include russo-one-regular();
+        border       : 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 5px;
+        background   : get-color("pure-black");
+        color        : get-color("pure-white");
+        cursor       : pointer;
+        font-size    : get-font-size(20);
+        padding      : px-to-rem(20);
+        padding-right: px-to-rem(75);
+        position     : relative;
+        text-align   : left;
+        transition   : all .3s ease-in-out;
+        width        : 100%;
+
+        @include hover {
+            color: get-color("sky-blue");
+
+            &::after {
+                color: get-color("sky-blue");
+            }
+        }
+
+        @include devices-large-screens() {
+            font-size: get-font-size(22);
+            padding  : px-to-rem(30);
+        }
+
+        @include devices(t) {
+            font-size: get-font-size(20);
+            padding  : px-to-rem(20);
+        }
+
+        &::before {
+            @include flex(center, center, 0);
+            border       : 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 50px;
+            content      : "";
+            height       : 40px;
+            margin-top   : -22px;
+            position     : absolute;
+            right        : 20px;
+            top          : 50%;
+            width        : 40px;
+        }
+
+        &::after {
+            @include flex(center, center, 0);
+            background    : inherit;
+            border        : 1px solid rgba(255, 255, 255, 0.05);
+            border-radius : 50px;
+            content       : "\2b";
+            font-size     : get-font-size(18);
+            font-family   : 'Font Awesome 5 Free';
+            font-weight   : 600;
+            height        : 40px;
+            margin-top    : -19px;
+            padding-bottom: 3px;
+            position      : absolute;
+            right         : 20px;
+            top           : 50%;
+            width         : 40px;
+        }
+    }
+}
+
+.accordion-button.collapsed {
+    box-shadow: inherit;
+    outline   : inherit;
 }
