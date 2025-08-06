@@ -708,12 +708,6 @@
     @include apply-bg-color(pure-black);
     padding-bottom: px-to-rem(60);
     width         : 100%;
-
-    .section-title {
-        max-width: 750px;
-        margin   : 20px auto 40px;
-        width    : 100%;
-    }
 }
 
 .testimonial-container {
@@ -985,12 +979,6 @@
         padding-bottom: px-to-rem(80);
     }
 
-    .section-title {
-        max-width: 750px;
-        margin   : 20px auto 40px;
-        width    : 100%;
-    }
-
     &-container {
         display              : grid;
         grid-template-columns: 1fr;
@@ -1104,10 +1092,10 @@
 /** start newsletter */
 .newsletter {
     @include apply-bg-color(pure-black);
-    padding   : px-to-rem(40) 2%;
-    position  : relative;
-    width     : 100%;
-    z-index   : 2;
+    padding : px-to-rem(40) 2%;
+    position: relative;
+    width   : 100%;
+    z-index : 2;
 
     @include devices-large-screens {
         padding: px-to-rem(80);
@@ -1230,7 +1218,22 @@
 
 /** start section faq */
 .faq {
-    background: palevioletred;
+
+    padding-bottom: px-to-rem(60);
+
+    @include devices-large-screens {
+        padding-bottom: px-to-rem(120);
+    }
+
+    &-wrapper {
+        display              : grid;
+        grid-template-columns: 1fr;
+        gap                  : 2rem;
+
+        @include devices-large-screens {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
 }
 
 /** end section faq */

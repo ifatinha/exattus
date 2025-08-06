@@ -1,0 +1,13 @@
+@use "../util/functions"as *;
+
+.accordion {
+    padding: px-to-rem(12);
+
+    &-item {
+        border       : 1px solid rgba($color: #fff, $alpha: 0.175);
+        border-radius: px-to-rem(5);
+        margin-bottom: px-to-rem(20);
+        overflow     : hidden;
+        padding      : px-to-rem(30);
+    }
+}

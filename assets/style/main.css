@@ -762,6 +762,17 @@ h6 {
   overflow: auto;
 }
 
+.accordion {
+  padding: 0.75rem;
+}
+.accordion-item {
+  border: 1px solid rgba(255, 255, 255, 0.175);
+  border-radius: 0.3125rem;
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+  padding: 1.875rem;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1440px;
@@ -1296,6 +1307,12 @@ h6 {
     font-size: 2.625rem;
     line-height: 3.25rem;
   }
+}
+
+.section-text-center {
+  max-width: 750px;
+  margin: 20px auto 40px;
+  width: 100%;
 }
 
 /** section about */
@@ -2239,11 +2256,6 @@ h6 {
   padding-bottom: 3.75rem;
   width: 100%;
 }
-.testimonial .section-title {
-  max-width: 750px;
-  margin: 20px auto 40px;
-  width: 100%;
-}
 
 .testimonial-container {
   align-items: start;
@@ -2529,11 +2541,6 @@ h6 {
     padding-bottom: 5rem;
   }
 }
-.blog .section-title {
-  max-width: 750px;
-  margin: 20px auto 40px;
-  width: 100%;
-}
 .blog-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -2801,7 +2808,42 @@ h6 {
 /** end newsletter */
 /** start section faq */
 .faq {
-  background: palevioletred;
+  padding-bottom: 3.75rem;
+}
+@media screen and (min-width: 1920px) {
+  .faq {
+    padding-bottom: 7.5rem;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
+  .faq {
+    padding-bottom: 7.5rem;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
+  .faq {
+    padding-bottom: 7.5rem;
+  }
+}
+.faq-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+@media screen and (min-width: 1920px) {
+  .faq-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
+  .faq-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
+  .faq-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /** end section faq */
