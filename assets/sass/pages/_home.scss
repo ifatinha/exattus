@@ -1261,4 +1261,23 @@
     }
 }
 
+.location {
+    padding-bottom: px-to-rem(60);
+
+    @include devices-large-screens {
+        padding-bottom: px-to-rem(120);
+    }
+
+    &-wrapper {
+        display              : grid;
+        grid-template-columns: 1fr;
+        gap                  : 24px;
+        width                : 100%;
+
+        @include devices-large-screens {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
 /** end section contact */
