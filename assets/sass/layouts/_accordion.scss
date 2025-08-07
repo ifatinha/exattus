@@ -36,11 +36,11 @@
         width        : 100%;
 
         @include hover {
-            color: get-color("sky-blue");
+            // color: get-color("sky-blue");
 
-            &::after {
-                color: get-color("sky-blue");
-            }
+            // &::after {
+            //     color: get-color("sky-blue");
+            // }
         }
 
         @include devices-large-screens() {
@@ -101,12 +101,11 @@
     &-body {
         @include apply-bg-color("pure-black");
         color     : rgb(212, 214, 215);
-        display   : none;
         max-height: 0;
-        opacity   : 0;
         overflow  : hidden;
-        padding   : px-to-rem(30) px-to-rem(10);
-        transition: all .3s ease-in-out;
+        //padding   : px-to-rem(30) px-to-rem(10);
+        transition: max-height 0.3s ease-out;
+        background: darkcyan;
     }
 }
 
@@ -119,21 +118,22 @@
 
     &::after {
         //background-image: inherit;
-        border-color    : rgba(255, 255, 255, 0.015);
-        color           : get-color("pure-white");
-        content         : "\f068";
-        font-family     : 'Font Awesome 5 Free';
-        transform       : inherit;
+        border-color: rgba(255, 255, 255, 0.015);
+        color       : get-color("pure-white");
+        content     : "\f068";
+        font-family : 'Font Awesome 5 Free';
+        transform   : inherit;
     }
 
     &::before {
         border-color: rgba(255, 255, 255, 0.15);
     }
+}
 
+.accordion-collapse.show {
     .accordion-body {
+        background: orange;
         display   : block;
-        max-height: 100px;
         opacity   : 1;
-        overflow  : visible;
     }
 }

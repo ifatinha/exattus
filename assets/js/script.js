@@ -4,6 +4,7 @@ import { initLoader } from "./modules/preloader.js";
 import { toTop } from "./modules/toTop.js";
 import { toggleCasesStudies } from "./modules/toggle-cases-studies.js";
 import { carouselTestimonial } from "./owlcarousel/carousel.js";
+import { accordion } from "./modules/accordion.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const functionsToCall = [
@@ -14,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { name: "toTop", func: toTop },
     { name: "toggleCasesStudies", func: toggleCasesStudies },
     { name: "carouselTestimonial", func: carouselTestimonial },
+    { name: "accordion", func: accordion },
   ];
 
   functionsToCall.forEach(({ name, func }) => {

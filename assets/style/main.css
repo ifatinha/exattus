@@ -795,12 +795,6 @@ h6 {
   transition: all 0.3s ease-in-out;
   width: 100%;
 }
-.accordion-button:hover {
-  color: #77BEFF;
-}
-.accordion-button:hover::after {
-  color: #77BEFF;
-}
 @media screen and (min-width: 1920px) {
   .accordion-button {
     font-size: 1.375rem;
@@ -885,12 +879,10 @@ h6 {
 .accordion-body {
   background-color: #000000;
   color: rgb(212, 214, 215);
-  display: none;
   max-height: 0;
-  opacity: 0;
   overflow: hidden;
-  padding: 1.875rem 0.625rem;
-  transition: all 0.3s ease-in-out;
+  transition: max-height 0.3s ease-out;
+  background: darkcyan;
 }
 
 .accordion-button.collapsed {
@@ -910,11 +902,11 @@ h6 {
 .accordion-button.collapsed::before {
   border-color: rgba(255, 255, 255, 0.15);
 }
-.accordion-button.collapsed .accordion-body {
+
+.accordion-collapse.show .accordion-body {
+  background: orange;
   display: block;
-  max-height: 100px;
   opacity: 1;
-  overflow: visible;
 }
 
 .container {
