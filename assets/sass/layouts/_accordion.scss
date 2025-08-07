@@ -30,7 +30,6 @@
         cursor       : pointer;
         font-size    : get-font-size(20);
         padding      : px-to-rem(20);
-        padding-right: px-to-rem(75);
         position     : relative;
         text-align   : left;
         transition   : all .3s ease-in-out;
@@ -62,7 +61,7 @@
             height       : 40px;
             margin-top   : -22px;
             position     : absolute;
-            right        : 20px;
+            right        : 10px;
             top          : 50%;
             width        : 40px;
         }
@@ -80,14 +79,61 @@
             margin-top    : -19px;
             padding-bottom: 3px;
             position      : absolute;
-            right         : 20px;
+            right         : 10px;
             top           : 50%;
             width         : 40px;
         }
+
+        &:focus {
+            border-color: get-color("sky-blue");
+            box-shadow  : inherit;
+        }
+    }
+
+    &-title {
+        margin-right: 20px;
+
+        @include devices-large-screens {
+            margin-right: 30px;
+        }
+    }
+
+    &-body {
+        @include apply-bg-color("pure-black");
+        color     : rgb(212, 214, 215);
+        display   : none;
+        max-height: 0;
+        opacity   : 0;
+        overflow  : hidden;
+        padding   : px-to-rem(30) px-to-rem(10);
+        transition: all .3s ease-in-out;
     }
 }
 
 .accordion-button.collapsed {
-    box-shadow: inherit;
-    outline   : inherit;
+    border-image    : linear-gradient(to right, #3663D8, #77BEFF) 1;
+    background-color: #77BEFF;
+    background      : linear-gradient(170deg, #3663D8 0%, #77BEFF 100%);
+    box-shadow      : inherit;
+    outline         : inherit;
+
+    &::after {
+        //background-image: inherit;
+        border-color    : rgba(255, 255, 255, 0.015);
+        color           : get-color("pure-white");
+        content         : "\f068";
+        font-family     : 'Font Awesome 5 Free';
+        transform       : inherit;
+    }
+
+    &::before {
+        border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .accordion-body {
+        display   : block;
+        max-height: 100px;
+        opacity   : 1;
+        overflow  : visible;
+    }
 }
