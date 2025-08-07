@@ -1,6 +1,6 @@
 export function accordion() {
   const buttons = document.querySelectorAll(".accordion-button");
-  const panels = document.querySelectorAll(".accordion-collapse");
+  const panels = document.querySelectorAll(".accordion-body");
 
   if (!buttons.length || !panels.length) {
     console.warn("Accordion buttons or panels not found.");
@@ -10,36 +10,33 @@ export function accordion() {
   // Fecha todos os painéis e remove classes de estado
   const closeAllAccortionds = () => {
     buttons.forEach((button) => button.classList.remove("collapsed"));
-    panels.forEach((panel) => {
-      panel.classList.remove("show");
-      panel.style.maxHeight = null; // Reseta a altura máxima
-    });
+    panels.forEach((panel) => (panel.style.maxHeight = null));
   };
 
   // Abre o painel correspondente ao botão clicado
-  const toggleAccordionPanel = (event) => {
+  const toggleAccordion = (event) => {
     const button = event.currentTarget;
-    const targetSelect = button.dataset.bsTarget;
-    const panel = document.querySelector(targetSelect);
+    const targetId = button.dataset.bsTarget;
+    const panel = document
+      .querySelector(targetId)
+      ?.querySelector(".accordion-body");
 
     if (!panel) {
-      console.warn("Accordion panel not found for target:", targetSelect);
+      console.warn(
+        `Accordion: Painel não encontrado para o seletor "${targetId}".`
+      );
       return;
     }
 
-    const isOpen = button.classList.contains("collapsed");
+    const isOpen = panel.style.maxHeight;
     closeAllAccortionds();
 
     // Se estava fechado, então abre
     if (!isOpen) {
       button.classList.add("collapsed");
-      //panel.classList.add("show");
-      panel.style.maxHeight = panel.scrollHeight + "px"; // Define a altura máxima para o conteúdo
-      console.log("Panel opened with height:", panel.scrollHeight);
+      panel.style.maxHeight = `${panel.scrollHeight}px`; // Define a altura máxima para o conteúdo
     }
   };
 
-  buttons.forEach((button) => {
-    button.addEventListener("click", toggleAccordionPanel);
-  });
+  buttons.forEach((btn) => btn.addEventListener("click", toggleAccordion));
 }

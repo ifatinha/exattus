@@ -32,15 +32,15 @@
         padding      : px-to-rem(20);
         position     : relative;
         text-align   : left;
-        transition   : all .3s ease-in-out;
+        transition   : all .5s ease-in-out;
         width        : 100%;
 
         @include hover {
-            // color: get-color("sky-blue");
+            color: get-color("sky-blue");
 
-            // &::after {
-            //     color: get-color("sky-blue");
-            // }
+            &::after {
+                color: get-color("sky-blue");
+            }
         }
 
         @include devices-large-screens() {
@@ -62,13 +62,13 @@
             margin-top   : -22px;
             position     : absolute;
             right        : 10px;
+            transition   : all .3s ease-in-out;
             top          : 50%;
             width        : 40px;
         }
 
         &::after {
             @include flex(center, center, 0);
-            background    : inherit;
             border        : 1px solid rgba(255, 255, 255, 0.05);
             border-radius : 50px;
             content       : "\2b";
@@ -80,6 +80,7 @@
             padding-bottom: 3px;
             position      : absolute;
             right         : 10px;
+            transition    : all .3s ease-in-out;
             top           : 50%;
             width         : 40px;
         }
@@ -100,12 +101,14 @@
 
     &-body {
         @include apply-bg-color("pure-black");
-        color     : rgb(212, 214, 215);
         max-height: 0;
         overflow  : hidden;
-        //padding   : px-to-rem(30) px-to-rem(10);
         transition: max-height 0.3s ease-out;
-        background: darkcyan;
+    }
+
+    &-text {
+        color  : rgb(212, 214, 215);
+        padding: px-to-rem(30) px-to-rem(10);
     }
 }
 
@@ -113,27 +116,18 @@
     border-image    : linear-gradient(to right, #3663D8, #77BEFF) 1;
     background-color: #77BEFF;
     background      : linear-gradient(170deg, #3663D8 0%, #77BEFF 100%);
+    color           : get-color("pure-white");
     box-shadow      : inherit;
     outline         : inherit;
 
     &::after {
-        //background-image: inherit;
         border-color: rgba(255, 255, 255, 0.015);
         color       : get-color("pure-white");
         content     : "\f068";
         font-family : 'Font Awesome 5 Free';
-        transform   : inherit;
     }
 
     &::before {
         border-color: rgba(255, 255, 255, 0.15);
-    }
-}
-
-.accordion-collapse.show {
-    .accordion-body {
-        background: orange;
-        display   : block;
-        opacity   : 1;
     }
 }

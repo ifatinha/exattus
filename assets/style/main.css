@@ -792,8 +792,14 @@ h6 {
   padding: 1.25rem;
   position: relative;
   text-align: left;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
   width: 100%;
+}
+.accordion-button:hover {
+  color: #77BEFF;
+}
+.accordion-button:hover::after {
+  color: #77BEFF;
 }
 @media screen and (min-width: 1920px) {
   .accordion-button {
@@ -831,6 +837,7 @@ h6 {
   margin-top: -22px;
   position: absolute;
   right: 10px;
+  transition: all 0.3s ease-in-out;
   top: 50%;
   width: 40px;
 }
@@ -839,7 +846,6 @@ h6 {
   display: flex;
   gap: 0;
   justify-content: center;
-  background: inherit;
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 50px;
   content: "+";
@@ -851,6 +857,7 @@ h6 {
   padding-bottom: 3px;
   position: absolute;
   right: 10px;
+  transition: all 0.3s ease-in-out;
   top: 50%;
   width: 40px;
 }
@@ -878,17 +885,20 @@ h6 {
 }
 .accordion-body {
   background-color: #000000;
-  color: rgb(212, 214, 215);
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out;
-  background: darkcyan;
+}
+.accordion-text {
+  color: rgb(212, 214, 215);
+  padding: 1.875rem 0.625rem;
 }
 
 .accordion-button.collapsed {
   border-image: linear-gradient(to right, #3663D8, #77BEFF) 1;
   background-color: #77BEFF;
   background: linear-gradient(170deg, #3663D8 0%, #77BEFF 100%);
+  color: #ffffff;
   box-shadow: inherit;
   outline: inherit;
 }
@@ -897,16 +907,9 @@ h6 {
   color: #ffffff;
   content: "\f068";
   font-family: "Font Awesome 5 Free";
-  transform: inherit;
 }
 .accordion-button.collapsed::before {
   border-color: rgba(255, 255, 255, 0.15);
-}
-
-.accordion-collapse.show .accordion-body {
-  background: orange;
-  display: block;
-  opacity: 1;
 }
 
 .container {
