@@ -2849,7 +2849,7 @@ h6 {
   }
 }
 .newsletter form {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   width: 100%;
 }
@@ -2988,5 +2988,30 @@ h6 {
 }
 
 /** end section faq */
+/** start section contact */
+.contact-bg {
+  align-items: center;
+  display: flex;
+  gap: 0;
+  justify-content: center;
+  background-image: url("../images/contact.webp");
+  background-color: rgb(37, 99, 173);
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  height: 450px;
+  width: 100%;
+}
+.contact-bg .container {
+  text-align: center;
+}
+.contact-bg h1 {
+  font-size: 2.625rem;
+}
+
+/** end section contact */
 
 /*# sourceMappingURL=main.css.map */

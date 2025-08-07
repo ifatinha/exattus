@@ -1135,7 +1135,7 @@
     }
 
     form {
-        max-width: 900px;
+        max-width: 1200px;
         margin   : 0 auto;
         width    : 100%;
     }
@@ -1237,3 +1237,28 @@
 }
 
 /** end section faq */
+
+/** start section contact */
+.contact-bg {
+    @include flex(center, center, 0);
+    background-image     : url("../images/contact.webp");
+    background-color     : rgb(37, 99, 173);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-position  : center center;
+    background-repeat    : no-repeat;
+    background-size      : cover;
+    flex-direction       : column;
+    height               : 450px;
+    width                : 100%;
+
+    .container {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: get-font-size(42);
+    }
+}
+
+/** end section contact */
