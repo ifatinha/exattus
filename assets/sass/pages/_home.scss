@@ -1261,14 +1261,15 @@
     }
 }
 
-.location {
+.contact {
+    background    : get-color(pure-black);
     padding-bottom: px-to-rem(60);
 
     @include devices-large-screens {
         padding-bottom: px-to-rem(120);
     }
 
-    &-wrapper {
+    .location-wrapper {
         display              : grid;
         grid-template-columns: 1fr;
         gap                  : 24px;
@@ -1279,7 +1280,7 @@
         }
     }
 
-    &-row {
+    .location-row {
 
         &:nth-child(2) {
             display              : grid;
@@ -1300,7 +1301,7 @@
         }
     }
 
-    &-item {
+    .location-item {
         @include flex(flex-end, center, 0);
         @include apply-bg-color(pure-black);
         border       : 1px solid rgba(255, 255, 255, 0.05);
@@ -1318,11 +1319,11 @@
         }
     }
 
-    &-inner {
+    .location-inner {
         overflow: hidden;
     }
 
-    &-info {
+    .location-info {
         .city-imagem {
             img {
                 object-fit: cover;
@@ -1370,11 +1371,10 @@
 }
 
 .contact-wrapper {
-    background    : get-color(pure-black);
-    padding-top   : 60px;
+    padding-top: 60px;
 
     @include devices-large-screens {
-        padding-top   : 120px;
+        padding-top: 120px;
     }
 
     .column {
