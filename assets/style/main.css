@@ -3153,6 +3153,40 @@ h6 {
   font-size: 0.9375rem;
 }
 
+.contact-wrapper {
+  background: #000000;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1920px) {
+  .contact-wrapper {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
+  .contact-wrapper {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
+  .contact-wrapper {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+.contact-wrapper .column:nth-child(2) {
+  text-align: right;
+}
+.contact-wrapper .column:nth-child(2) .title {
+  display: block;
+}
+
+.contact-form {
+  margin-top: 2rem;
+}
+
 /** end section contact */
 
 /*# sourceMappingURL=main.css.map */

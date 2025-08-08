@@ -1369,4 +1369,29 @@
     }
 }
 
+.contact-wrapper {
+    background    : get-color(pure-black);
+    padding-top   : 60px;
+    padding-bottom: 60px;
+
+    @include devices-large-screens {
+        padding-top   : 120px;
+        padding-bottom: 120px;
+    }
+
+    .column {
+        &:nth-child(2) {
+            text-align: right;
+
+            .title {
+                display: block;
+            }
+        }
+    }
+}
+
+.contact-form {
+    margin-top: 2rem;
+}
+
 /** end section contact */
