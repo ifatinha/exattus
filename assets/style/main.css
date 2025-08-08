@@ -3008,7 +3008,7 @@ h6 {
 .contact-bg .container {
   text-align: center;
 }
-.contact-bg h1 {
+.contact-bg h2 {
   font-size: 2.625rem;
 }
 
@@ -3050,6 +3050,107 @@ h6 {
   .location-wrapper {
     grid-template-columns: 1fr 1fr;
   }
+}
+.location-row:nth-child(2) {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+@media screen and (min-width: 1920px) {
+  .location-row:nth-child(2) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
+  .location-row:nth-child(2) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
+  .location-row:nth-child(2) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: calc(1024px - 1px)) {
+  .location-row:nth-child(2) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .location-row:nth-child(2) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.location-item {
+  align-items: flex-end;
+  display: flex;
+  gap: 0;
+  justify-content: center;
+  background-color: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  min-height: 410px;
+  padding: 0.625rem 0.625rem;
+  transition: all 0.3s ease-in-out;
+}
+.location-item:hover {
+  border-color: #77BEFF;
+}
+@media screen and (min-width: 1920px) {
+  .location-item {
+    padding: 1.25rem 1.25rem;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
+  .location-item {
+    padding: 1.25rem 1.25rem;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
+  .location-item {
+    padding: 1.25rem 1.25rem;
+  }
+}
+.location-inner {
+  overflow: hidden;
+}
+.location-info .city-imagem img {
+  object-fit: cover;
+}
+.location-info .city-info {
+  margin-top: 1.25rem;
+}
+.location-info .city-name {
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  -o-background-clip: text;
+  background-clip: text;
+  background: linear-gradient(60deg, rgb(54, 99, 216) -20%, rgb(119, 190, 255) 100%) text;
+  margin-bottom: 1.25rem;
+  transition: 0.3s ease-in-out all;
+  -webkit-text-fill-color: transparent;
+}
+.location-info .city-location {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9375rem;
+}
+.location-info .city-item {
+  align-items: center;
+  display: flex;
+}
+.location-info .city-item .icon {
+  flex: 0 0 auto;
+  margin-right: 0.9375rem;
+}
+.location-info .city-item .icon img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+.location-info .city-label {
+  font-size: 0.9375rem;
 }
 
 /** end section contact */

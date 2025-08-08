@@ -1256,7 +1256,7 @@
         text-align: center;
     }
 
-    h1 {
+    h2 {
         font-size: get-font-size(42);
     }
 }
@@ -1276,6 +1276,95 @@
 
         @include devices-large-screens {
             grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &-row {
+
+        &:nth-child(2) {
+            display              : grid;
+            grid-template-columns: 1fr;
+            gap                  : 24px;
+
+            @include devices-large-screens {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include devices(t) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include mobile-landscape {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+
+    &-item {
+        @include flex(flex-end, center, 0);
+        @include apply-bg-color(pure-black);
+        border       : 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 10px;
+        min-height   : 410px;
+        padding      : px-to-rem(10) px-to-rem(10);
+        transition   : all 0.3s ease-in-out;
+
+        @include hover {
+            border-color: get-color(sky-blue);
+        }
+
+        @include devices-large-screens {
+            padding: px-to-rem(20) px-to-rem(20);
+        }
+    }
+
+    &-inner {
+        overflow: hidden;
+    }
+
+    &-info {
+        .city-imagem {
+            img {
+                object-fit: cover;
+            }
+        }
+
+        .city-info {
+            margin-top: px-to-rem(20);
+        }
+
+        .city-name {
+            @include prefix(background-clip, text);
+            background             : linear-gradient(60deg, rgb(54, 99, 216) -20%, rgb(119, 190, 255) 100%) text;
+            margin-bottom          : px-to-rem(20);
+            transition             : .3s ease-in-out all;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .city-location {
+            display       : flex;
+            flex-direction: column;
+            gap           : px-to-rem(15);
+        }
+
+        .city-item {
+            align-items: center;
+            display    : flex;
+
+            .icon {
+                flex        : 0 0 auto;
+                margin-right: px-to-rem(15);
+
+                img {
+                    height    : 100%;
+                    object-fit: cover;
+                    width     : 100%;
+                }
+            }
+        }
+
+        .city-label {
+            font-size: get-font-size(15);
         }
     }
 }
