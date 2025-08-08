@@ -1372,11 +1372,9 @@
 .contact-wrapper {
     background    : get-color(pure-black);
     padding-top   : 60px;
-    padding-bottom: 60px;
 
     @include devices-large-screens {
         padding-top   : 120px;
-        padding-bottom: 120px;
     }
 
     .column {
@@ -1393,6 +1391,7 @@
 .contact-form {
     display              : grid;
     margin-top           : 2rem;
+    margin-bottom        : 3rem;
     grid-template-columns: 1fr;
     gap                  : px-to-rem(12);
 
