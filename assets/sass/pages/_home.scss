@@ -1391,7 +1391,57 @@
 }
 
 .contact-form {
-    margin-top: 2rem;
+    display              : grid;
+    margin-top           : 2rem;
+    grid-template-columns: 1fr;
+    gap                  : px-to-rem(12);
+
+    @include devices-large-screens {
+        grid-template-columns: repeat(2, 1fr);
+        gap                  : px-to-rem(20);
+    }
+
+    @include devices(t) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile-landscape {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &-item {
+
+        input,
+        textarea {
+            @include font-primary();
+            background   : transparent;
+            border       : 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+            color        : get-color(light-silver);
+            display      : block;
+            font-size    : get-font-size(18);
+            font-weight  : 400;
+            margin-bottom: px-to-rem(20);
+            outline      : none;
+            position     : relative;
+            padding      : px-to-rem(15) px-to-rem(20);
+            transition   : border-color .3s ease-in-out;
+            width        : 100%;
+
+            &::placeholder {
+                color: get-color(light-silver);
+            }
+
+            &:focus {
+                color       : get-color(light-silver);
+                border-color: get-color(sky-blue);
+            }
+
+            &:active {
+                background: transparent;
+            }
+        }
+    }
 }
 
 /** end section contact */
