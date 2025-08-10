@@ -32,7 +32,7 @@
     }
 
     &-info {
-        padding: 1rem;
+        padding   : 1rem;
     }
 
     .widget {
@@ -156,18 +156,14 @@
         }
     }
 
-    .widget-info {
-        .widget-title {
-            margin-top: px-to-rem(20);
-        }
-    }
-
     .widget-number {
         @include russo-one-regular();
         color         : rgb(212, 214, 215);
+        display       : inline-block;
         font-size     : get-font-size(32);
         line-height   : px-to-rem(22);
         letter-spacing: 3px;
+        margin-bottom : px-to-rem(20);
         transition    : all .3s ease-in-out;
 
         @include hover {
@@ -176,7 +172,15 @@
     }
 
     .widget-social {
-        margin-top: px-to-rem(80);
+        margin-top: px-to-rem(30);
+
+        @include devices-large-screens {
+            margin-top: px-to-rem(110);
+        }
+
+        @include ipad-2-landscape {
+            margin-top: px-to-rem(30);
+        }
 
         ul {
             display: flex;
@@ -244,20 +248,40 @@
 
     &-copyright {
         border-top: 1px solid rgba($color: #ffffff, $alpha: 0.05);
-        margin-top: px-to-rem(80);
+        margin-top: 0;
         padding   : px-to-rem(30) 2%;
 
+        @include devices-large-screens {
+            margin-top: px-to-rem(80);
+        }
+
+        @include ipad-2-landscape {
+            margin-top: 0;
+        }
+
         .copyright-wrapper {
-            @include flex(center, space-between);
+            @include flex(center, space-between, 18px);
             flex-wrap: wrap;
         }
     }
 
     .footer-logo {
-        background: orange;
+
+        @include devices-small-screens {
+            flex-basis: 100%;
+        }
+
+        img {
+            max-width : 280px;
+            object-fit: cover
+        }
     }
 
     .footer-text {
+
+        @include devices-small-screens {
+            flex-basis: 100%;
+        }
 
         p {
             a {

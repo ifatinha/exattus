@@ -225,6 +225,11 @@
     right         : 0;
     top           : 50%;
     transform     : translateY(-50%);
+    transition    : all .3s ease-in-out;
+
+    @include hover {
+        @include apply-color(sky-blue);
+    }
 
     @include devices-mobile {
         font-size: get-font-size(16);
