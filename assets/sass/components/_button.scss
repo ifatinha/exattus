@@ -206,17 +206,32 @@
 .btn-arrow {
     @include rounded(50px, true);
     @include flex(center, center, 0);
-    background  : transparent;
-    border      : 1px solid rgba(255, 255, 255, 0.15);
-    border-color: get-color(sky-blue);
-    cursor      : pointer;
-    padding     : 4px 4px 0 0;
-    position    : relative;
-    transition  : all .3s ease-in-out;
+    background: transparent;
+    border    : 1px solid rgba(255, 255, 255, 0.15);
+    cursor    : pointer;
+    padding   : 4px 4px 0 0;
+    position  : relative;
+    transition: all .3s ease-in-out;
+
+    svg path {
+        stroke    : get-color(pure-white);
+        transition: all .3s ease-in-out;
+    }
+
+    @include hover {
+        border-color: get-color(sky-blue);
+
+        &::after {
+            border-color: get-color(sky-blue);
+        }
+
+        svg path {
+            stroke: get-color(sky-blue);
+        }
+    }
 
     &::after {
-        border       : 1px solid rgba(255, 255, 255, 0.1);
-        border-color : get-color(sky-blue);
+        border       : 1px solid rgba(255, 255, 255, 0.15);
         bottom       : -4px;
         border-radius: 50%;
         content      : "";

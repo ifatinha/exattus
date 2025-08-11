@@ -542,15 +542,26 @@ h6 {
   justify-content: center;
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.15);
-  border-color: #77BEFF;
   cursor: pointer;
   padding: 4px 4px 0 0;
   position: relative;
   transition: all 0.3s ease-in-out;
 }
-.btn-arrow::after {
-  border: 1px solid rgba(255, 255, 255, 0.1);
+.btn-arrow svg path {
+  stroke: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+.btn-arrow:hover {
   border-color: #77BEFF;
+}
+.btn-arrow:hover::after {
+  border-color: #77BEFF;
+}
+.btn-arrow:hover svg path {
+  stroke: #77BEFF;
+}
+.btn-arrow::after {
+  border: 1px solid rgba(255, 255, 255, 0.15);
   bottom: -4px;
   border-radius: 50%;
   content: "";
