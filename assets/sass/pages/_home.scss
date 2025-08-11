@@ -265,12 +265,12 @@
 }
 
 .marquee-inner {
-    @include marquee();
     align-items: center;
     display    : flex;
     gap        : px-to-rem(40);
     position   : relative;
     white-space: nowwrap;
+    will-change: transform;
     width      : 100%;
 }
 

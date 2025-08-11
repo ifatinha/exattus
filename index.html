@@ -198,7 +198,7 @@
       <!-- end main content -->
 
       <!-- start section about -->
-      <div id="about">
+      <section id="about">
          <section class="section about">
             <div class="container">
                <span class="title">
@@ -208,8 +208,8 @@
                   <h2 class="section-title">Você no centro de tudo</h2>
                   <p class="paragraph">Combinamos expertise contábil e inteligência tecnológica para entregar soluções
                      integradas, eficientes e personalizadas. Mais do que serviços, entregamos valor. Atuamos com
-                     precisão
-                     contábil e soluções digitais sob medida para transformar sua rotina e acelerar seu crescimento.
+                     precisão contábil e soluções digitais sob medida para transformar sua rotina e acelerar seu
+                     crescimento.
                   </p>
                </div>
                <div class="about-content">
@@ -250,11 +250,11 @@
                         </div>
                         <div class="about-customers">
                            <div class="counter">
-                              <div class="counter-number">250+</div>
+                              <div class="counter-number" id="counterAbout1">250+</div>
                               <div class="counter-info">Pessoas de negócios</div>
                            </div>
                            <div class="counter">
-                              <div class="counter-number">100+</div>
+                              <div class="counter-number" id="counterAbout2">100+</div>
                               <div class="counter-info">Projetos entregues</div>
                            </div>
                         </div>
@@ -310,7 +310,7 @@
                </div>
             </div>
          </section>
-      </div>
+      </section>
       <!-- end section about -->
 
       <!-- start section services -->
@@ -398,6 +398,8 @@
                         Cibersegurança
                      </span>
                   </div>
+
+                  <!-- clone automático no JS -->
                </div>
             </div>
          </div>
@@ -1492,11 +1494,12 @@
                         <input type="text" name="subject" id="subject" placeholder="Assunto" required>
                      </div>
                      <div class="contact-form-item">
-                        <textarea name="company" id="company" rows="6" placeholder="Companhia" required autocomplete="on"></textarea>
+                        <textarea name="company" id="company" rows="6" placeholder="Companhia" required
+                           autocomplete="on"></textarea>
                      </div>
                      <div class="contact-form-item">
-                        <textarea name="description" id="description" rows="6" placeholder="Descrição"
-                           required autocomplete="on"></textarea>
+                        <textarea name="description" id="description" rows="6" placeholder="Descrição" required
+                           autocomplete="on"></textarea>
                      </div>
                      <div class="contact-form-item">
                         <a href="#contact" class="btn-round">

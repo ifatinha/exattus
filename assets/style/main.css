@@ -2208,19 +2208,12 @@ h6 {
 }
 
 .marquee-inner {
-  animation-name: marquee;
-  animation-duration: 30s;
-  animation-timing-function: linear;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  animation-fill-mode: none;
-  animation-play-state: running;
   align-items: center;
   display: flex;
   gap: 2.5rem;
   position: relative;
   white-space: nowwrap;
+  will-change: transform;
   width: 100%;
 }
 
