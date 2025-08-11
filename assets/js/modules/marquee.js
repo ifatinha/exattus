@@ -1,7 +1,7 @@
 export function animateMarquee() {
   const marqueeInner = document.querySelector(".marquee-inner");
   const itemsEl = Array.from(marqueeInner.children);
-  let speed = 60;
+  let speed = 40;
   let position = 0;
 
   if (!marqueeInner) {
