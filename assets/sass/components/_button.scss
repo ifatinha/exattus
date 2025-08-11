@@ -155,9 +155,11 @@
 .back-to-top {
     @include flex(center, center, 0);
     @include rounded(55px, true);
-    border    : 2px solid rgb(119, 190, 255);
+    //border    : 2px solid rgb(119, 190, 255);
+    //border    : 2px solid rgba(255, 255, 255, 0.15);
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.1);
     bottom    : px-to-rem(30);
-    color     : rgb(119, 190, 255);
+    color     : rgba(255, 255, 255, 0.15);
     opacity   : 0;
     position  : fixed;
     right     : px-to-rem(20);
@@ -168,8 +170,22 @@
     z-index   : 1000;
 
     @include hover {
-        border-color: rgba(255, 255, 255, 0.15);
-        color       : rgba(255, 255, 255, 0.15);
+        color: rgb(119, 190, 255);
+    }
+
+    &::before {
+        //border  : 2px solid rgb(119, 190, 255);
+        //background   : rgb(119, 190, 255);
+        background: conic-gradient(rgb(119, 190, 255) var(--scroll-progress, 0%),
+                rgba(255, 255, 255, 0.15) var(--scroll-progress, 0%));
+        border-radius: 100%;
+        content      : "";
+        inset        : 0;
+        mask         :
+            radial-gradient(farthest-side, transparent calc(100% - 2px), black calc(100% - 1px));
+        padding : 2px;
+        position: absolute;
+        z-index : -1;
     }
 }
 
