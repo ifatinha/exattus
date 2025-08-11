@@ -91,6 +91,17 @@
             order: 1;
         }
     }
+
+    @include mobile-landscape {
+
+        .main-title {
+            flex-basis: 100%;
+        }
+
+        .main-description {
+            margin-top: 0;
+        }
+    }
 }
 
 .main-description {
@@ -102,8 +113,9 @@
         max-width: 450px;
     }
 
-    @include devices(m);
-    margin-top: 0;
+    @include devices(m) {
+        margin-top: 0;
+    }
 }
 
 .main-text {

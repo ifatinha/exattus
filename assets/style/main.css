@@ -438,22 +438,28 @@ h6 {
   border-radius: 80px;
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #ffffff;
+  color: #77BEFF;
   flex-direction: column;
   padding: 0.9375rem;
   position: relative;
-  transition: all 0.35s ease-in-out;
+  transition: all 0.3s ease-in-out;
   text-align: center;
   z-index: 2;
 }
+.btn-round svg path {
+  transition: all 0.3s ease-in-out;
+}
 .btn-round:hover {
+  border-color: #77BEFF;
+}
+.btn-round:hover::after {
   border-color: #77BEFF;
 }
 .btn-round:hover span {
   color: #77BEFF;
 }
-.btn-round:hover::after {
-  border-color: #77BEFF;
+.btn-round:hover svg path {
+  stroke: #77BEFF;
 }
 .btn-round:active {
   transform: scale(0.95);
@@ -512,9 +518,15 @@ h6 {
   padding: 2px;
   position: absolute;
   z-index: -1;
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 2px), black calc(100% - 1px));
+  -moz-mask: radial-gradient(farthest-side, transparent calc(100% - 2px), black calc(100% - 1px));
+  -ms-mask: radial-gradient(farthest-side, transparent calc(100% - 2px), black calc(100% - 1px));
+  -o-mask: radial-gradient(farthest-side, transparent calc(100% - 2px), black calc(100% - 1px));
+  mask: radial-gradient(farthest-side, transparent calc(100% - 2px), black calc(100% - 1px));
 }
 
 .back-to-top.active {
+  color: rgb(119, 190, 255);
   opacity: 1;
   transform: translateY(0);
   visibility: visible;
@@ -1436,12 +1448,19 @@ h6 {
     order: 1;
   }
 }
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .main-text .main-title {
+    flex-basis: 100%;
+  }
+  .main-text .main-description {
+    margin-top: 0;
+  }
+}
 
 .main-description {
   max-width: 400px;
   margin-top: 1.25rem;
   width: 100%;
-  margin-top: 0;
 }
 @media screen and (min-width: 1920px) {
   .main-description {
@@ -1458,6 +1477,12 @@ h6 {
     max-width: 450px;
   }
 }
+@media screen and (max-width: calc(768px - 1px)) {
+  .main-description {
+    margin-top: 0;
+  }
+}
+
 .main-text {
   color: #d4d6d7;
 }
@@ -2184,28 +2209,8 @@ h6 {
 /** start section services*/
 .space {
   overflow: hidden;
-  padding: 3.125rem 0;
+  padding: 2.5rem 0;
   width: 100%;
-}
-@media screen and (min-width: 1920px) {
-  .space {
-    padding: 9.375rem 0;
-  }
-}
-@media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
-  .space {
-    padding: 9.375rem 0;
-  }
-}
-@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
-  .space {
-    padding: 9.375rem 0;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: calc(1024px - 1px)) {
-  .space {
-    padding: 5.625rem 0;
-  }
 }
 
 .marquee-wrapper {

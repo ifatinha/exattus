@@ -2,8 +2,9 @@
 @use "../base/mixins"as *;
 @use "../base/typography"as *;
 @use "../global/responsive"as *;
-@use "../util/functions"as *;
 @use "../global/animations"as *;
+@use "../util/functions"as *;
+@use "../util/prefixes"as *;
 
 .burger__button {
     @include flex(center, center, 10px);
@@ -103,23 +104,31 @@
     @include rounded(160px, true);
     background    : transparent;
     border        : 1px solid rgba(255, 255, 255, 0.15);
-    color         : get-color(pure-white);
+    color         : get-color(sky-blue);
     flex-direction: column;
     padding       : px-to-rem(15);
     position      : relative;
-    transition    : all 0.35s ease-in-out;
+    transition    : all .3s ease-in-out;
     text-align    : center;
     z-index       : 2;
 
+    svg path {
+        transition: all .3s ease-in-out;
+    }
+
     @include hover {
         border-color: get-color(sky-blue);
+
+        &::after {
+            border-color: get-color(sky-blue);
+        }
 
         span {
             color: get-color(sky-blue);
         }
 
-        &::after {
-            border-color: get-color(sky-blue);
+        svg path {
+            stroke: get-color(sky-blue);
         }
     }
 
@@ -155,8 +164,6 @@
 .back-to-top {
     @include flex(center, center, 0);
     @include rounded(55px, true);
-    //border    : 2px solid rgb(119, 190, 255);
-    //border    : 2px solid rgba(255, 255, 255, 0.15);
     box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.1);
     bottom    : px-to-rem(30);
     color     : rgba(255, 255, 255, 0.15);
@@ -174,8 +181,6 @@
     }
 
     &::before {
-        //border  : 2px solid rgb(119, 190, 255);
-        //background   : rgb(119, 190, 255);
         background: conic-gradient(rgb(119, 190, 255) var(--scroll-progress, 0%),
                 rgba(255, 255, 255, 0.15) var(--scroll-progress, 0%));
         border-radius: 100%;
@@ -186,10 +191,13 @@
         padding : 2px;
         position: absolute;
         z-index : -1;
+
+        @include prefix(mask, radial-gradient(farthest-side, transparent calc(100% - 2px), black calc(100% - 1px)));
     }
 }
 
 .back-to-top.active {
+    color     : rgb(119, 190, 255);
     opacity   : 1;
     transform : translateY(0);
     visibility: visible;

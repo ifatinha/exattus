@@ -244,16 +244,8 @@
 /** start section services*/
 .space {
     overflow: hidden;
-    padding : px-to-rem(50) 0;
+    padding : px-to-rem(40) 0;
     width   : 100%;
-
-    @include devices-large-screens {
-        padding: px-to-rem(150) 0;
-    }
-
-    @include devices(t) {
-        padding: px-to-rem(90) 0;
-    }
 }
 
 .marquee-wrapper {
