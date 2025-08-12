@@ -5,7 +5,8 @@
 
 .header {
     @include flex(center, space-between);
-    background   : transparent;
+    @include apply-bg-color(pure-black);
+    //background   : transparent;
     border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.1);
     padding      : 1rem 2%;
     position     : absolute;
@@ -23,7 +24,7 @@
     }
 
     &__brand {
-        min-width : 200px;
+        min-width: 200px;
 
         img {
             height: auto;

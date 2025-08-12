@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Charset -->
+    <meta charset="UTF-8">
+
+    <!-- Compatibilidade com IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Responsividade -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título da página -->
+    <title>Serviços - Exattus Contabilidade & Tecnologia LTDA</title>
+
+    <!-- Descrição para SEO -->
+    <meta name="description"
+        content="Conheça os serviços da EXATTUS: contabilidade, consultoria, desenvolvimento de sistemas, treinamento e suporte para empresas públicas e privadas.">
+
+    <!-- Palavras-chave -->
+    <meta name="keywords"
+        content="Serviços de Contabilidade, Consultoria Contábil, Desenvolvimento de Sistemas, Treinamento, Suporte Técnico, EXATTUS">
+
+    <!-- Autor -->
+    <meta name="author" content="EXATTUS CONTABILIDADE & TECNOLOGIA LTDA">
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Serviços - EXATTUS Contabilidade & Tecnologia LTDA">
+    <meta property="og:description"
+        content="Conheça os serviços da EXATTUS: contabilidade, consultoria, desenvolvimento de sistemas, treinamento e suporte.">
+    <meta property="og:url" content="https://www.exattuscontabiltech.com/services">
+    <meta property="og:image" content="https://www.exattuscontabiltech.com/assets/images/og-image-services.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Serviços - EXATTUS Contabilidade & Tecnologia LTDA">
+    <meta name="twitter:description"
+        content="Conheça os serviços da EXATTUS: contabilidade, consultoria, desenvolvimento de sistemas, treinamento e suporte.">
+    <meta name="twitter:image"
+        content="https://www.exattuscontabiltech.com.br/assets/images/twitter-image-services.png">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../images/icon-exattus.svg" type="image/x-icon">
+
+    <!-- Tema para navegadores móveis -->
+    <meta name="theme-color" content="#004d40">
+
+    <!-- links fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Russo+One&display=swap"
+        rel="stylesheet">
+
+    <!-- links css -->
+    <link rel="stylesheet" href="../style/main.css">
+
+</head>
+
+<body>
+    <!-- start header -->
+    <header class="header">
+        <div class="header__brand">
+            <a href="../../index.html">
+                <img src="../images/logo-exattus.svg" alt="EXATTUS CONTABILIDADE & TECNOLOGIA LTDA">
+            </a>
+        </div>
+
+        <button class="burger__button" type="button" id="navbarOpenButton" aria-label="Abrir Menu" aria-expanded="false"
+            aria-haspopup="menu" aria-controls="sidebarMenu">
+            <span class="burger__button-visually">Menu</span>
+            <span class="burger__button-bars" id="menuBar" aria-hidden="true"></span>
+        </button>
+    </header>
+    <!-- end header -->
+
+    <!-- start menu modal -->
+    <div class="modal menu__modal" id="modal"></div>
+    <!-- end menu modal -->
+
+    <!-- start sidebar -->
+    <div class="sidebar sidebar--menu" id="sidebarMenu">
+        <div class="sidebar__header">
+            <div class="navbar__brand">
+                <a href="index.html">
+                    <img src="../images/logo-exattus.svg" alt="EXATTUS CONTABILIDADE & TECNOLOGIA LTDA">
+                </a>
+            </div>
+            <button class="sidebar__close-btn" id="sidebarCloseBtn" aria-label="Fechar menu">
+                <span class="close__btn-x"></span>
+                <span class="close__btn-y"></span>
+            </button>
+        </div>
+
+        <div class="sidebar__body">
+            <ul class="sidebar__menu" id="sidebarMenuList" aria-label="Menu lateral">
+                <li><a href="#home" class="active">Inicio</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#team">Equipe</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#faq">Faq</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+            <div class="sidebar__contact">
+                <span class="number">+55 83 98153-2811</span>
+                <a href="mailto:contato@exattus.com">
+                    <i class="fas fa-envelope"></i>
+                    contato@exattus.com
+                </a>
+                <span class="text">
+                    Pronto para inovar? Entre em contato.
+                </span>
+            </div>
+        </div>
+    </div>
+    <!-- end sidebar -->
+
+    <!-- start div loader -->
+    <div class="preloader" id="preloader">
+        <h2 class="preloader-title">Exattus</h2>
+        <div class="loader"></div>
+    </div>
+    <!-- end div loader -->
+
+    <!-- start div back to top -->
+    <a href="#" class="back-to-top" id="backToTopBtn" aria-label="Voltar ao topo da página">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+        <span class="sr-only">Voltar ao topo</span>
+    </a>
+    <!-- end div back to top -->
+
+    <!-- start site content -->
+    <div class="site-content hiddens" id="siteContent">
+
+        <!-- start services bg -->
+        <div class="bg-holder services-bg">
+            <div class="container">
+                <h2>Nossas Soluções</h2>
+                <p>Transformamos desafios em resultados com serviços sob medida para o seu negócio.</p>
+            </div>
+        </div>
+        <!-- end services bg -->
+
+        <!-- start footer -->
+        <footer class="footer">
+            <div class="footer-main">
+                <div class="container">
+                    <div class="footer-wrapper">
+                        <div class="footer-info">
+                            <div class="widget widget-address">
+                                <h2 class="widget-title">Onde nos encontrar</h2>
+                                <ul class="address-info-list">
+                                    <li>
+                                        <i class="icon">
+                                            <img src="../images/address-info-contacts.svg" alt="Contact icon">
+                                        </i>
+                                        <div class="info">
+                                            <span>207 Rua das Flores</span>
+                                            <p>Serra Grande, PB, 58955-000</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <i class="icon">
+                                            <img src="../images/address-info-headphone.svg" alt="Phone icon">
+                                        </i>
+                                        <div class="info">
+                                            <span>+(83)985656-5623</span>
+                                            <p>Seg-Sex 08h30 às 18h00</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <i class="icon">
+                                            <img src="../images/address-info-email.svg" alt="Email icon">
+                                        </i>
+                                        <div class="info">
+                                            <span>exattus@contanto.com</span>
+                                            <p>Suporte online 24 horas por dia, 7 dias por semana</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-info">
+                            <div class="widget">
+                                <h2 class="widget-title">Boletim informativo</h2>
+                                <div class="widget-newsletter">
+                                    <form action="#" method="get">
+                                        <input type="email" name="email" id="emailNewsletter"
+                                            placeholder="Digite seu e-mail" required autocomplete="email">
+                                        <button type="submit" aria-label="Enviar mensagem">
+                                            <span class="sr-only">Enviar</span>
+                                            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                                <div class="widget-menu">
+                                    <h2 class="widget-title">Links rápidos</h2>
+                                    <ul>
+                                        <li><a href="#">Home</a></li>
+                                        <li><a href="#">Sobre Nós</a></li>
+                                        <li><a href="#">Serviços</a></li>
+                                        <li><a href="#">Estudos de Caso</a></li>
+                                        <li><a href="#">Blog</a></li>
+                                        <li><a href="#">FAQ</a></li>
+                                        <li><a href="#">Nossa Equipe</a></li>
+                                        <li><a href="#">Política</a></li>
+                                        <li><a href="#">Termos de Uso</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-info">
+                            <div class="widget widget-info">
+                                <h2 class="widget-title">Central de atendimento</h2>
+                                <a href="tel:+83981532811" class="widget-number">+(83)98153-2811</a>
+                                <h2 class="widget-title">e obtenha um orçamento gratuito</h2>
+                                <div class="widget-social">
+                                    <ul>
+                                        <li><a href="http://www.facebook.com/exattus">FB</a></li>
+                                        <li><a href="http://www.instagram.com/exattus">IN</a></li>
+                                        <li><a href="http://www.x.com/exattus">TW</a></li>
+                                        <li><a href="http://www.linkedin.com/exattus">LI</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    <div class="copyright-wrapper">
+                        <div class="footer-logo">
+                            <a href="../../index.html">
+                                <img src="../images/logo-exattus.svg" alt="EXATTUS CONTABILIDADE & TECNOLOGIA LTDA">
+                            </a>
+                        </div>
+                        <div class="footer-text">
+                            <p>Desenvolvido por <a href="../../index.html">Exattus</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <!-- end footer -->
+    </div>
+    <!-- end site content -->
+
+    <!-- scripts -->
+    <script type="module" src="../js/script.js"></script>
+    <script src="https://kit.fontawesome.com/4980d49b51.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

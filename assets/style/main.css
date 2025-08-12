@@ -324,6 +324,28 @@ h6 {
   border: 0;
 }
 
+.bg-holder {
+  align-items: center;
+  display: flex;
+  gap: 0;
+  justify-content: center;
+  background-color: rgb(37, 99, 173);
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  height: 450px;
+  width: 100%;
+}
+.bg-holder .container {
+  text-align: center;
+}
+.bg-holder h2 {
+  font-size: 2.625rem;
+}
+
 @keyframes run {
   0% {
     top: -50%;
@@ -1314,7 +1336,7 @@ h6 {
   display: flex;
   gap: 1rem;
   justify-content: space-between;
-  background: transparent;
+  background-color: #000000;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 1rem 2%;
   position: absolute;
@@ -3619,5 +3641,8 @@ h6 {
 }
 
 /** end section contact */
+.services-bg {
+  background-image: url("../images/services-bg.webp");
+}
 
 /*# sourceMappingURL=main.css.map */
