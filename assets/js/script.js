@@ -10,6 +10,7 @@ import { toggleCasesStudies } from "./modules/toggle-cases-studies.js";
 import { carouselTestimonial } from "./owlcarousel/carousel.js";
 import { accordion } from "./modules/accordion.js";
 import { animateMarquee } from "./modules/marquee.js";
+import { initServiceRouter } from "./modules/service-router.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const functionsToCall = [
@@ -24,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { name: "carouselTestimonial", func: carouselTestimonial },
     { name: "accordion", func: accordion },
     { name: "animateMarquee", func: animateMarquee },
+    { name: "initServiceRouter", func: initServiceRouter },
   ];
 
   functionsToCall.forEach(({ name, func }) => {
