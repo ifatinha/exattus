@@ -5,8 +5,8 @@
 
 .header {
     @include flex(center, space-between);
-    @include apply-bg-color(pure-black);
-    //background   : transparent;
+    //@include apply-bg-color(pure-black);
+    background   : transparent;
     border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.1);
     padding      : 1rem 2%;
     position     : absolute;

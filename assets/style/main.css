@@ -336,7 +336,7 @@ h6 {
   background-repeat: no-repeat;
   background-size: cover;
   flex-direction: column;
-  height: 450px;
+  height: 550px;
   width: 100%;
 }
 .bg-holder .container {
@@ -1336,7 +1336,7 @@ h6 {
   display: flex;
   gap: 1rem;
   justify-content: space-between;
-  background-color: #000000;
+  background: transparent;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 1rem 2%;
   position: absolute;
@@ -3643,6 +3643,59 @@ h6 {
 /** end section contact */
 .services-bg {
   background-image: url("../images/services-bg.webp");
+}
+
+.service-container {
+  padding: 40px 2%;
+}
+@media screen and (min-width: 1920px) {
+  .service-container {
+    padding-bottom: 160px;
+    padding-top: 160px;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
+  .service-container {
+    padding-bottom: 160px;
+    padding-top: 160px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
+  .service-container {
+    padding-bottom: 160px;
+    padding-top: 160px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: calc(1024px - 1px)) {
+  .service-container {
+    padding-bottom: 80px;
+    padding-top: 80px;
+  }
+}
+.service-container .row {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media screen and (min-width: 1920px) {
+  .service-container .row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
+  .service-container .row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
+  .service-container .row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.service-container .column {
+  padding: 12px;
+}
+.service-container .service-sidebar {
+  background: green;
 }
 
 /*# sourceMappingURL=main.css.map */

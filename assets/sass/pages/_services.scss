@@ -1,3 +1,37 @@
+@use "../global/responsive"as *;
+
 .services-bg {
     background-image: url("../images/services-bg.webp");
+}
+
+.service-container {
+    padding: 40px 2%;
+
+    @include devices-large-screens {
+        padding-bottom: 160px;
+        padding-top   : 160px;
+    }
+
+    @include devices(t) {
+        padding-bottom: 80px;
+        padding-top   : 80px;
+    }
+
+    .row {
+        display              : grid;
+        grid-template-columns: 1fr;
+
+        @include devices-large-screens {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .column {
+        padding: 12px;
+    }
+
+    .service-sidebar {
+        background: green;
+    }
+
 }
