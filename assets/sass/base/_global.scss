@@ -210,3 +210,24 @@ h6 {
     white-space: nowrap;
     border     : 0;
 }
+
+.bg-holder {
+    @include flex(center, center, 0);
+    background-color     : rgb(37, 99, 173);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-position  : center center;
+    background-repeat    : no-repeat;
+    background-size      : cover;
+    flex-direction       : column;
+    height               : 450px;
+    width                : 100%;
+
+    .container {
+        text-align: center;
+    }
+
+    h2 {
+        font-size: get-font-size(42);
+    }
+}
