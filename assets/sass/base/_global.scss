@@ -231,3 +231,15 @@ h6 {
         font-size: get-font-size(42);
     }
 }
+
+.widget {
+    &-title {
+        font-size    : get-font-size(26);
+        margin-bottom: px-to-rem(40);
+    }
+}
+
+is-stick {
+    position: sticky;
+    top     : px-to-rem(140);
+}

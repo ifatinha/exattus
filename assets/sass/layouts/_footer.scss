@@ -35,13 +35,6 @@
         padding   : 1rem;
     }
 
-    .widget {
-        &-title {
-            font-size    : get-font-size(26);
-            margin-bottom: px-to-rem(40);
-        }
-    }
-
     .widget-address {
         .address-info-list {
             li {

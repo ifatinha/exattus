@@ -1,4 +1,7 @@
+@use "../base/colors"as *;
+@use "../base/mixins"as *;
 @use "../global/responsive"as *;
+@use "../util/functions"as *;
 
 .services-bg {
     background-image: url("../images/services-bg.webp");
@@ -22,16 +25,61 @@
         grid-template-columns: 1fr;
 
         @include devices-large-screens {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 2fr;
         }
     }
 
     .column {
         padding: 12px;
     }
+}
 
-    .service-sidebar {
-        background: green;
+.service-sidebar {
+    //background: green;
+
+    .widget {
+        border       : 1px solid rgba($color: #ffffff, $alpha: 0.1);
+        border-radius: 10px;
+        padding      : px-to-rem(30);
+        width        : 100%;
+
+        &:not(:last-child) {
+            margin-bottom: px-to-rem(60);
+        }
+
+        &-title {
+            margin-bottom: px-to-rem(40);
+        }
     }
 
+    .categories-list {
+        display       : flex;
+        flex-direction: column;
+        gap           : px-to-rem(25);
+
+        li {
+            a {
+                @include apply-color(light-silver);
+                border-bottom : 1px solid rgba($color: #ffffff, $alpha: 0.1);
+                display       : block;
+                padding-bottom: px-to-rem(25);
+                transition    : all .5s ease-in-out;
+
+                @include hover {
+                    @include apply-color(sky-blue);
+                    border-color: get-color(sky-blue);
+                }
+            }
+
+            &:last-of-type {
+                a {
+                    border: none;
+                }
+            }
+        }
+    }
+}
+
+.service-details {
+    background: palevioletred;
 }
