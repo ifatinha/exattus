@@ -351,9 +351,19 @@ h6 {
   margin-bottom: 2.5rem;
 }
 
-is-stick {
+.is-stick {
   position: sticky;
   top: 8.75rem;
+}
+
+.blockquote {
+  color: #ffffff;
+  border-left: 5px solid #77BEFF;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+  padding: 0 1.875rem;
+}
+.blockquote-author {
+  font-weight: 500;
 }
 
 @keyframes run {
@@ -3748,8 +3758,86 @@ is-stick {
   width: 24px;
 }
 
-.service-details {
-  background: palevioletred;
+.service-single .service-image img {
+  border-radius: 10px;
+  vertical-align: middle;
+}
+.service-single .service-content {
+  margin-top: 3rem;
+}
+@media screen and (min-width: 1920px) {
+  .service-single .service-content {
+    padding-left: 3rem;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
+  .service-single .service-content {
+    padding-left: 3rem;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
+  .service-single .service-content {
+    padding-left: 3rem;
+  }
+}
+.service-single .service-description p {
+  margin-bottom: 1rem;
+}
+.service-single .service-list {
+  padding: 1.5rem 0;
+}
+.service-single .service-list ul {
+  display: flex;
+  gap: 10px 30px;
+  flex-direction: inherit;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.service-single .service-list ul li {
+  align-items: baseline;
+  display: flex;
+  font-weight: 400;
+  flex-shrink: 0;
+  gap: 15px;
+  width: calc(100% - 15px);
+}
+@media screen and (min-width: 1920px) {
+  .service-single .service-list ul li {
+    width: calc(50% - 15px);
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
+  .service-single .service-list ul li {
+    width: calc(50% - 15px);
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
+  .service-single .service-list ul li {
+    width: calc(50% - 15px);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: calc(1024px - 1px)) {
+  .service-single .service-list ul li {
+    width: calc(50% - 15px);
+  }
+}
+.service-single .service-list ul li img {
+  height: 15px;
+  width: 15px;
+}
+.service-single .service-footer {
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+}
+.service-single .service-footer h3 {
+  font-size: 1.625rem;
+}
+.service-single .service-footer .row {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.service-single .service-footer .service-list li {
+  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */
