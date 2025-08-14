@@ -1729,6 +1729,7 @@ h6 {
 }
 
 .site-content {
+  background-color: #000000;
   position: relative;
   z-index: 2;
 }
@@ -3842,6 +3843,10 @@ h6 {
 }
 .service-single .service-footer .service-list li {
   width: 100%;
+}
+
+.services-wrapper {
+  position: relative;
 }
 
 /*# sourceMappingURL=main.css.map */

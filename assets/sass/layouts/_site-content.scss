@@ -2,9 +2,9 @@
 @use "../global/animations"as *;
 
 .site-content {
-    @include apply-bg-color(primary-color);
-    position  : relative;
-    z-index   : 2;
+    @include apply-bg-color(pure-black);
+    position: relative;
+    z-index : 2;
 }
 
 .site-container {
