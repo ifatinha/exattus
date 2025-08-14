@@ -1,5 +1,6 @@
 @use "../base/colors"as *;
 @use "../base/mixins"as *;
+@use "../base/typography"as *;
 @use "../global/responsive"as *;
 @use "../util/functions"as *;
 
@@ -74,6 +75,27 @@
             &:last-of-type {
                 a {
                     border: none;
+                }
+            }
+        }
+    }
+
+    .address-info-list {
+
+        li {
+            margin-bottom: px-to-rem(20);
+
+            h3 {
+                align-items: center;
+                color      : rgb(212, 214, 215);
+                display    : flex;
+                font-weight: 500;
+                font-size  : get-font-size(22);
+                gap        : 10px;
+
+                img {
+                    height: 24px;
+                    width : 24px;
                 }
             }
         }

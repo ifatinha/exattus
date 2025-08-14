@@ -3732,6 +3732,21 @@ is-stick {
 .service-sidebar .categories-list li:last-of-type a {
   border: none;
 }
+.service-sidebar .address-info-list li {
+  margin-bottom: 1.25rem;
+}
+.service-sidebar .address-info-list li h3 {
+  align-items: center;
+  color: rgb(212, 214, 215);
+  display: flex;
+  font-weight: 500;
+  font-size: 1.375rem;
+  gap: 10px;
+}
+.service-sidebar .address-info-list li h3 img {
+  height: 24px;
+  width: 24px;
+}
 
 .service-details {
   background: palevioletred;
