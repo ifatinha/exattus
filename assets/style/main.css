@@ -3739,6 +3739,10 @@ h6 {
   color: #77BEFF;
   border-color: #77BEFF;
 }
+.service-sidebar .categories-list li a.active {
+  color: #77BEFF;
+  border-color: #77BEFF;
+}
 .service-sidebar .categories-list li:last-of-type a {
   border: none;
 }

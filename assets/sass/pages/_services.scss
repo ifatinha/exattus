@@ -72,6 +72,11 @@
                 }
             }
 
+            a.active {
+                @include apply-color(sky-blue);
+                border-color: get-color(sky-blue);
+            }
+
             &:last-of-type {
                 a {
                     border: none;
