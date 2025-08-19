@@ -109,6 +109,9 @@
 
 .service-single {
 
+    background: green;
+    position  : absolute;
+
     .service-image {
         img {
             border-radius : 10px;
@@ -186,5 +189,7 @@
 }
 
 .services-wrapper {
-    position: relative;
+    position  : relative;
+    background: orange;
+    height    : auto;
 }

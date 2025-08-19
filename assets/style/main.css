@@ -3763,6 +3763,10 @@ h6 {
   width: 24px;
 }
 
+.service-single {
+  background: green;
+  position: absolute;
+}
 .service-single .service-image img {
   border-radius: 10px;
   vertical-align: middle;
@@ -3847,6 +3851,8 @@ h6 {
 
 .services-wrapper {
   position: relative;
+  background: orange;
+  height: auto;
 }
 
 /*# sourceMappingURL=main.css.map */
